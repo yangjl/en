@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-        <title></title>
-        <description> - </description>
-        <link></link>
-        <link></link>
-        <lastBuildDate>2014-02-18T09:26:00-06:00</lastBuildDate>
-        <pubDate>2014-02-18T09:26:00-06:00</pubDate>
+        <title>Jinliang Yang</title>
+        <description>Jinliang Yang - Jinliang Yang</description>
+        <link>http://yangjl.me/en</link>
+        <link>http://yangjl.me/en</link>
+        <lastBuildDate>2014-02-18T14:47:44-06:00</lastBuildDate>
+        <pubDate>2014-02-18T14:47:44-06:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -14,8 +14,8 @@
                 <title>hello world</title>
                 <description>
 </description>
-                <link>/2013/11/hello-world/</link>
-                <guid>/2013/11/hello-world</guid>
+                <link>http://yangjl.me/en/test/2013/11/05/hello-world</link>
+                <guid>http://yangjl.me/en/test/2013/11/05/hello-world</guid>
                 <pubDate>2013-11-05T00:00:00-06:00</pubDate>
         </item>
 
@@ -23,8 +23,8 @@
                 <title>Hello World</title>
                 <description>&lt;p&gt;what is this?&lt;/p&gt;
 </description>
-                <link>/2013/08/hello-world/</link>
-                <guid>/2013/08/hello-world</guid>
+                <link>http://yangjl.me/en/2013/08/28/hello-world</link>
+                <guid>http://yangjl.me/en/2013/08/28/hello-world</guid>
                 <pubDate>2013-08-28T00:00:00-05:00</pubDate>
         </item>
 
@@ -433,8 +433,8 @@ As noted, our main programming constraint is the fact that our API is limited to
 &lt;p&gt;Please take a look at &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
 or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you&#39;d like.&lt;/p&gt;
 </description>
-                <link>/2011/12/jekyll-introduction/</link>
-                <guid>/2011/12/jekyll-introduction</guid>
+                <link>http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction</link>
+                <guid>http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction</guid>
                 <pubDate>2011-12-29T00:00:00-06:00</pubDate>
         </item>
 

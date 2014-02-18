@@ -1,7 +1,8 @@
 ---
 layout: page
-title: BigData meets Genetics
+title: Coding Genetic Codes
 ---
+{% include JB/setup %}
 
 <ul class="posts">
   {% for post in site.posts %}
