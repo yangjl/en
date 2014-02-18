@@ -2,7 +2,7 @@
 name: "Jinliang Yang"
 description: "My blog"
 
-url: "http://yangjl.me/cn"
+url: "http://yangjl.me/en"
 
 paginate: 10
 
@@ -15,7 +15,6 @@ pygments: true
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title 
-
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
 # Themes are encouraged to use these universal variables 
@@ -38,7 +37,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://yangjl.me/cn
+production_url : http://yangjl.me/en
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -67,7 +66,7 @@ JB :
   #   - Only the following values are falsy: ["", null, false]
   #   - When setting BASE_PATH it must be a valid url.
   #     This means always setting the protocol (http|https) or prefixing with "/"
-  BASE_PATH : http://yangjl.me/cn
+  BASE_PATH : http://yangjl.me/en
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
