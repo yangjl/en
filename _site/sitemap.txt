@@ -1,5 +1,4 @@
 
-http://yangjl.me/en/about/about.html
 http://yangjl.me/en/about.html
 http://yangjl.me/en/archive.html
 http://yangjl.me/en/atom.xml
@@ -10,6 +9,7 @@ http://yangjl.me/en/rss.xml
 http://yangjl.me/en/sitemap.txt
 http://yangjl.me/en/tags.html
 
-http://yangjl.me/en/test/2013/11/05/hello-world
+http://yangjl.me/en/bigdata%20of%20maize/2014/03/05/NCBI-SRA
+http://yangjl.me/en/test/2014/03/04/NCBI-SRA
 http://yangjl.me/en/2013/08/28/hello-world
 http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction
