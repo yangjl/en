@@ -4,7 +4,7 @@
  <title>Jinliang Yang</title>
  <link href="http://yangjl.me/en/" rel="self"/>
  <link href="http://yangjl.me/en"/>
- <updated>2014-03-12T18:28:28+08:00</updated>
+ <updated>2014-11-05T22:07:51-08:00</updated>
  <id>http://yangjl.me/en</id>
  <author>
    <name>Jinliang Yang</name>
@@ -13,23 +13,138 @@
 
  
  <entry>
+   <title>A show case of using Rmarkdown and Github for reproducible research</title>
+   <link href="http://yangjl.me/en/reproducible/2014/11/05/reproducible-research"/>
+   <updated>2014-11-05T00:00:00-08:00</updated>
+   <id>http://yangjl.me/en/reproducible/2014/11/05/reproducible-research</id>
+   <content type="html">&lt;h1&gt;Markdown&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; is a simple, easy-to-read, easy-to-write plain text format. The syntax of markdown could be printed in less than one page.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; Heading
+ =======
+
+ Sub-heading
+ -----------
+
+ ### Another deeper heading
+
+ Paragraphs are separated
+ by a blank line.
+
+ Let 2 spaces at the end of a line to do a  
+ line break
+
+ Text attributes *italic*,
+ **bold**, `monospace`,~~monospace~~, `monospace` .
+
+ A [link](http://example.com).
+
+ Shopping list:
+
+   * apples
+   * oranges
+   * pears
+
+ Numbered list:
+
+   1. apples
+   2. oranges
+   3. pears
+
+ The rain---not the reign---in
+ Spain.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1&gt;Heading&lt;/h1&gt;
+
+&lt;h2&gt;Sub-heading&lt;/h2&gt;
+
+&lt;h3&gt;Another deeper heading&lt;/h3&gt;
+
+&lt;p&gt;Paragraphs are separated
+by a blank line.&lt;/p&gt;
+
+&lt;p&gt;Let 2 spaces at the end of a line to do a&lt;br/&gt;
+line break&lt;/p&gt;
+
+&lt;p&gt;Text attributes &lt;em&gt;italic&lt;/em&gt;,
+&lt;strong&gt;bold&lt;/strong&gt;, &lt;code&gt;monospace&lt;/code&gt;,&lt;del&gt;monospace&lt;/del&gt;, &lt;code&gt;monospace&lt;/code&gt; .&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://example.com&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt; Shopping list:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; apples&lt;/li&gt;
+&lt;li&gt; oranges&lt;/li&gt;
+&lt;li&gt; pears&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt; Numbered list:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;. apples&lt;/li&gt;
+&lt;li&gt;. oranges&lt;/li&gt;
+&lt;li&gt;. pears&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt; The rain---not the reign---in
+ Spain.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;This is an example of a draft. Read more here: &lt;a href=&quot;http://jekyllrb.com/docs/drafts/&quot;&gt;http://jekyllrb.com/docs/drafts/&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Journal Club（2）</title>
+   <link href="http://yangjl.me/en/journal%20club/2014/04/09/Journal-Club-2"/>
+   <updated>2014-04-09T00:00:00-07:00</updated>
+   <id>http://yangjl.me/en/journal%20club/2014/04/09/Journal-Club-2</id>
+   <content type="html">&lt;p&gt;This nature&#39;s cover story &quot;THE GREEN HOURGLASS&quot; was really an exciting paper. I regret to not be able to fully capture it two years ago.&lt;/p&gt;
+
+&lt;p&gt;The authors adapted the embryonic hourclass model proposed from vertebrates (as the figure show below) to plants, and provided the transcriptomic evidence from two complementary analyses. What is the embryonic hourclass? It refers to embryos from various taxa appear different in early stages, and converge to a similar form during mid-embryogenesis (or called phylotypic stage), and again diverge in later stages.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eRwvfhO.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recent analyses using zebrafish and &lt;em&gt;Drosophila&lt;/em&gt; demonstrated the transcriptome was dominated by ancient genes. Here in this paper, the authors calculated two different transcriptome indices: transcriptome age index (TAI) and transcriptome divergence index (TDI). The indices were computed across seven embryo stages. After visualization of the indices, clear hourclass patterns (see figure below from the paper) were found for both measurements.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/BqI4EiL.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What we can learn from this study are that (1) try to answer historical or classical biological questions with modern resources and (2) use open data to do it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Quint, M., Drost, H.-G., Gabel, A., Ullrich, K. K., Bönn, M., &amp;amp; Grosse, I. (2012). A transcriptomic hourglass in plant embryogenesis. Nature, 490(7418), 98–101. doi:10.1038/nature11394
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4&gt;&lt;i class=&quot;icon-folder-open&quot;&gt;&lt;/i&gt;&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/22951968&quot;&gt;reference link:&lt;/a&gt;&lt;/h4&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>NGS data of Maize</title>
    <link href="http://yangjl.me/en/bigdata%20of%20maize/2014/03/05/NCBI-SRA"/>
-   <updated>2014-03-05T00:00:00+08:00</updated>
+   <updated>2014-03-05T00:00:00-08:00</updated>
    <id>http://yangjl.me/en/bigdata%20of%20maize/2014/03/05/NCBI-SRA</id>
-   <content type="html">&lt;p&gt;We are now in the Big Data era, where &quot;the data scientist will become the most sexy job in the world&quot; said by &lt;a href=&quot;http://www.nytimes.com/2013/04/14/education/edlife/universities-offer-courses-in-a-hot-new-field-data-science.html?pagewanted=all&amp;amp;_r=0&quot;&gt;NYT&lt;/a&gt;. And the IT world frequently mentioned that &quot;90% of the data in the world today has been created in the last two years alone&quot;. It seems like a strong wave of data explosion is coming!&lt;/p&gt;
+   <content type="html">&lt;p&gt;We are now in the Big Data era, where &quot;the data scientist will become the most sexy job in the world&quot; said by &lt;a href=&quot;http://www.nytimes.com/2013/04/14/education/edlife/universities-offer-courses-in-a-hot-new-field-data-science.html?pagewanted=all&amp;amp;_r=0&quot;&gt;NYT&lt;/a&gt;. And the IT world frequently mentioned &quot;90% of the data in the world today has been created in the last two years alone&quot;. It seems like a strong wave of data explosion is coming!&lt;/p&gt;
 
-&lt;p&gt;Amazing, but so what. I feel like we have nothing to do with it until recently when I checked the NCBI SRA database for a talk. I found that, we, the maize community as a whole, are right in the midst of the Big Data explosion. According to the database report, while after doing some accession matchings, in the past serval years, especially the last two years, about 13,000 Giga base-pairs were deposited from the maize community. That is about 6,000 depth of coverage of the maize genome if roughly assuming the maize genome is 2 Giba bases in size. This estimation not includes the on-going projects and non-submitted datasets. More importantly, this is happening just five years after the accomplishment of the maize B73 reference genome project. If we review the complete datasets in the SRA database, maize NGS data actually only accounted for &amp;lt; 0.1%. Until the end of Feb. 2014, &gt;2300 Tera bases reside there. The &quot;90% &lt;strong&gt;genome sequencing data&lt;/strong&gt; were generated in the past two years alone&quot;. See, IT&#39;s data theory could be perfectly aligned to the sequencing industry (see the figure below).&lt;/p&gt;
+&lt;p&gt;Amazing! However, I feel like we have nothing to do with it until recently when I checked the NCBI SRA database for a talk. I found that, we, the maize community, are right in the midst of the Big Data explosion. According to the database report, while after doing some accessions lookup, in the past several years, especially the last two years, about 13,000 Giga base-pairs were deposited from the maize community. That is about 6,500 depth of coverage of the maize genome if roughly assuming the maize genome is 2 Giba bases in size. This estimation not includes the on-going projects and non-submitted datasets. More importantly, this is happening just five years after the accomplishment of the maize B73 reference genome project. If we review the complete datasets in the SRA database, maize NGS data actually only accounted for &amp;lt; 0.1%. Until the end of Feb. 2014, more than 2,300 Tera bases reside there. The &quot;90% &lt;strong&gt;genome sequencing data&lt;/strong&gt; were generated in the past two years alone&quot;. See, IT&#39;s data theory could be perfectly aligned to the sequencing industry (see the figure below).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Mb5Z1Yi.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As the data explosion, NGS data&#39;s storage, sharing and publishing become a world wide changllenge. To overcome it, &gt;150 academic institutions and private companies went together to join the &lt;a href=&quot;http://genomicsandhealth.org/&quot;&gt;Global Alliance for Genomics and Health&lt;/a&gt;. While, &lt;a href=&quot;http://googleresearch.blogspot.co.uk/2014/02/google-joins-global-alliance-for.html&quot;&gt;Google Genomics&lt;/a&gt; is one of them. As the joining of some IT tycoons, &lt;strong&gt;genomics&lt;/strong&gt; now become a multi-disciplinary issue. &lt;strong&gt;Genomics&lt;/strong&gt; and its related &lt;strong&gt;Bioinformatics&lt;/strong&gt; are upgrading to their 2.0 versions. I never thought that, trained as a geneticist, I may one day work for google. Good, bad or ironic?&lt;/p&gt;
+&lt;p&gt;As the data explosion, NGS data&#39;s storage, sharing and publishing become a worldwide challenge. To overcome it, ~150 academic institutions and private companies went together to join the &lt;a href=&quot;http://genomicsandhealth.org/&quot;&gt;Global Alliance for Genomics and Health&lt;/a&gt;. While, &lt;a href=&quot;http://googleresearch.blogspot.co.uk/2014/02/google-joins-global-alliance-for.html&quot;&gt;Google Genomics&lt;/a&gt; is one of them. As the joining of some IT tycoons, &lt;strong&gt;genomics&lt;/strong&gt; now become a multi-disciplinary challenge. &lt;strong&gt;Genomics&lt;/strong&gt; and its related &lt;strong&gt;Bioinformatics&lt;/strong&gt; are upgraded to their 2.0 version. I never thought that, trained as a geneticist, I may one day work for Google. Good, bad or ironic? It might be too optimistic. There is a long way to go and the industries are actually more interested in the human health related area. As a relative small research community for maize or plant genomics studies, we are less attractive from industry&#39;s point of view.&lt;/p&gt;
 
-&lt;p&gt;The above is too optimistic for me. The industries are actually more interested in the human health related area. As a relative small research community for maize or plant genomics studies, we are close to nothing from industry&#39;s point of view. Anyway, I will try to interpret the maize data a little. This kind of study may be extended to other crop species later. After a close looking, the data actually show their own story, sometimes, these information could not be extracted from the papers alone. Below, I listed the top 10 maize projects according to their data output.&lt;/p&gt;
+&lt;p&gt;Here, I will try to interpret the maize NGS data a little. This kind of study may be extended to other crop species later. After a close look, the data presented their own story. This kind of story might not be extracted from the papers alone. Below, I listed the top 10 maize projects according to their data output.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/01JWlMz.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;From the above figure, it seems like the maize genetic studies was expanding from their traditional research subjects. Thanks to the continuous declining of the sequencing price, many genome wide studies become possible, such as geno-pheno association, transcriptome, methylome, etc. At the same time, the resources and talents were under &quot;exon reshuffling&quot; during this process. Some Chinese teams, including CAU, CAAS or even Huazhong Agricultural University were emerging.&lt;/p&gt;
+&lt;p&gt;From the above figure, it seems like the maize genetic studies were expanding from their traditional research areas. Thanks to the continuous declining of the sequencing price, many genome wide studies become possible, such as geno-pheno association, transcriptome, methylome, etc. At the same time, the resources and talents were under &quot;exon reshuffling&quot; during this process. Some Chinese groups, including those from CAU, CAAS and Huazhong Agricultural University are rising.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -111,49 +226,18 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;In the U.S., a new setup of research community was forming during the process of competition and collaboration of sequencing. From the summary table of the sequencing data, I learned that different labs have their own focus. The &lt;strong&gt;lab&lt;/strong&gt; here, sometimes, should also include the efforts from their collbrators. Among these labs, Buclker&#39;s group at Cornell, after finishing the zea mays HapMap project, is now aiming to sequencing every species of maize in the world through Genotyping-By-Sequencing (GBS). From a recently release of the Ames diversity panel data, I personally think the GBS still have room to improvement, especially the high missing rate problem. Recently, Buell&#39;s lab at MSU released a large set of transcriptomic data. This group may lead the maize transcriptome analysis in the future. While, some competitors are CAAS (or Huazhong Agricultural Unisversity), ISU, and others. A group at CSHL did a lot of Methylome study. Another group at CSHL, Jackson&#39;s lab, focused on the development studies, their efforts of transcriptomic sequencing at various developmental stages may eventually lead to a developmentome (I invented this term) some day. Other research subjects, such as ISU&#39;s Zeanome and PAV, UC Davis R-I group&#39;s domestication and evolution and University of Minnesota&#39;s IBM RIL eQTL mapping, et. al..&lt;/p&gt;
+&lt;p&gt;In the U.S., from the above summary table of the sequencing data, I learned that different labs have their own focus. The &lt;strong&gt;lab&lt;/strong&gt; here, sometimes, should also refer to the efforts from their collaborators. Among these labs, Buckler&#39;s group at Cornell, after finishing the zea mays HapMap project, was now aiming to sequencing every species of maize in the world using Genotyping-By-Sequencing (GBS). Recently, Buell&#39;s lab at MSU released a large set of transcriptomic data. This group may lead the maize transcriptome analysis in the future. A group at CSHL did a lot of Methylome study. Another group at CSHL, Jackson&#39;s lab, focused on the development studies, their efforts of transcriptomic sequencing at various developmental stages may eventually lead to a developmentome (I invented this term) some day. Other research subjects, such as ISU&#39;s Zeanome and PAV, UC Davis R-I group&#39;s domestication and evolution and University of Minnesota&#39;s IBM RIL eQTL mapping, et. al..&lt;/p&gt;
 
-&lt;p&gt;Sequencing alone could not solve the biological problems until applied with sophisticated analyzes. When genetics meets Big Data, the analysis itself become a problem. Traditional training did not prepared genetists with big data skills. In the future, the one who mastering the data tools and making sense of data would be more likely to success I guess. From the student, genetics is now not limited to pipetting, pollinating or cloning. Coding should add to our toolkit as well.&lt;/p&gt;
+&lt;p&gt;Sequencing alone could not solve the biological problems until applied with sophisticated analyses. When genetics meets Big Data, the analysis itself become a problem. Traditional training did not prepared genetists with big data skills. In the future, the one who mastering the data tools and making sense of data would be more likely to success I guess. Genetics is now not limited to pipetting, pollinating or cloning, coding skills should be added to our toolkit as well.&lt;/p&gt;
 
-&lt;p&gt;Big Data era in maize is coming, are you ready yet!&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>NGS data generated from maize community</title>
-   <link href="http://yangjl.me/en/test/2014/03/04/NCBI-SRA"/>
-   <updated>2014-03-04T00:00:00+08:00</updated>
-   <id>http://yangjl.me/en/test/2014/03/04/NCBI-SRA</id>
-   <content type="html">&lt;p&gt;NCBI &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/sra&quot;&gt;sequence read archive (SRA)&lt;/a&gt; stores raw sequencing data from various next generation sequencing (NGS) platforms. As the end of the Feb. 2014, 1,500 Tera bases of next generation sequencing (NGS) data were deposited into the database. While, among them 10 Tera bases were contributed from maize community, accounting for 0.5%.&lt;/p&gt;
-
-&lt;p&gt;There were several milestones of the data events as shown in the below figure.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;zmHapMap1&lt;/li&gt;
-&lt;li&gt;zmHapMap2
-CAU resequencing
-ISU Zeanome (RNA-seq)&lt;/li&gt;
-&lt;li&gt;Ames Diversity Panel
-IBM RILs RNA-seq&lt;/li&gt;
-&lt;li&gt;CAAS resequencing&lt;/li&gt;
-&lt;/ol&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Hello World</title>
-   <link href="http://yangjl.me/en/2013/08/28/hello-world"/>
-   <updated>2013-08-28T00:00:00+08:00</updated>
-   <id>http://yangjl.me/en/2013/08/28/hello-world</id>
-   <content type="html">&lt;p&gt;what is this?&lt;/p&gt;
+&lt;p&gt;Big Data era in maize is coming, are you ready yet?&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>Jekyll Introduction</title>
    <link href="http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction"/>
-   <updated>2011-12-29T00:00:00+08:00</updated>
+   <updated>2011-12-29T00:00:00-08:00</updated>
    <id>http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction</id>
    <content type="html">&lt;p&gt;This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
 Directly following the intro we&#39;ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
