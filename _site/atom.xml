@@ -4,7 +4,7 @@
  <title>Jinliang Yang</title>
  <link href="http://yangjl.me/en/" rel="self"/>
  <link href="http://yangjl.me/en"/>
- <updated>2014-11-05T22:07:51-08:00</updated>
+ <updated>2014-11-20T10:58:07-08:00</updated>
  <id>http://yangjl.me/en</id>
  <author>
    <name>Jinliang Yang</name>
@@ -13,10 +13,33 @@
 
  
  <entry>
+   <title>Using Rmarkdown and Github for Reproducible Research</title>
+   <link href="http://yangjl.me/en/reproducible/2014/11/20/work-flow"/>
+   <updated>2014-11-20T00:00:00-08:00</updated>
+   <id>http://yangjl.me/en/reproducible/2014/11/20/work-flow</id>
+   <content type="html">&lt;p&gt;Broadly speaking, reproducible research aims to generate and report data analyses and scientific claims in a reproducible manner. Or simply, by one click, others could re-generate the results you reported and the report itself. From my personal experience of several years of quantitative genetics research, the broad definition of reproducible research is too ambitious. In a real world study, normally we will spend many days, weeks or even years for data tweaking and hammering. In these processes, many versions of intermediate data will be generated, many parameters for model fitting were tried, and many figures were plotted and changed later. It is such a pain to reproduce a research even conducted by yourself, who normally carried out multiple research projects across years. Do not mention to share with others.&lt;/p&gt;
+
+&lt;p&gt;Modern data analyses rely on tools. Thanks for the powerful R IDE: &lt;a href=&quot;http://www.rstudio.com/&quot;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt; and version control tool: &lt;a href=&quot;https://github.com/&quot;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;, which largely make this idea of reproducible research feasible. After a workshop in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;&lt;strong&gt;RILAB&lt;/strong&gt;&lt;/a&gt;, some of my colleagues show their interests in my workflow of project management and documentation (while, it is far from completely reproducible). It encouraged me to share some of the tools that might be helpful for others.&lt;/p&gt;
+
+&lt;p&gt;When I started a new project,   &lt;br/&gt;
+I normally start a project with&lt;/p&gt;
+
+&lt;h2&gt;Setup your project&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;using &lt;strong&gt;GitHub&lt;/strong&gt; to do the version control&lt;/li&gt;
+&lt;li&gt;using &lt;strong&gt;packrat&lt;/strong&gt; to do the R package dependency management&lt;/li&gt;
+&lt;li&gt;using &lt;strong&gt;ProjectTemplate&lt;/strong&gt; to layout working directories&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>A show case of using Rmarkdown and Github for reproducible research</title>
-   <link href="http://yangjl.me/en/reproducible/2014/11/05/reproducible-research"/>
+   <link href="http://yangjl.me/en/reproducible/2014/11/05/reproducible-research+copy"/>
    <updated>2014-11-05T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/reproducible/2014/11/05/reproducible-research</id>
+   <id>http://yangjl.me/en/reproducible/2014/11/05/reproducible-research copy</id>
    <content type="html">&lt;h1&gt;Markdown&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; is a simple, easy-to-read, easy-to-write plain text format. The syntax of markdown could be printed in less than one page.&lt;/p&gt;
