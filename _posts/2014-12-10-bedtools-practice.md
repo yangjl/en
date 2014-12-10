@@ -12,16 +12,12 @@ tags: [tutorial, usage, bedtools, BED]
 
 ## BED and other formats
 
-- BED [format](http://bedtools.readthedocs.org/en/latest/content/general-usage.html)
+### BED [format](http://bedtools.readthedocs.org/en/latest/content/general-usage.html)
 1. BED3: A BED file where each feature is described by _chrom_, _start_, and _end_.  
 For example: chr1 110 120  
 Note: start is zero-based, where the first base in a chr is numbered 0. And the end is one-based. For example, a SNP at 10 should be coded as start=9, end=10.
-
 2. BED4: _chrom_, _start_, _end_ and _name_.
-
-
-- Other genomic data format can be found from UCSC Genome Browser [website](http://genome.ucsc.edu/FAQ/FAQformat#format1)
-
+### Other genomic data format can be found from UCSC Genome Browser [website](http://genome.ucsc.edu/FAQ/FAQformat#format1)
 
 ## Find SNPs in window, report SNPs and which window they belong to.
 
