@@ -124,12 +124,19 @@
     <div class="content">
       <p>Broadly speaking, reproducible research aims to generate and report data analyses and scientific claims in a reproducible manner. Or simply, by one click, others could re-generate the results you reported and the report itself. From my personal experience of several years of quantitative genetics research, the broad definition of reproducible research is too ambitious. In a real world study, normally we will spend many days, weeks or even years for data tweaking and hammering. In these processes, many versions of intermediate data will be generated, many parameters for model fitting were tried, and many figures were plotted and changed later. It is such a pain to reproduce a research even conducted by yourself, who normally carried out multiple research projects across years. Do not mention to share with others.</p>
 
-<p>Modern data analyses rely on tools. Thanks for the powerful R IDE: <a href="http://www.rstudio.com/"><strong>RStudio</strong></a> and version control tool: <a href="https://github.com/"><strong>GitHub</strong></a>, which largely make this idea of reproducible research feasible. After a workshop in <a href="http://www.rilab.org/"><strong>RILAB</strong></a>, some of my colleagues show their interests in my workflow of project management and documentation (while, it is far from completely reproducible). It encouraged me to share some of the tools that might be helpful for others.</p>
+<p>Modern data analyses rely on tools. Thanks for the powerful R IDE: <a href="http://www.rstudio.com/"><strong>RStudio</strong></a> and version control tool: <a href="https://github.com/"><strong>GitHub</strong></a>, which largely make this idea of reproducible research feasible. After a workshop in <a href="http://www.rilab.org/"><strong>RILAB</strong></a>, some of my colleagues show their interests in my workflow of project management and documentation, although it is far from completely reproducible. It encouraged me to blog it and share some of the tools that might be helpful for others. Here is the workflow I used.</p>
 
-<p>When I started a new project,   <br/>
+<h2>Setup project</h2>
+
+<p>The right corner icon of <strong>RStudio</strong> will enable you to manage your <em>New Project</em>.    <br/>
 I normally start a project with</p>
 
-<h2>Setup your project</h2>
+<pre><code>#install.packages('ProjectTemplate')
+library('ProjectTemplate')
+create.project('temp')
+system("mv temp/* .")
+system("rm -r temp/")
+</code></pre>
 
 <ul>
 <li>using <strong>GitHub</strong> to do the version control</li>
@@ -168,7 +175,7 @@ I normally start a project with</p>
 
   
      
-    	<li><a href="/tags.html#tutorial-ref">tutorial <span>3</span></a></li>
+    	<li><a href="/tags.html#tutorial-ref">tutorial <span>6</span></a></li>
      
     	<li><a href="/tags.html#md-ref">md <span>2</span></a></li>
      
@@ -189,7 +196,7 @@ I normally start a project with</p>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next disabled"><a>Next &rarr;</a>
+        <li class="next"><a href="/genomics/2014/12/10/bedtools-practice" title="Bedtools Usage Notes">Next &rarr;</a></li>
       
       </ul>
     </div>
@@ -222,7 +229,7 @@ I normally start a project with</p>
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2014 by <a href="http://yangjl.me">Jinliang Yang</a> | <span class="label label-info">2014-11-20 10:58:07</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2014 by <a href="http://yangjl.me">Jinliang Yang</a> | <span class="label label-info">2014-12-14 20:14:53</span></small></p>
       </footer>
 
     </div>

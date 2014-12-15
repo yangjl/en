@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>A show case of using Rmarkdown and Github for reproducible research</title>
-    <meta name="description" content="description">
+    <title>Bedtools Usage Notes</title>
+    <meta name="description" content="from my personal experience">
     <meta name="author" content="Jinliang Yang">
 
     <!-- Enable responsive viewport -->
@@ -113,98 +113,50 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>A show case of using Rmarkdown and Github for reproducible research </h1>
+  <h1>Bedtools Usage Notes </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>05 November 2014</span>
+      <span>10 December 2014</span>
     </div>
     <div class="content">
-      <h1>Markdown</h1>
+      <p><a href="http://bedtools.readthedocs.org/en/latest/index.html"><strong>Bedtools</strong></a> contain several handy utilities for genomic data analysis, especially useful for feature intersection analysis by using the function <strong>intersect</strong>. I like bedtools because of the simple <strong>BED</strong> format and speed of their algorithm. Below listed some of my personal usage examples for your reference.</p>
 
-<p><a href="http://daringfireball.net/projects/markdown/">Markdown</a> is a simple, easy-to-read, easy-to-write plain text format. The syntax of markdown could be printed in less than one page.</p>
+<hr />
 
-<pre><code> Heading
- =======
+<h2>BED and other formats</h2>
 
- Sub-heading
- -----------
+<h3>BED <a href="http://bedtools.readthedocs.org/en/latest/content/general-usage.html">format</a></h3>
 
- ### Another deeper heading
+<ol>
+<li>BED3: A BED file where each feature is described by <em>chrom</em>, <em>start</em>, and <em>end</em>.</li>
+</ol>
 
- Paragraphs are separated
- by a blank line.
 
- Let 2 spaces at the end of a line to do a  
- line break
-
- Text attributes *italic*,
- **bold**, `monospace`,~~monospace~~, `monospace` .
-
- A [link](http://example.com).
-
- Shopping list:
-
-   * apples
-   * oranges
-   * pears
-
- Numbered list:
-
-   1. apples
-   2. oranges
-   3. pears
-
- The rain---not the reign---in
- Spain.
+<pre><code class="">For example: chr1 110 120  
+Note: start is zero-based, where the first base in a chr is numbered 0. And the end is one-based. For example, a SNP at 10 should be coded as start=9, end=10.
 </code></pre>
 
-<h1>Heading</h1>
-
-<h2>Sub-heading</h2>
-
-<h3>Another deeper heading</h3>
-
-<p>Paragraphs are separated
-by a blank line.</p>
-
-<p>Let 2 spaces at the end of a line to do a<br/>
-line break</p>
-
-<p>Text attributes <em>italic</em>,
-<strong>bold</strong>, <code>monospace</code>,<del>monospace</del>, <code>monospace</code> .</p>
-
-<p>A <a href="http://example.com">link</a>.</p>
-
-<p> Shopping list:</p>
-
-<ul>
-<li> apples</li>
-<li> oranges</li>
-<li> pears</li>
-</ul>
-
-
-<p> Numbered list:</p>
-
 <ol>
-<li>. apples</li>
-<li>. oranges</li>
-<li>. pears</li>
+<li>BED4: <em>chrom</em>, <em>start</em>, <em>end</em> and <em>name</em>.</li>
 </ol>
 
 
-<p> The rain---not the reign---in
- Spain.</p>
+<h3>Other genomic data format can be found from UCSC Genome Browser <a href="http://genome.ucsc.edu/FAQ/FAQformat#format1">website</a></h3>
 
-<ol>
-<li></li>
-</ol>
+<hr />
 
+<h2>Find SNPs in window, report SNPs and the windows they belong to.</h2>
 
-<p>This is an example of a draft. Read more here: <a href="http://jekyllrb.com/docs/drafts/">http://jekyllrb.com/docs/drafts/</a></p>
+<pre><code>bedtools intersect -a window.bed -b SNP.bed -wb
+</code></pre>
+
+<p>More details see here: <a href="http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html"><strong>intersect</strong></a>  <br/>
+* <strong>-a:</strong> window of bed format<br/>
+* <strong>-b:</strong> SNPs of bed format<br/>
+* <strong>-wb:</strong> write the original entry in B for each overlap</p>
 
     </div>
 
@@ -217,8 +169,8 @@ line break</p>
 
   
      
-    	<li><a href="/categories.html#reproducible-ref">
-    		reproducible <span>2</span>
+    	<li><a href="/categories.html#genomics-ref">
+    		genomics <span>3</span>
     	</a></li>
     
   
@@ -238,9 +190,11 @@ line break</p>
      
     	<li><a href="/tags.html#tutorial-ref">tutorial <span>6</span></a></li>
      
-    	<li><a href="/tags.html#md-ref">md <span>2</span></a></li>
+    	<li><a href="/tags.html#usage-ref">usage <span>3</span></a></li>
      
-    	<li><a href="/tags.html#github-ref">github <span>2</span></a></li>
+    	<li><a href="/tags.html#bedtools-ref">bedtools <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#BED-ref">BED <span>1</span></a></li>
     
   
 
@@ -253,11 +207,11 @@ line break</p>
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/journal%20club/2014/04/09/Journal-Club-2" title="Journal Club（2）">&larr; Previous</a></li>
+        <li class="prev"><a href="/reproducible/2014/11/20/work-flow" title="Using Rmarkdown and Github for Reproducible Research">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/reproducible/2014/11/20/work-flow" title="Using Rmarkdown and Github for Reproducible Research">Next &rarr;</a></li>
+        <li class="next"><a href="/genomics/2014/12/11/IRanges" title="Usage of IRanges/GenomicRanges Bioconductor packages">Next &rarr;</a></li>
       
       </ul>
     </div>

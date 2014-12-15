@@ -9,6 +9,9 @@ http://yangjl.me/en/rss.xml
 http://yangjl.me/en/sitemap.txt
 http://yangjl.me/en/tags.html
 
+http://yangjl.me/en/genomics/2014/12/12/DataTable
+http://yangjl.me/en/genomics/2014/12/11/IRanges
+http://yangjl.me/en/genomics/2014/12/10/bedtools-practice
 http://yangjl.me/en/reproducible/2014/11/20/work-flow
 http://yangjl.me/en/reproducible/2014/11/05/reproducible-research+copy
 http://yangjl.me/en/journal%20club/2014/04/09/Journal-Club-2

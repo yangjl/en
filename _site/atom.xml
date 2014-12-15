@@ -4,7 +4,7 @@
  <title>Jinliang Yang</title>
  <link href="http://yangjl.me/en/" rel="self"/>
  <link href="http://yangjl.me/en"/>
- <updated>2014-11-20T10:58:07-08:00</updated>
+ <updated>2014-12-14T20:14:53-08:00</updated>
  <id>http://yangjl.me/en</id>
  <author>
    <name>Jinliang Yang</name>
@@ -13,18 +13,132 @@
 
  
  <entry>
+   <title>R package Data.Table Usage Notes</title>
+   <link href="http://yangjl.me/en/genomics/2014/12/12/DataTable"/>
+   <updated>2014-12-12T00:00:00-08:00</updated>
+   <id>http://yangjl.me/en/genomics/2014/12/12/DataTable</id>
+   <content type="html">&lt;p&gt;Most of those were learned from Kate Crosby&#39;s &lt;a href=&quot;https://github.com/kate-crosby/datatable_slides&quot;&gt;short tutorial&lt;/a&gt; in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;RIL lab&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Read in data.frame rapidly with &lt;strong&gt;fread&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;## tab delimited file
+data &amp;lt;- fread(&quot;yourfile.txt&quot;, sep=&quot;\t&quot;)
+## csv file
+data &amp;lt;- fread(&quot;yourfile.csv&quot;, sep=&quot;,&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Subsetting dt&lt;/h2&gt;
+
+&lt;h3&gt;:= NULL&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;sub &amp;lt;- data[, c(&quot;chr&quot;, &quot;pos&quot;) := NULL]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;use function of &lt;strong&gt;subset&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;sub &amp;lt;- subset(fulldata, select = c(&quot;chr&quot;, &quot;pos&quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;.SD = &quot;Subset of Data.table&quot;&lt;/h3&gt;
+
+&lt;p&gt;Select the 2nd row (SNP) for/of each chromosome!
+&lt;code&gt;
+dt &amp;lt;- dt[, .SD[2], by=chrom]
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2&gt;Order data really quickly with setkey()&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;# Here in chr and then pos
+order.dt &amp;lt;- setkey(dt, &quot;chr&quot;, &quot;pos&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;More information&lt;/h2&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Usage of IRanges/GenomicRanges Bioconductor packages</title>
+   <link href="http://yangjl.me/en/genomics/2014/12/11/IRanges"/>
+   <updated>2014-12-11T00:00:00-08:00</updated>
+   <id>http://yangjl.me/en/genomics/2014/12/11/IRanges</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.pdf&quot;&gt;&lt;strong&gt;introduction&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bioconductor.org/help/course-materials/2013/SeattleFeb2013/IntermediateSequenceAnalysis2013.pdf&quot;&gt;&lt;strong&gt;class&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pgfe.umassmed.edu/ou/archives/3122&quot;&gt;&lt;strong&gt;website&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Transform &lt;strong&gt;GRanges&lt;/strong&gt; to &lt;strong&gt;Data.Frame&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;cnvdf &amp;lt;- data.frame(chr=as.character(seqnames(mycnv)), start=start(mycnv), end=end(mycnv))
+callcnv &amp;lt;- mcols(mycnv)
+cnvdf &amp;lt;- cbind(cnvdf, callcnv)
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Bedtools Usage Notes</title>
+   <link href="http://yangjl.me/en/genomics/2014/12/10/bedtools-practice"/>
+   <updated>2014-12-10T00:00:00-08:00</updated>
+   <id>http://yangjl.me/en/genomics/2014/12/10/bedtools-practice</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/index.html&quot;&gt;&lt;strong&gt;Bedtools&lt;/strong&gt;&lt;/a&gt; contain several handy utilities for genomic data analysis, especially useful for feature intersection analysis by using the function &lt;strong&gt;intersect&lt;/strong&gt;. I like bedtools because of the simple &lt;strong&gt;BED&lt;/strong&gt; format and speed of their algorithm. Below listed some of my personal usage examples for your reference.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;BED and other formats&lt;/h2&gt;
+
+&lt;h3&gt;BED &lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/content/general-usage.html&quot;&gt;format&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;BED3: A BED file where each feature is described by &lt;em&gt;chrom&lt;/em&gt;, &lt;em&gt;start&lt;/em&gt;, and &lt;em&gt;end&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;pre&gt;&lt;code class=&quot;&quot;&gt;For example: chr1 110 120  
+Note: start is zero-based, where the first base in a chr is numbered 0. And the end is one-based. For example, a SNP at 10 should be coded as start=9, end=10.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;BED4: &lt;em&gt;chrom&lt;/em&gt;, &lt;em&gt;start&lt;/em&gt;, &lt;em&gt;end&lt;/em&gt; and &lt;em&gt;name&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;Other genomic data format can be found from UCSC Genome Browser &lt;a href=&quot;http://genome.ucsc.edu/FAQ/FAQformat#format1&quot;&gt;website&lt;/a&gt;&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Find SNPs in window, report SNPs and the windows they belong to.&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;bedtools intersect -a window.bed -b SNP.bed -wb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;More details see here: &lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html&quot;&gt;&lt;strong&gt;intersect&lt;/strong&gt;&lt;/a&gt;  &lt;br/&gt;
+* &lt;strong&gt;-a:&lt;/strong&gt; window of bed format&lt;br/&gt;
+* &lt;strong&gt;-b:&lt;/strong&gt; SNPs of bed format&lt;br/&gt;
+* &lt;strong&gt;-wb:&lt;/strong&gt; write the original entry in B for each overlap&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Using Rmarkdown and Github for Reproducible Research</title>
    <link href="http://yangjl.me/en/reproducible/2014/11/20/work-flow"/>
    <updated>2014-11-20T00:00:00-08:00</updated>
    <id>http://yangjl.me/en/reproducible/2014/11/20/work-flow</id>
    <content type="html">&lt;p&gt;Broadly speaking, reproducible research aims to generate and report data analyses and scientific claims in a reproducible manner. Or simply, by one click, others could re-generate the results you reported and the report itself. From my personal experience of several years of quantitative genetics research, the broad definition of reproducible research is too ambitious. In a real world study, normally we will spend many days, weeks or even years for data tweaking and hammering. In these processes, many versions of intermediate data will be generated, many parameters for model fitting were tried, and many figures were plotted and changed later. It is such a pain to reproduce a research even conducted by yourself, who normally carried out multiple research projects across years. Do not mention to share with others.&lt;/p&gt;
 
-&lt;p&gt;Modern data analyses rely on tools. Thanks for the powerful R IDE: &lt;a href=&quot;http://www.rstudio.com/&quot;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt; and version control tool: &lt;a href=&quot;https://github.com/&quot;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;, which largely make this idea of reproducible research feasible. After a workshop in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;&lt;strong&gt;RILAB&lt;/strong&gt;&lt;/a&gt;, some of my colleagues show their interests in my workflow of project management and documentation (while, it is far from completely reproducible). It encouraged me to share some of the tools that might be helpful for others.&lt;/p&gt;
+&lt;p&gt;Modern data analyses rely on tools. Thanks for the powerful R IDE: &lt;a href=&quot;http://www.rstudio.com/&quot;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt; and version control tool: &lt;a href=&quot;https://github.com/&quot;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;, which largely make this idea of reproducible research feasible. After a workshop in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;&lt;strong&gt;RILAB&lt;/strong&gt;&lt;/a&gt;, some of my colleagues show their interests in my workflow of project management and documentation, although it is far from completely reproducible. It encouraged me to blog it and share some of the tools that might be helpful for others. Here is the workflow I used.&lt;/p&gt;
 
-&lt;p&gt;When I started a new project,   &lt;br/&gt;
+&lt;h2&gt;Setup project&lt;/h2&gt;
+
+&lt;p&gt;The right corner icon of &lt;strong&gt;RStudio&lt;/strong&gt; will enable you to manage your &lt;em&gt;New Project&lt;/em&gt;.    &lt;br/&gt;
 I normally start a project with&lt;/p&gt;
 
-&lt;h2&gt;Setup your project&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;#install.packages(&#39;ProjectTemplate&#39;)
+library(&#39;ProjectTemplate&#39;)
+create.project(&#39;temp&#39;)
+system(&quot;mv temp/* .&quot;)
+system(&quot;rm -r temp/&quot;)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;using &lt;strong&gt;GitHub&lt;/strong&gt; to do the version control&lt;/li&gt;
