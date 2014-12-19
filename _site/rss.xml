@@ -5,10 +5,91 @@
         <description>Jinliang Yang - Jinliang Yang</description>
         <link>http://yangjl.me/en</link>
         <link>http://yangjl.me/en</link>
-        <lastBuildDate>2014-12-14T20:14:53-08:00</lastBuildDate>
-        <pubDate>2014-12-14T20:14:53-08:00</pubDate>
+        <lastBuildDate>2014-12-16T13:53:48-08:00</lastBuildDate>
+        <pubDate>2014-12-16T13:53:48-08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Python: meaning of __init__ and __main__</title>
+                <description>&lt;h3&gt;What does &lt;code&gt;if __name__ == “__main__” do&lt;/code&gt;?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/419163/what-does-if-name-main-do&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When the Python interpreter reads a source file, it executes all of the code found in it. Before executing the code, it will define a few special variables. For example, if the python interpreter is running that module (the source file) as the main program, it sets the special &lt;strong&gt;name&lt;/strong&gt; variable to have a value &quot;&lt;strong&gt;main&lt;/strong&gt;&quot;. If this file is being imported from another module, &lt;strong&gt;name&lt;/strong&gt; will be set to the module&#39;s name.
+In the case of your script, let&#39;s assume that it&#39;s executing as the main function, e.g. you said something like&lt;br/&gt;
+&lt;code&gt;python threading_example.py&lt;/code&gt;&lt;br/&gt;
+on the command line. After setting up the special variables, it will execute the import statement and load those modules. It will then evaluate the def block, creating a function object and creating a variable called myfunction that points to the function object. It will then read the if statement and see that &lt;strong&gt;name&lt;/strong&gt; does equal &quot;&lt;strong&gt;main&lt;/strong&gt;&quot;, so it will execute the block shown there.&lt;/p&gt;
+
+&lt;p&gt;One of the reasons for doing this is that sometimes you write a module (a .py file) where it can be executed directly. Alternatively, it can also be imported and used in another module. By doing the main check, you can have that code only execute when you want to run the module as a program and not have it execute when someone just wants to import your module and call your functions themselves.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://stackoverflow.com/questions/448271/what-is-init-py-for&quot;&gt;What is &lt;code&gt;__init__.py&lt;/code&gt; for?&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Files name &lt;strong&gt;init&lt;/strong&gt;.py are used to mark directories on disk as Python package directories. If you have the files&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;&quot;&gt;mydir/spam/__init__.py   
+mydir/spam/module.py  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And mydir is on your path, you can import the code in module.py as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;&quot;&gt;import spam.module  
+or  
+from spam import module  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you remove the &lt;strong&gt;init&lt;/strong&gt;.py file, Python will no longer look for submodules inside that directory, so attempts to import the module will fail.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;init&lt;/strong&gt;.py file is usually empty, but can be used to export selected portions of the package under more convenient name, hold convenience functions, etc. Given the example above, the contents of the init module can be accessed as&lt;/p&gt;
+</description>
+                <link>http://yangjl.me/en/codes/2014/12/16/Python-init-name</link>
+                <guid>http://yangjl.me/en/codes/2014/12/16/Python-init-name</guid>
+                <pubDate>2014-12-16T00:00:00-08:00</pubDate>
+        </item>
+
+        <item>
+                <title>R equivalent functions in Pandas</title>
+                <description>&lt;p&gt;Pandas &lt;a href=&quot;http://pandas.pydata.org/pandas-docs/stable/tutorials.html&quot;&gt;Tutorials&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Direct link to some useful functions&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Group by: &lt;a href=&quot;http://pandas.pydata.org/pandas-docs/stable/groupby.html?highlight=aggregate&quot;&gt;split-apply-combine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comparison with &lt;a href=&quot;http://pandas.pydata.org/pandas-docs/dev/comparison_with_r.html&quot;&gt;R/R libraries&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;read.table&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;snpibd = pd.read_table(&quot;largedata/IBD/allsnps_11m_IBD.bed&quot;, sep=&quot;\t&quot;, header= None)
+gerp = pd.read_csv(&quot;largedata/SNP/allsnps_11m_gerpv2_tidy.csv&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;replace = gsub&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;snpibd[3].replace(&quot;chr&quot;, &quot;&quot;, regex=True, inplace=True)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;paste&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;snpibd[&#39;snpid&#39;] = snpibd[3].map(str) + &quot;_&quot; + snpibd[2].map(str)
+snpibd[&#39;ibdid&#39;] = snpibd[3].map(str) + &quot;_&quot; + snpibd[4].map(str)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;merge&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;snp11mgp = pd.merge(gerp130m[[&quot;snpid&quot;, &quot;N&quot;, &quot;RS&quot;]], snp11m, on=&#39;snpid&#39;, sort=False, how=&#39;right&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;write.csv&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;snp11mgp.to_csv(&quot;largedata/SNP/allsnps_11m_gerpv2.csv&quot;, index=False)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+                <link>http://yangjl.me/en/codes/2014/12/15/Pandas</link>
+                <guid>http://yangjl.me/en/codes/2014/12/15/Pandas</guid>
+                <pubDate>2014-12-15T00:00:00-08:00</pubDate>
+        </item>
 
         <item>
                 <title>R package Data.Table Usage Notes</title>
@@ -49,8 +130,8 @@ order.dt &amp;lt;- setkey(dt, &quot;chr&quot;, &quot;pos&quot;)
 
 &lt;h2&gt;More information&lt;/h2&gt;
 </description>
-                <link>http://yangjl.me/en/genomics/2014/12/12/DataTable</link>
-                <guid>http://yangjl.me/en/genomics/2014/12/12/DataTable</guid>
+                <link>http://yangjl.me/en/codes/2014/12/12/DataTable</link>
+                <guid>http://yangjl.me/en/codes/2014/12/12/DataTable</guid>
                 <pubDate>2014-12-12T00:00:00-08:00</pubDate>
         </item>
 
@@ -69,8 +150,8 @@ callcnv &amp;lt;- mcols(mycnv)
 cnvdf &amp;lt;- cbind(cnvdf, callcnv)
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                <link>http://yangjl.me/en/genomics/2014/12/11/IRanges</link>
-                <guid>http://yangjl.me/en/genomics/2014/12/11/IRanges</guid>
+                <link>http://yangjl.me/en/codes/2014/12/11/IRanges</link>
+                <guid>http://yangjl.me/en/codes/2014/12/11/IRanges</guid>
                 <pubDate>2014-12-11T00:00:00-08:00</pubDate>
         </item>
 
@@ -112,8 +193,8 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
 * &lt;strong&gt;-b:&lt;/strong&gt; SNPs of bed format&lt;br/&gt;
 * &lt;strong&gt;-wb:&lt;/strong&gt; write the original entry in B for each overlap&lt;/p&gt;
 </description>
-                <link>http://yangjl.me/en/genomics/2014/12/10/bedtools-practice</link>
-                <guid>http://yangjl.me/en/genomics/2014/12/10/bedtools-practice</guid>
+                <link>http://yangjl.me/en/codes/2014/12/10/bedtools-practice</link>
+                <guid>http://yangjl.me/en/codes/2014/12/10/bedtools-practice</guid>
                 <pubDate>2014-12-10T00:00:00-08:00</pubDate>
         </item>
 

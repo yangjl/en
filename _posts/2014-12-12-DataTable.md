@@ -2,7 +2,7 @@
 layout: post
 title: "R package Data.Table Usage Notes"
 description: "from my personal experience"
-category: genomics
+category: codes
 tags: [tutorial, usage, R, NGS]
 ---
 {% include JB/setup %}

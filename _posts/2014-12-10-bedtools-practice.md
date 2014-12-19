@@ -2,7 +2,7 @@
 layout: post
 title: "Bedtools Usage Notes"
 description: "from my personal experience"
-category: genomics
+category: codes
 tags: [tutorial, usage, bedtools, BED]
 ---
 {% include JB/setup %}

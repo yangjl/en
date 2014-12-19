@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>R package Data.Table Usage Notes</title>
+    <title>Usage of IRanges/GenomicRanges Bioconductor packages</title>
     <meta name="description" content="from my personal experience">
     <meta name="author" content="Jinliang Yang">
 
@@ -113,51 +113,27 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>R package Data.Table Usage Notes </h1>
+  <h1>Usage of IRanges/GenomicRanges Bioconductor packages </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>12 December 2014</span>
+      <span>11 December 2014</span>
     </div>
     <div class="content">
-      <p>Most of those were learned from Kate Crosby's <a href="https://github.com/kate-crosby/datatable_slides">short tutorial</a> in <a href="http://www.rilab.org/">RIL lab</a>.</p>
+      <p><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.pdf"><strong>introduction</strong></a></p>
 
-<h2>Read in data.frame rapidly with <strong>fread</strong></h2>
+<p><a href="http://bioconductor.org/help/course-materials/2013/SeattleFeb2013/IntermediateSequenceAnalysis2013.pdf"><strong>class</strong></a></p>
 
-<pre><code>## tab delimited file
-data &lt;- fread("yourfile.txt", sep="\t")
-## csv file
-data &lt;- fread("yourfile.csv", sep=",")
+<p><a href="http://pgfe.umassmed.edu/ou/archives/3122"><strong>website</strong></a></p>
+
+<h2>Transform <strong>GRanges</strong> to <strong>Data.Frame</strong></h2>
+
+<pre><code>cnvdf &lt;- data.frame(chr=as.character(seqnames(mycnv)), start=start(mycnv), end=end(mycnv))
+callcnv &lt;- mcols(mycnv)
+cnvdf &lt;- cbind(cnvdf, callcnv)
 </code></pre>
-
-<h2>Subsetting dt</h2>
-
-<h3>:= NULL</h3>
-
-<pre><code>sub &lt;- data[, c("chr", "pos") := NULL]
-</code></pre>
-
-<h3>use function of <strong>subset</strong></h3>
-
-<pre><code>sub &lt;- subset(fulldata, select = c("chr", "pos"))
-</code></pre>
-
-<h3>.SD = "Subset of Data.table"</h3>
-
-<p>Select the 2nd row (SNP) for/of each chromosome!
-<code>
-dt &lt;- dt[, .SD[2], by=chrom]
-</code></p>
-
-<h2>Order data really quickly with setkey()</h2>
-
-<pre><code># Here in chr and then pos
-order.dt &lt;- setkey(dt, "chr", "pos")
-</code></pre>
-
-<h2>More information</h2>
 
     </div>
 
@@ -170,8 +146,8 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/categories.html#genomics-ref">
-    		genomics <span>3</span>
+    	<li><a href="/categories.html#codes-ref">
+    		codes <span>5</span>
     	</a></li>
     
   
@@ -189,11 +165,11 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/tags.html#tutorial-ref">tutorial <span>6</span></a></li>
+    	<li><a href="/tags.html#tutorial-ref">tutorial <span>8</span></a></li>
      
-    	<li><a href="/tags.html#usage-ref">usage <span>3</span></a></li>
+    	<li><a href="/tags.html#usage-ref">usage <span>5</span></a></li>
      
-    	<li><a href="/tags.html#R-ref">R <span>1</span></a></li>
+    	<li><a href="/tags.html#bioconductor-ref">bioconductor <span>1</span></a></li>
      
     	<li><a href="/tags.html#NGS-ref">NGS <span>4</span></a></li>
     
@@ -208,11 +184,11 @@ order.dt &lt;- setkey(dt, "chr", "pos")
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/genomics/2014/12/11/IRanges" title="Usage of IRanges/GenomicRanges Bioconductor packages">&larr; Previous</a></li>
+        <li class="prev"><a href="/codes/2014/12/10/bedtools-practice" title="Bedtools Usage Notes">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next disabled"><a>Next &rarr;</a>
+        <li class="next"><a href="/codes/2014/12/12/DataTable" title="R package Data.Table Usage Notes">Next &rarr;</a></li>
       
       </ul>
     </div>
@@ -245,7 +221,7 @@ order.dt &lt;- setkey(dt, "chr", "pos")
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2014 by <a href="http://yangjl.me">Jinliang Yang</a> | <span class="label label-info">2014-12-14 20:14:53</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2014 by <a href="http://yangjl.me">Jinliang Yang</a> | <span class="label label-info">2014-12-16 13:53:48</span></small></p>
       </footer>
 
     </div>

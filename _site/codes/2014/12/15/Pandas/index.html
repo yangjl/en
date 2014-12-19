@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Usage of IRanges/GenomicRanges Bioconductor packages</title>
+    <title>R equivalent functions in Pandas</title>
     <meta name="description" content="from my personal experience">
     <meta name="author" content="Jinliang Yang">
 
@@ -113,26 +113,50 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>Usage of IRanges/GenomicRanges Bioconductor packages </h1>
+  <h1>R equivalent functions in Pandas </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>11 December 2014</span>
+      <span>15 December 2014</span>
     </div>
     <div class="content">
-      <p><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.pdf"><strong>introduction</strong></a></p>
+      <p>Pandas <a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html">Tutorials</a></p>
 
-<p><a href="http://bioconductor.org/help/course-materials/2013/SeattleFeb2013/IntermediateSequenceAnalysis2013.pdf"><strong>class</strong></a></p>
+<h3>Direct link to some useful functions</h3>
 
-<p><a href="http://pgfe.umassmed.edu/ou/archives/3122"><strong>website</strong></a></p>
+<ul>
+<li>Group by: <a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html?highlight=aggregate">split-apply-combine</a></li>
+<li>Comparison with <a href="http://pandas.pydata.org/pandas-docs/dev/comparison_with_r.html">R/R libraries</a></li>
+</ul>
 
-<h2>Transform <strong>GRanges</strong> to <strong>Data.Frame</strong></h2>
 
-<pre><code>cnvdf &lt;- data.frame(chr=as.character(seqnames(mycnv)), start=start(mycnv), end=end(mycnv))
-callcnv &lt;- mcols(mycnv)
-cnvdf &lt;- cbind(cnvdf, callcnv)
+<h3>read.table</h3>
+
+<pre><code>snpibd = pd.read_table("largedata/IBD/allsnps_11m_IBD.bed", sep="\t", header= None)
+gerp = pd.read_csv("largedata/SNP/allsnps_11m_gerpv2_tidy.csv")
+</code></pre>
+
+<h3>replace = gsub</h3>
+
+<pre><code>snpibd[3].replace("chr", "", regex=True, inplace=True)
+</code></pre>
+
+<h3>paste</h3>
+
+<pre><code>snpibd['snpid'] = snpibd[3].map(str) + "_" + snpibd[2].map(str)
+snpibd['ibdid'] = snpibd[3].map(str) + "_" + snpibd[4].map(str)
+</code></pre>
+
+<h3>merge</h3>
+
+<pre><code>snp11mgp = pd.merge(gerp130m[["snpid", "N", "RS"]], snp11m, on='snpid', sort=False, how='right')
+</code></pre>
+
+<h3>write.csv</h3>
+
+<pre><code>snp11mgp.to_csv("largedata/SNP/allsnps_11m_gerpv2.csv", index=False)
 </code></pre>
 
     </div>
@@ -146,8 +170,8 @@ cnvdf &lt;- cbind(cnvdf, callcnv)
 
   
      
-    	<li><a href="/categories.html#genomics-ref">
-    		genomics <span>3</span>
+    	<li><a href="/categories.html#codes-ref">
+    		codes <span>5</span>
     	</a></li>
     
   
@@ -165,13 +189,15 @@ cnvdf &lt;- cbind(cnvdf, callcnv)
 
   
      
-    	<li><a href="/tags.html#tutorial-ref">tutorial <span>6</span></a></li>
+    	<li><a href="/tags.html#tutorial-ref">tutorial <span>8</span></a></li>
      
-    	<li><a href="/tags.html#usage-ref">usage <span>3</span></a></li>
+    	<li><a href="/tags.html#usage-ref">usage <span>5</span></a></li>
      
-    	<li><a href="/tags.html#bioconductor-ref">bioconductor <span>1</span></a></li>
+    	<li><a href="/tags.html#python-ref">python <span>2</span></a></li>
      
-    	<li><a href="/tags.html#NGS-ref">NGS <span>4</span></a></li>
+    	<li><a href="/tags.html#R-ref">R <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#pandas-ref">pandas <span>1</span></a></li>
     
   
 
@@ -184,11 +210,11 @@ cnvdf &lt;- cbind(cnvdf, callcnv)
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/genomics/2014/12/10/bedtools-practice" title="Bedtools Usage Notes">&larr; Previous</a></li>
+        <li class="prev"><a href="/codes/2014/12/12/DataTable" title="R package Data.Table Usage Notes">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/genomics/2014/12/12/DataTable" title="R package Data.Table Usage Notes">Next &rarr;</a></li>
+        <li class="next"><a href="/codes/2014/12/16/Python-init-name" title="Python: meaning of __init__ and __main__">Next &rarr;</a></li>
       
       </ul>
     </div>
@@ -221,7 +247,7 @@ cnvdf &lt;- cbind(cnvdf, callcnv)
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2014 by <a href="http://yangjl.me">Jinliang Yang</a> | <span class="label label-info">2014-12-14 20:14:53</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2014 by <a href="http://yangjl.me">Jinliang Yang</a> | <span class="label label-info">2014-12-16 13:53:48</span></small></p>
       </footer>
 
     </div>
