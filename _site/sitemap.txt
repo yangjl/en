@@ -9,6 +9,7 @@ http://yangjl.me/en/rss.xml
 http://yangjl.me/en/sitemap.txt
 http://yangjl.me/en/tags.html
 
+http://yangjl.me/en/codes/2015/01/01/bash-to-zsh
 http://yangjl.me/en/codes/2014/12/16/Python-init-name
 http://yangjl.me/en/codes/2014/12/15/Pandas
 http://yangjl.me/en/codes/2014/12/12/DataTable

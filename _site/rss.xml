@@ -5,10 +5,29 @@
         <description>Jinliang Yang - Jinliang Yang</description>
         <link>http://yangjl.me/en</link>
         <link>http://yangjl.me/en</link>
-        <lastBuildDate>2014-12-16T13:53:48-08:00</lastBuildDate>
-        <pubDate>2014-12-16T13:53:48-08:00</pubDate>
+        <lastBuildDate>2015-01-07T11:29:13-08:00</lastBuildDate>
+        <pubDate>2015-01-07T11:29:13-08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Changing bash to zsh</title>
+                <description>&lt;h1&gt;Why I change from &lt;code&gt;bash&lt;/code&gt; to &lt;code&gt;zsh&lt;/code&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/jaguardesignstudio/why-zsh-is-cooler-than-your-shell-16194692&quot;&gt;zsh is cooler than bash&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Oh-my-zsh&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Cheat sheat&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.bash2zsh.com/zsh_refcard/refcard.pdf&quot;&gt;Refcard&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>http://yangjl.me/en/codes/2015/01/01/bash-to-zsh</link>
+                <guid>http://yangjl.me/en/codes/2015/01/01/bash-to-zsh</guid>
+                <pubDate>2015-01-01T00:00:00-08:00</pubDate>
+        </item>
 
         <item>
                 <title>Python: meaning of __init__ and __main__</title>
