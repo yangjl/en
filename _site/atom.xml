@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Jinliang Yang</title>
- <link href="http://yangjl.me/en/" rel="self"/>
- <link href="http://yangjl.me/en"/>
- <updated>2015-01-07T11:29:13-08:00</updated>
- <id>http://yangjl.me/en</id>
+ <link href="http://yangjl.com/" rel="self"/>
+ <link href="http://yangjl.com"/>
+ <updated>2015-01-13T00:17:20-08:00</updated>
+ <id>http://yangjl.com</id>
  <author>
    <name>Jinliang Yang</name>
    <email>yangjl0930@gmail.com</email>
@@ -13,10 +13,33 @@
 
  
  <entry>
+   <title>Attending #PAGXXIII at home</title>
+   <link href="http://yangjl.com/notes/2015/01/12/pag2015"/>
+   <updated>2015-01-12T00:00:00-08:00</updated>
+   <id>http://yangjl.com/notes/2015/01/12/pag2015</id>
+   <content type="html">&lt;h1&gt;Why I change from &lt;code&gt;bash&lt;/code&gt; to &lt;code&gt;zsh&lt;/code&gt;&lt;/h1&gt;
+
+&lt;p&gt;I missed #PAG meetings two years in a row partly because of my newborn. Thanks to the social media such as &lt;a href=&quot;https://twitter.com/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;github.com&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;Slideshare&lt;/a&gt;, which keep people like me updated about the excitements in San Diego. Here, I extracted some information from web about #PAGXXIII and try to digest the meeting a little bit at home.&lt;/p&gt;
+
+&lt;p&gt;All the tweets with the dash tag #PAGXXIII was obtained every day and was achieved in the &lt;a href=&quot;&quot;&gt;git repo&lt;/a&gt;. Most of this code was adapted from &lt;a href=&quot;http://gettinggeneticsdone.blogspot.com/search/label/Twitter&quot;&gt;Stephen Turner&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;DAY ONE&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Cheat sheat&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.bash2zsh.com/zsh_refcard/refcard.pdf&quot;&gt;Refcard&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Changing bash to zsh</title>
-   <link href="http://yangjl.me/en/codes/2015/01/01/bash-to-zsh"/>
+   <link href="http://yangjl.com/codes/2015/01/01/bash-to-zsh"/>
    <updated>2015-01-01T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/codes/2015/01/01/bash-to-zsh</id>
+   <id>http://yangjl.com/codes/2015/01/01/bash-to-zsh</id>
    <content type="html">&lt;h1&gt;Why I change from &lt;code&gt;bash&lt;/code&gt; to &lt;code&gt;zsh&lt;/code&gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/jaguardesignstudio/why-zsh-is-cooler-than-your-shell-16194692&quot;&gt;zsh is cooler than bash&lt;/a&gt;&lt;/p&gt;
@@ -33,9 +56,9 @@
  
  <entry>
    <title>Python: meaning of __init__ and __main__</title>
-   <link href="http://yangjl.me/en/codes/2014/12/16/Python-init-name"/>
+   <link href="http://yangjl.com/codes/2014/12/16/Python-init-name"/>
    <updated>2014-12-16T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/codes/2014/12/16/Python-init-name</id>
+   <id>http://yangjl.com/codes/2014/12/16/Python-init-name</id>
    <content type="html">&lt;h3&gt;What does &lt;code&gt;if __name__ == “__main__” do&lt;/code&gt;?&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/419163/what-does-if-name-main-do&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
@@ -70,9 +93,9 @@ from spam import module
  
  <entry>
    <title>R equivalent functions in Pandas</title>
-   <link href="http://yangjl.me/en/codes/2014/12/15/Pandas"/>
+   <link href="http://yangjl.com/codes/2014/12/15/Pandas"/>
    <updated>2014-12-15T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/codes/2014/12/15/Pandas</id>
+   <id>http://yangjl.com/codes/2014/12/15/Pandas</id>
    <content type="html">&lt;p&gt;Pandas &lt;a href=&quot;http://pandas.pydata.org/pandas-docs/stable/tutorials.html&quot;&gt;Tutorials&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;Direct link to some useful functions&lt;/h3&gt;
@@ -114,9 +137,9 @@ snpibd[&#39;ibdid&#39;] = snpibd[3].map(str) + &quot;_&quot; + snpibd[4].map(str
  
  <entry>
    <title>R package Data.Table Usage Notes</title>
-   <link href="http://yangjl.me/en/codes/2014/12/12/DataTable"/>
+   <link href="http://yangjl.com/codes/2014/12/12/DataTable"/>
    <updated>2014-12-12T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/codes/2014/12/12/DataTable</id>
+   <id>http://yangjl.com/codes/2014/12/12/DataTable</id>
    <content type="html">&lt;p&gt;Most of those were learned from Kate Crosby&#39;s &lt;a href=&quot;https://github.com/kate-crosby/datatable_slides&quot;&gt;short tutorial&lt;/a&gt; in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;RIL lab&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2&gt;Read in data.frame rapidly with &lt;strong&gt;fread&lt;/strong&gt;&lt;/h2&gt;
@@ -158,9 +181,9 @@ order.dt &amp;lt;- setkey(dt, &quot;chr&quot;, &quot;pos&quot;)
  
  <entry>
    <title>Usage of IRanges/GenomicRanges Bioconductor packages</title>
-   <link href="http://yangjl.me/en/codes/2014/12/11/IRanges"/>
+   <link href="http://yangjl.com/codes/2014/12/11/IRanges"/>
    <updated>2014-12-11T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/codes/2014/12/11/IRanges</id>
+   <id>http://yangjl.com/codes/2014/12/11/IRanges</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.pdf&quot;&gt;&lt;strong&gt;introduction&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://bioconductor.org/help/course-materials/2013/SeattleFeb2013/IntermediateSequenceAnalysis2013.pdf&quot;&gt;&lt;strong&gt;class&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
@@ -178,9 +201,9 @@ cnvdf &amp;lt;- cbind(cnvdf, callcnv)
  
  <entry>
    <title>Bedtools Usage Notes</title>
-   <link href="http://yangjl.me/en/codes/2014/12/10/bedtools-practice"/>
+   <link href="http://yangjl.com/codes/2014/12/10/bedtools-practice"/>
    <updated>2014-12-10T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/codes/2014/12/10/bedtools-practice</id>
+   <id>http://yangjl.com/codes/2014/12/10/bedtools-practice</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/index.html&quot;&gt;&lt;strong&gt;Bedtools&lt;/strong&gt;&lt;/a&gt; contain several handy utilities for genomic data analysis, especially useful for feature intersection analysis by using the function &lt;strong&gt;intersect&lt;/strong&gt;. I like bedtools because of the simple &lt;strong&gt;BED&lt;/strong&gt; format and speed of their algorithm. Below listed some of my personal usage examples for your reference.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -221,9 +244,9 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
  
  <entry>
    <title>Using Rmarkdown and Github for Reproducible Research</title>
-   <link href="http://yangjl.me/en/reproducible/2014/11/20/work-flow"/>
+   <link href="http://yangjl.com/reproducible/2014/11/20/work-flow"/>
    <updated>2014-11-20T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/reproducible/2014/11/20/work-flow</id>
+   <id>http://yangjl.com/reproducible/2014/11/20/work-flow</id>
    <content type="html">&lt;p&gt;Broadly speaking, reproducible research aims to generate and report data analyses and scientific claims in a reproducible manner. Or simply, by one click, others could re-generate the results you reported and the report itself. From my personal experience of several years of quantitative genetics research, the broad definition of reproducible research is too ambitious. In a real world study, normally we will spend many days, weeks or even years for data tweaking and hammering. In these processes, many versions of intermediate data will be generated, many parameters for model fitting were tried, and many figures were plotted and changed later. It is such a pain to reproduce a research even conducted by yourself, who normally carried out multiple research projects across years. Do not mention to share with others.&lt;/p&gt;
 
 &lt;p&gt;Modern data analyses rely on tools. Thanks for the powerful R IDE: &lt;a href=&quot;http://www.rstudio.com/&quot;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt; and version control tool: &lt;a href=&quot;https://github.com/&quot;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;, which largely make this idea of reproducible research feasible. After a workshop in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;&lt;strong&gt;RILAB&lt;/strong&gt;&lt;/a&gt;, some of my colleagues show their interests in my workflow of project management and documentation, although it is far from completely reproducible. It encouraged me to blog it and share some of the tools that might be helpful for others. Here is the workflow I used.&lt;/p&gt;
@@ -251,9 +274,9 @@ system(&quot;rm -r temp/&quot;)
  
  <entry>
    <title>A show case of using Rmarkdown and Github for reproducible research</title>
-   <link href="http://yangjl.me/en/reproducible/2014/11/05/reproducible-research+copy"/>
+   <link href="http://yangjl.com/reproducible/2014/11/05/reproducible-research+copy"/>
    <updated>2014-11-05T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/reproducible/2014/11/05/reproducible-research copy</id>
+   <id>http://yangjl.com/reproducible/2014/11/05/reproducible-research copy</id>
    <content type="html">&lt;h1&gt;Markdown&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; is a simple, easy-to-read, easy-to-write plain text format. The syntax of markdown could be printed in less than one page.&lt;/p&gt;
@@ -342,9 +365,9 @@ line break&lt;/p&gt;
  
  <entry>
    <title>Journal Club（2）</title>
-   <link href="http://yangjl.me/en/journal%20club/2014/04/09/Journal-Club-2"/>
+   <link href="http://yangjl.com/journal%20club/2014/04/09/Journal-Club-2"/>
    <updated>2014-04-09T00:00:00-07:00</updated>
-   <id>http://yangjl.me/en/journal%20club/2014/04/09/Journal-Club-2</id>
+   <id>http://yangjl.com/journal%20club/2014/04/09/Journal-Club-2</id>
    <content type="html">&lt;p&gt;This nature&#39;s cover story &quot;THE GREEN HOURGLASS&quot; was really an exciting paper. I regret to not be able to fully capture it two years ago.&lt;/p&gt;
 
 &lt;p&gt;The authors adapted the embryonic hourclass model proposed from vertebrates (as the figure show below) to plants, and provided the transcriptomic evidence from two complementary analyses. What is the embryonic hourclass? It refers to embryos from various taxa appear different in early stages, and converge to a similar form during mid-embryogenesis (or called phylotypic stage), and again diverge in later stages.&lt;/p&gt;
@@ -366,9 +389,9 @@ line break&lt;/p&gt;
  
  <entry>
    <title>NGS data of Maize</title>
-   <link href="http://yangjl.me/en/bigdata%20of%20maize/2014/03/05/NCBI-SRA"/>
+   <link href="http://yangjl.com/bigdata%20of%20maize/2014/03/05/NCBI-SRA"/>
    <updated>2014-03-05T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/bigdata%20of%20maize/2014/03/05/NCBI-SRA</id>
+   <id>http://yangjl.com/bigdata%20of%20maize/2014/03/05/NCBI-SRA</id>
    <content type="html">&lt;p&gt;We are now in the Big Data era, where &quot;the data scientist will become the most sexy job in the world&quot; said by &lt;a href=&quot;http://www.nytimes.com/2013/04/14/education/edlife/universities-offer-courses-in-a-hot-new-field-data-science.html?pagewanted=all&amp;amp;_r=0&quot;&gt;NYT&lt;/a&gt;. And the IT world frequently mentioned &quot;90% of the data in the world today has been created in the last two years alone&quot;. It seems like a strong wave of data explosion is coming!&lt;/p&gt;
 
 &lt;p&gt;Amazing! However, I feel like we have nothing to do with it until recently when I checked the NCBI SRA database for a talk. I found that, we, the maize community, are right in the midst of the Big Data explosion. According to the database report, while after doing some accessions lookup, in the past several years, especially the last two years, about 13,000 Giga base-pairs were deposited from the maize community. That is about 6,500 depth of coverage of the maize genome if roughly assuming the maize genome is 2 Giba bases in size. This estimation not includes the on-going projects and non-submitted datasets. More importantly, this is happening just five years after the accomplishment of the maize B73 reference genome project. If we review the complete datasets in the SRA database, maize NGS data actually only accounted for &amp;lt; 0.1%. Until the end of Feb. 2014, more than 2,300 Tera bases reside there. The &quot;90% &lt;strong&gt;genome sequencing data&lt;/strong&gt; were generated in the past two years alone&quot;. See, IT&#39;s data theory could be perfectly aligned to the sequencing industry (see the figure below).&lt;/p&gt;
@@ -473,9 +496,9 @@ line break&lt;/p&gt;
  
  <entry>
    <title>Jekyll Introduction</title>
-   <link href="http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction"/>
+   <link href="http://yangjl.com/lessons/2011/12/29/jekyll-introduction"/>
    <updated>2011-12-29T00:00:00-08:00</updated>
-   <id>http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction</id>
+   <id>http://yangjl.com/lessons/2011/12/29/jekyll-introduction</id>
    <content type="html">&lt;p&gt;This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
 Directly following the intro we&#39;ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
 

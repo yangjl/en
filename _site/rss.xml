@@ -3,12 +3,35 @@
 <channel>
         <title>Jinliang Yang</title>
         <description>Jinliang Yang - Jinliang Yang</description>
-        <link>http://yangjl.me/en</link>
-        <link>http://yangjl.me/en</link>
-        <lastBuildDate>2015-01-07T11:29:13-08:00</lastBuildDate>
-        <pubDate>2015-01-07T11:29:13-08:00</pubDate>
+        <link>http://yangjl.com</link>
+        <link>http://yangjl.com</link>
+        <lastBuildDate>2015-01-13T00:17:20-08:00</lastBuildDate>
+        <pubDate>2015-01-13T00:17:20-08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Attending #PAGXXIII at home</title>
+                <description>&lt;h1&gt;Why I change from &lt;code&gt;bash&lt;/code&gt; to &lt;code&gt;zsh&lt;/code&gt;&lt;/h1&gt;
+
+&lt;p&gt;I missed #PAG meetings two years in a row partly because of my newborn. Thanks to the social media such as &lt;a href=&quot;https://twitter.com/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;github.com&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;Slideshare&lt;/a&gt;, which keep people like me updated about the excitements in San Diego. Here, I extracted some information from web about #PAGXXIII and try to digest the meeting a little bit at home.&lt;/p&gt;
+
+&lt;p&gt;All the tweets with the dash tag #PAGXXIII was obtained every day and was achieved in the &lt;a href=&quot;&quot;&gt;git repo&lt;/a&gt;. Most of this code was adapted from &lt;a href=&quot;http://gettinggeneticsdone.blogspot.com/search/label/Twitter&quot;&gt;Stephen Turner&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;DAY ONE&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Cheat sheat&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.bash2zsh.com/zsh_refcard/refcard.pdf&quot;&gt;Refcard&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>http://yangjl.com/notes/2015/01/12/pag2015</link>
+                <guid>http://yangjl.com/notes/2015/01/12/pag2015</guid>
+                <pubDate>2015-01-12T00:00:00-08:00</pubDate>
+        </item>
 
         <item>
                 <title>Changing bash to zsh</title>
@@ -24,8 +47,8 @@
 
 &lt;p&gt;&lt;a href=&quot;http://www.bash2zsh.com/zsh_refcard/refcard.pdf&quot;&gt;Refcard&lt;/a&gt;&lt;/p&gt;
 </description>
-                <link>http://yangjl.me/en/codes/2015/01/01/bash-to-zsh</link>
-                <guid>http://yangjl.me/en/codes/2015/01/01/bash-to-zsh</guid>
+                <link>http://yangjl.com/codes/2015/01/01/bash-to-zsh</link>
+                <guid>http://yangjl.com/codes/2015/01/01/bash-to-zsh</guid>
                 <pubDate>2015-01-01T00:00:00-08:00</pubDate>
         </item>
 
@@ -61,8 +84,8 @@ from spam import module
 
 &lt;p&gt;The &lt;strong&gt;init&lt;/strong&gt;.py file is usually empty, but can be used to export selected portions of the package under more convenient name, hold convenience functions, etc. Given the example above, the contents of the init module can be accessed as&lt;/p&gt;
 </description>
-                <link>http://yangjl.me/en/codes/2014/12/16/Python-init-name</link>
-                <guid>http://yangjl.me/en/codes/2014/12/16/Python-init-name</guid>
+                <link>http://yangjl.com/codes/2014/12/16/Python-init-name</link>
+                <guid>http://yangjl.com/codes/2014/12/16/Python-init-name</guid>
                 <pubDate>2014-12-16T00:00:00-08:00</pubDate>
         </item>
 
@@ -105,8 +128,8 @@ snpibd[&#39;ibdid&#39;] = snpibd[3].map(str) + &quot;_&quot; + snpibd[4].map(str
 &lt;pre&gt;&lt;code&gt;snp11mgp.to_csv(&quot;largedata/SNP/allsnps_11m_gerpv2.csv&quot;, index=False)
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                <link>http://yangjl.me/en/codes/2014/12/15/Pandas</link>
-                <guid>http://yangjl.me/en/codes/2014/12/15/Pandas</guid>
+                <link>http://yangjl.com/codes/2014/12/15/Pandas</link>
+                <guid>http://yangjl.com/codes/2014/12/15/Pandas</guid>
                 <pubDate>2014-12-15T00:00:00-08:00</pubDate>
         </item>
 
@@ -149,8 +172,8 @@ order.dt &amp;lt;- setkey(dt, &quot;chr&quot;, &quot;pos&quot;)
 
 &lt;h2&gt;More information&lt;/h2&gt;
 </description>
-                <link>http://yangjl.me/en/codes/2014/12/12/DataTable</link>
-                <guid>http://yangjl.me/en/codes/2014/12/12/DataTable</guid>
+                <link>http://yangjl.com/codes/2014/12/12/DataTable</link>
+                <guid>http://yangjl.com/codes/2014/12/12/DataTable</guid>
                 <pubDate>2014-12-12T00:00:00-08:00</pubDate>
         </item>
 
@@ -169,8 +192,8 @@ callcnv &amp;lt;- mcols(mycnv)
 cnvdf &amp;lt;- cbind(cnvdf, callcnv)
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                <link>http://yangjl.me/en/codes/2014/12/11/IRanges</link>
-                <guid>http://yangjl.me/en/codes/2014/12/11/IRanges</guid>
+                <link>http://yangjl.com/codes/2014/12/11/IRanges</link>
+                <guid>http://yangjl.com/codes/2014/12/11/IRanges</guid>
                 <pubDate>2014-12-11T00:00:00-08:00</pubDate>
         </item>
 
@@ -212,8 +235,8 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
 * &lt;strong&gt;-b:&lt;/strong&gt; SNPs of bed format&lt;br/&gt;
 * &lt;strong&gt;-wb:&lt;/strong&gt; write the original entry in B for each overlap&lt;/p&gt;
 </description>
-                <link>http://yangjl.me/en/codes/2014/12/10/bedtools-practice</link>
-                <guid>http://yangjl.me/en/codes/2014/12/10/bedtools-practice</guid>
+                <link>http://yangjl.com/codes/2014/12/10/bedtools-practice</link>
+                <guid>http://yangjl.com/codes/2014/12/10/bedtools-practice</guid>
                 <pubDate>2014-12-10T00:00:00-08:00</pubDate>
         </item>
 
@@ -242,8 +265,8 @@ system(&quot;rm -r temp/&quot;)
 &lt;/ul&gt;
 
 </description>
-                <link>http://yangjl.me/en/reproducible/2014/11/20/work-flow</link>
-                <guid>http://yangjl.me/en/reproducible/2014/11/20/work-flow</guid>
+                <link>http://yangjl.com/reproducible/2014/11/20/work-flow</link>
+                <guid>http://yangjl.com/reproducible/2014/11/20/work-flow</guid>
                 <pubDate>2014-11-20T00:00:00-08:00</pubDate>
         </item>
 
@@ -333,8 +356,8 @@ line break&lt;/p&gt;
 
 &lt;p&gt;This is an example of a draft. Read more here: &lt;a href=&quot;http://jekyllrb.com/docs/drafts/&quot;&gt;http://jekyllrb.com/docs/drafts/&lt;/a&gt;&lt;/p&gt;
 </description>
-                <link>http://yangjl.me/en/reproducible/2014/11/05/reproducible-research+copy</link>
-                <guid>http://yangjl.me/en/reproducible/2014/11/05/reproducible-research copy</guid>
+                <link>http://yangjl.com/reproducible/2014/11/05/reproducible-research+copy</link>
+                <guid>http://yangjl.com/reproducible/2014/11/05/reproducible-research copy</guid>
                 <pubDate>2014-11-05T00:00:00-08:00</pubDate>
         </item>
 
@@ -357,8 +380,8 @@ line break&lt;/p&gt;
 
 &lt;h4&gt;&lt;i class=&quot;icon-folder-open&quot;&gt;&lt;/i&gt;&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/22951968&quot;&gt;reference link:&lt;/a&gt;&lt;/h4&gt;
 </description>
-                <link>http://yangjl.me/en/journal%20club/2014/04/09/Journal-Club-2</link>
-                <guid>http://yangjl.me/en/journal%20club/2014/04/09/Journal-Club-2</guid>
+                <link>http://yangjl.com/journal%20club/2014/04/09/Journal-Club-2</link>
+                <guid>http://yangjl.com/journal%20club/2014/04/09/Journal-Club-2</guid>
                 <pubDate>2014-04-09T00:00:00-07:00</pubDate>
         </item>
 
@@ -464,8 +487,8 @@ line break&lt;/p&gt;
 
 &lt;p&gt;Big Data era in maize is coming, are you ready yet?&lt;/p&gt;
 </description>
-                <link>http://yangjl.me/en/bigdata%20of%20maize/2014/03/05/NCBI-SRA</link>
-                <guid>http://yangjl.me/en/bigdata%20of%20maize/2014/03/05/NCBI-SRA</guid>
+                <link>http://yangjl.com/bigdata%20of%20maize/2014/03/05/NCBI-SRA</link>
+                <guid>http://yangjl.com/bigdata%20of%20maize/2014/03/05/NCBI-SRA</guid>
                 <pubDate>2014-03-05T00:00:00-08:00</pubDate>
         </item>
 
@@ -874,8 +897,8 @@ As noted, our main programming constraint is the fact that our API is limited to
 &lt;p&gt;Please take a look at &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
 or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you&#39;d like.&lt;/p&gt;
 </description>
-                <link>http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction</link>
-                <guid>http://yangjl.me/en/lessons/2011/12/29/jekyll-introduction</guid>
+                <link>http://yangjl.com/lessons/2011/12/29/jekyll-introduction</link>
+                <guid>http://yangjl.com/lessons/2011/12/29/jekyll-introduction</guid>
                 <pubDate>2011-12-29T00:00:00-08:00</pubDate>
         </item>
 
