@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git version control between laptop and local linux server with Github"
+title: "Git version control between laptop and linux server"
 description: "Git version control"
 category: notes
 tags: [tutorial, github]
