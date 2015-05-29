@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>R package Data.Table Usage Notes</title>
-    <meta name="description" content="from my personal experience">
+    <title>Retrieving large SRA files from NCBI using Aspera</title>
+    <meta name="description" content="Git version control">
     <meta name="author" content="Jinliang Yang">
 
     <!-- Enable responsive viewport -->
@@ -113,51 +113,41 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>R package Data.Table Usage Notes </h1>
+  <h1>Retrieving large SRA files from NCBI using Aspera </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>12 December 2014</span>
+      <span>09 April 2015</span>
     </div>
     <div class="content">
-      <p>Most of those were learned from Kate Crosby's <a href="https://github.com/kate-crosby/datatable_slides">short tutorial</a> in <a href="http://www.rilab.org/">RIL lab</a>.</p>
+      <p>NCBI has started using 3rd party commercial software to improve SRA data transferring speeds <strong>Aspera</strong>. The download rate can reach to hundreds MB/s.</p>
 
-<h2>Read in data.frame rapidly with <strong>fread</strong></h2>
+<p>Here is how to use it in Linux:</p>
 
-<pre><code>## tab delimited file
-data &lt;- fread("yourfile.txt", sep="\t")
-## csv file
-data &lt;- fread("yourfile.csv", sep=",")
+<h3>1. Download it:</h3>
+
+<p>There are multiple different stuff there <a href="http://downloads.asperasoft.com/downloads">http://downloads.asperasoft.com/downloads</a>. You should download this one for Linux system: <a href="http://downloads.asperasoft.com/en/downloads/8?list">Aspera connect</a>, high-performance transfer browser plug-in.</p>
+
+<h3>2. Install it:</h3>
+
+<p>It is super simple for installation.</p>
+
+<pre><code>ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
 </code></pre>
 
-<h2>Subsetting dt</h2>
-
-<h3>:= NULL</h3>
-
-<pre><code>sub &lt;- data[, c("chr", "pos") := NULL]
-</code></pre>
-
-<h3>use function of <strong>subset</strong></h3>
-
-<pre><code>sub &lt;- subset(fulldata, select = c("chr", "pos"))
-</code></pre>
-
-<h3>.SD = "Subset of Data.table"</h3>
-
-<p>Select the 2nd row (SNP) for/of each chromosome!
+<p>The command line utility called <strong>ascp</strong>, which is installed in
 <code>
-dt &lt;- dt[, .SD[2], by=chrom]
+$HOME/.aspera/connect
 </code></p>
 
-<h2>Order data really quickly with setkey()</h2>
+<h3>3. Use it:</h3>
 
-<pre><code># Here in chr and then pos
-order.dt &lt;- setkey(dt, "chr", "pos")
+<p>You can test it by downloading the <em>1GB</em> file. Note that the public key file should point to <em>.openssh</em> rather than <em>.putty</em>, which was suggested by <a href="http://wiki.bioinformatics.ucdavis.edu/index.php/Aspera_upload/download_to_NCBI">others</a>.</p>
+
+<pre><code>ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
 </code></pre>
-
-<h2>More information</h2>
 
     </div>
 
@@ -170,8 +160,8 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/categories.html#codes-ref">
-    		codes <span>7</span>
+    	<li><a href="/categories.html#notes-ref">
+    		notes <span>7</span>
     	</a></li>
     
   
@@ -189,11 +179,9 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/tags.html#tutorial-ref">tutorial <span>10</span></a></li>
+    	<li><a href="/tags.html#notes-ref">notes <span>5</span></a></li>
      
-    	<li><a href="/tags.html#usage-ref">usage <span>6</span></a></li>
-     
-    	<li><a href="/tags.html#R-ref">R <span>2</span></a></li>
+    	<li><a href="/tags.html#NCBI-ref">NCBI <span>1</span></a></li>
      
     	<li><a href="/tags.html#NGS-ref">NGS <span>6</span></a></li>
     
@@ -208,11 +196,11 @@ order.dt &lt;- setkey(dt, "chr", "pos")
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/codes/2014/12/11/IRanges" title="Usage of IRanges/GenomicRanges Bioconductor packages">&larr; Previous</a></li>
+        <li class="prev"><a href="/notes/2015/04/08/sync-git" title="Git version control between laptop and linux server">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/codes/2014/12/15/Pandas" title="R equivalent functions in Pandas">Next &rarr;</a></li>
+        <li class="next"><a href="/notes/2015/04/15/hdf5" title="TASSEL GBS HDF5 format">Next &rarr;</a></li>
       
       </ul>
     </div>

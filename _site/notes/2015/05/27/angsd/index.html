@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>R package Data.Table Usage Notes</title>
-    <meta name="description" content="from my personal experience">
+    <title>Notes on learning ANGSD</title>
+    <meta name="description" content="reading">
     <meta name="author" content="Jinliang Yang">
 
     <!-- Enable responsive viewport -->
@@ -113,51 +113,60 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>R package Data.Table Usage Notes </h1>
+  <h1>Notes on learning ANGSD </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>12 December 2014</span>
+      <span>27 May 2015</span>
     </div>
     <div class="content">
-      <p>Most of those were learned from Kate Crosby's <a href="https://github.com/kate-crosby/datatable_slides">short tutorial</a> in <a href="http://www.rilab.org/">RIL lab</a>.</p>
+      <p>The biggest advantages of <a href="http://popgen.dk/wiki/index.php/ANGSD">ANGSD</a> as they claimed are "<em>Most methods take genotype uncertainty into account instead of basing the analysis on called genotypes. This is especially useful for low and medium depth data</em>". The software was forked to my own <a href="https://github.com/yangjl/angsd">repo</a>.</p>
 
-<h2>Read in data.frame rapidly with <strong>fread</strong></h2>
+<h1>Install from Github</h1>
 
-<pre><code>## tab delimited file
-data &lt;- fread("yourfile.txt", sep="\t")
-## csv file
-data &lt;- fread("yourfile.csv", sep=",")
+<p>You also need to install <code>CRAM</code> by <code>htslib</code>, although I have no idea what CRAM is, I believe it might be something more fast or a space saving format (like SAM?). I have to say the installation become so easy with github!</p>
+
+<pre><code>git clone https://github.com/samtools/htslib.git  
+git clone git://github.com/ANGSD/angsd.git   
+cd angsd  
+make  
 </code></pre>
 
-<h2>Subsetting dt</h2>
+<h1>Preparation for BAM input</h1>
 
-<h3>:= NULL</h3>
+<p>The following codes all following ANGSD's tutorial.</p>
 
-<pre><code>sub &lt;- data[, c("chr", "pos") := NULL]
+<pre><code>### download data
+wget http://popgen.dk/software/download/angsd/bams.tar.gz
+tar xf bams.tar.gz
+### indexing them
+for i in bams/*.bam;do samtools index $i;done
+### create a list
+ls bams/*.bam &gt; bam.filelist
 </code></pre>
 
-<h3>use function of <strong>subset</strong></h3>
+<h1>SNP and genotype calling</h1>
 
-<pre><code>sub &lt;- subset(fulldata, select = c("chr", "pos"))
+<p>SNPs are called based on their allele frequencies by <code>-doMaf</code>. Basically, they will call a SNP if a site has a minor allele frequency significantly different from 0. (Note: how about really minor allele?)</p>
+
+<pre><code class="">### MAF for every basepair
+angsd -bam bam.filelist -doMajorMinor 2 -doMaf 8  -doCounts 1 -out out
+
+### SNP calling
+angsd -bam bam.filelist -GL 1 -out outfile -doMaf 2 -SNP_pval 1e-6 -doMajorMinor 1
+
+### Genotype Likelihoods
+angsd -bam bam.filelist -GL 1 -doGlf 2 -doMajorMinor 1 -doMaf 2 -SNP_pval 2e-6 -out genolike -nThreads 10
+
+### Genotype calling in one step
+angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doGeno 5 -doPost 1 -postCutoff 0.95
 </code></pre>
 
-<h3>.SD = "Subset of Data.table"</h3>
+<p>with option <code>-doPlink 1</code>, it will output PLINK format.</p>
 
-<p>Select the 2nd row (SNP) for/of each chromosome!
-<code>
-dt &lt;- dt[, .SD[2], by=chrom]
-</code></p>
-
-<h2>Order data really quickly with setkey()</h2>
-
-<pre><code># Here in chr and then pos
-order.dt &lt;- setkey(dt, "chr", "pos")
-</code></pre>
-
-<h2>More information</h2>
+<h1>Population Genetics</h1>
 
     </div>
 
@@ -170,8 +179,8 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/categories.html#codes-ref">
-    		codes <span>7</span>
+    	<li><a href="/categories.html#notes-ref">
+    		notes <span>7</span>
     	</a></li>
     
   
@@ -189,13 +198,17 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/tags.html#tutorial-ref">tutorial <span>10</span></a></li>
+    	<li><a href="/tags.html#popgen-ref">popgen <span>1</span></a></li>
      
-    	<li><a href="/tags.html#usage-ref">usage <span>6</span></a></li>
+    	<li><a href="/tags.html#python-ref">python <span>5</span></a></li>
      
-    	<li><a href="/tags.html#R-ref">R <span>2</span></a></li>
+    	<li><a href="/tags.html#software-ref">software <span>1</span></a></li>
      
-    	<li><a href="/tags.html#NGS-ref">NGS <span>6</span></a></li>
+    	<li><a href="/tags.html#github-ref">github <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#notes-ref">notes <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#angsd-ref">angsd <span>1</span></a></li>
     
   
 
@@ -208,11 +221,11 @@ order.dt &lt;- setkey(dt, "chr", "pos")
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/codes/2014/12/11/IRanges" title="Usage of IRanges/GenomicRanges Bioconductor packages">&larr; Previous</a></li>
+        <li class="prev"><a href="/notes/2015/05/11/reading-list" title="Reading List">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/codes/2014/12/15/Pandas" title="R equivalent functions in Pandas">Next &rarr;</a></li>
+        <li class="next"><a href="/codes/2015/05/27/zip" title="Compression related commands">Next &rarr;</a></li>
       
       </ul>
     </div>

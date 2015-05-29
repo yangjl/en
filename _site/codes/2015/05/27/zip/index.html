@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>R package Data.Table Usage Notes</title>
-    <meta name="description" content="from my personal experience">
+    <title>Compression related commands</title>
+    <meta name="description" content="">
     <meta name="author" content="Jinliang Yang">
 
     <!-- Enable responsive viewport -->
@@ -113,51 +113,26 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>R package Data.Table Usage Notes </h1>
+  <h1>Compression related commands </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>12 December 2014</span>
+      <span>27 May 2015</span>
     </div>
     <div class="content">
-      <p>Most of those were learned from Kate Crosby's <a href="https://github.com/kate-crosby/datatable_slides">short tutorial</a> in <a href="http://www.rilab.org/">RIL lab</a>.</p>
+      <h2>How to extract tar.gz file</h2>
 
-<h2>Read in data.frame rapidly with <strong>fread</strong></h2>
-
-<pre><code>## tab delimited file
-data &lt;- fread("yourfile.txt", sep="\t")
-## csv file
-data &lt;- fread("yourfile.csv", sep=",")
+<pre><code>tar -zxvf file.tar.gz
 </code></pre>
 
-<h2>Subsetting dt</h2>
+<p>where, <code>-z</code> works on gzip compression automatically when reading archives; <code>-x</code>, extract archives; <code>-v</code> produce verbose output; <code>-f</code> read the archive from the archive to the specififed file.</p>
 
-<h3>:= NULL</h3>
+<h2>How to get the first few lines from the *.gz file.</h2>
 
-<pre><code>sub &lt;- data[, c("chr", "pos") := NULL]
+<pre><code>gzip -cd *.gz | head -n 30
 </code></pre>
-
-<h3>use function of <strong>subset</strong></h3>
-
-<pre><code>sub &lt;- subset(fulldata, select = c("chr", "pos"))
-</code></pre>
-
-<h3>.SD = "Subset of Data.table"</h3>
-
-<p>Select the 2nd row (SNP) for/of each chromosome!
-<code>
-dt &lt;- dt[, .SD[2], by=chrom]
-</code></p>
-
-<h2>Order data really quickly with setkey()</h2>
-
-<pre><code># Here in chr and then pos
-order.dt &lt;- setkey(dt, "chr", "pos")
-</code></pre>
-
-<h2>More information</h2>
 
     </div>
 
@@ -189,13 +164,9 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/tags.html#tutorial-ref">tutorial <span>10</span></a></li>
+    	<li><a href="/tags.html#statistics-ref">statistics <span>2</span></a></li>
      
-    	<li><a href="/tags.html#usage-ref">usage <span>6</span></a></li>
-     
-    	<li><a href="/tags.html#R-ref">R <span>2</span></a></li>
-     
-    	<li><a href="/tags.html#NGS-ref">NGS <span>6</span></a></li>
+    	<li><a href="/tags.html#python-ref">python <span>5</span></a></li>
     
   
 
@@ -208,11 +179,11 @@ order.dt &lt;- setkey(dt, "chr", "pos")
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/codes/2014/12/11/IRanges" title="Usage of IRanges/GenomicRanges Bioconductor packages">&larr; Previous</a></li>
+        <li class="prev"><a href="/notes/2015/05/27/angsd" title="Notes on learning ANGSD">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/codes/2014/12/15/Pandas" title="R equivalent functions in Pandas">Next &rarr;</a></li>
+        <li class="next disabled"><a>Next &rarr;</a>
       
       </ul>
     </div>

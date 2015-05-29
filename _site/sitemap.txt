@@ -9,6 +9,13 @@ http://yangjl.com/en/rss.xml
 http://yangjl.com/en/sitemap.txt
 http://yangjl.com/en/tags.html
 
+http://yangjl.com/en/codes/2015/05/27/zip
+http://yangjl.com/en/notes/2015/05/27/angsd
+http://yangjl.com/en/notes/2015/05/11/reading-list
+http://yangjl.com/en/notes/2015/05/10/latex
+http://yangjl.com/en/notes/2015/04/15/hdf5
+http://yangjl.com/en/notes/2015/04/09/aspera
+http://yangjl.com/en/notes/2015/04/08/sync-git
 http://yangjl.com/en/notes/2015/01/12/pag2015
 http://yangjl.com/en/codes/2015/01/01/bash-to-zsh
 http://yangjl.com/en/codes/2014/12/16/Python-init-name

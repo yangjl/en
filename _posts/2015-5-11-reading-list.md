@@ -2,7 +2,7 @@
 layout: post
 title: "Reading List"
 description: "reading"
-category: notes, lessons
+category: notes
 tags: [statistics, python]
 ---
 {% include JB/setup %}

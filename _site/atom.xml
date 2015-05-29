@@ -4,13 +4,210 @@
  <title>Jinliang Yang</title>
  <link href="http://yangjl.com/en/" rel="self"/>
  <link href="http://yangjl.com/en"/>
- <updated>2015-01-13T11:42:41-08:00</updated>
+ <updated>2015-05-28T10:00:47-07:00</updated>
  <id>http://yangjl.com/en</id>
  <author>
    <name>Jinliang Yang</name>
    <email>yangjl0930@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Compression related commands</title>
+   <link href="http://yangjl.com/en/codes/2015/05/27/zip"/>
+   <updated>2015-05-27T00:00:00-07:00</updated>
+   <id>http://yangjl.com/en/codes/2015/05/27/zip</id>
+   <content type="html">&lt;h2&gt;How to extract tar.gz file&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;tar -zxvf file.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where, &lt;code&gt;-z&lt;/code&gt; works on gzip compression automatically when reading archives; &lt;code&gt;-x&lt;/code&gt;, extract archives; &lt;code&gt;-v&lt;/code&gt; produce verbose output; &lt;code&gt;-f&lt;/code&gt; read the archive from the archive to the specififed file.&lt;/p&gt;
+
+&lt;h2&gt;How to get the first few lines from the *.gz file.&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;gzip -cd *.gz | head -n 30
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Notes on learning ANGSD</title>
+   <link href="http://yangjl.com/en/notes/2015/05/27/angsd"/>
+   <updated>2015-05-27T00:00:00-07:00</updated>
+   <id>http://yangjl.com/en/notes/2015/05/27/angsd</id>
+   <content type="html">&lt;p&gt;The biggest advantages of &lt;a href=&quot;http://popgen.dk/wiki/index.php/ANGSD&quot;&gt;ANGSD&lt;/a&gt; as they claimed are &quot;&lt;em&gt;Most methods take genotype uncertainty into account instead of basing the analysis on called genotypes. This is especially useful for low and medium depth data&lt;/em&gt;&quot;. The software was forked to my own &lt;a href=&quot;https://github.com/yangjl/angsd&quot;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Install from Github&lt;/h1&gt;
+
+&lt;p&gt;You also need to install &lt;code&gt;CRAM&lt;/code&gt; by &lt;code&gt;htslib&lt;/code&gt;, although I have no idea what CRAM is, I believe it might be something more fast or a space saving format (like SAM?). I have to say the installation become so easy with github!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/samtools/htslib.git  
+git clone git://github.com/ANGSD/angsd.git   
+cd angsd  
+make  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1&gt;Preparation for BAM input&lt;/h1&gt;
+
+&lt;p&gt;The following codes all following ANGSD&#39;s tutorial.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;### download data
+wget http://popgen.dk/software/download/angsd/bams.tar.gz
+tar xf bams.tar.gz
+### indexing them
+for i in bams/*.bam;do samtools index $i;done
+### create a list
+ls bams/*.bam &amp;gt; bam.filelist
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1&gt;SNP and genotype calling&lt;/h1&gt;
+
+&lt;p&gt;SNPs are called based on their allele frequencies by &lt;code&gt;-doMaf&lt;/code&gt;. Basically, they will call a SNP if a site has a minor allele frequency significantly different from 0. (Note: how about really minor allele?)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;&quot;&gt;### MAF for every basepair
+angsd -bam bam.filelist -doMajorMinor 2 -doMaf 8  -doCounts 1 -out out
+
+### SNP calling
+angsd -bam bam.filelist -GL 1 -out outfile -doMaf 2 -SNP_pval 1e-6 -doMajorMinor 1
+
+### Genotype Likelihoods
+angsd -bam bam.filelist -GL 1 -doGlf 2 -doMajorMinor 1 -doMaf 2 -SNP_pval 2e-6 -out genolike -nThreads 10
+
+### Genotype calling in one step
+angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doGeno 5 -doPost 1 -postCutoff 0.95
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;with option &lt;code&gt;-doPlink 1&lt;/code&gt;, it will output PLINK format.&lt;/p&gt;
+
+&lt;h1&gt;Population Genetics&lt;/h1&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Reading List</title>
+   <link href="http://yangjl.com/en/notes/2015/05/11/reading-list"/>
+   <updated>2015-05-11T00:00:00-07:00</updated>
+   <id>http://yangjl.com/en/notes/2015/05/11/reading-list</id>
+   <content type="html">&lt;h3&gt;Python and statistics books&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://work.thaslwanter.at/Stats/html/index.html&quot;&gt;Introduction to statistics 6.4 in python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/&quot;&gt;Probabilistic Programming and Bayesian Methods for Hackers&lt;/a&gt;: an introduction to Bayesian methods and probabilistic progamming from a computation/understanding-first, mathematics-second point of view.&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>LaTex citation undefined</title>
+   <link href="http://yangjl.com/en/notes/2015/05/10/latex"/>
+   <updated>2015-05-10T00:00:00-07:00</updated>
+   <id>http://yangjl.com/en/notes/2015/05/10/latex</id>
+   <content type="html">&lt;h3&gt;LaTex citation error for PLOS 1&lt;/h3&gt;
+
+&lt;p&gt;If you got the following error message:
+&lt;code&gt;
+LaTex Warning: Citation on page undefined
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Just simply run latex twice, the first time, it will generate &lt;em&gt;.aux. The next time, bibtex will look for &lt;/em&gt;.aux.&lt;/p&gt;
+
+&lt;h3&gt;LaTax track chanages&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;latexdiff old.tex new.tex &amp;gt; track.tex
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;diff through git&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;git diff --word-diff=color commit1 commit2
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>TASSEL GBS HDF5 format</title>
+   <link href="http://yangjl.com/en/notes/2015/04/15/hdf5"/>
+   <updated>2015-04-15T00:00:00-07:00</updated>
+   <id>http://yangjl.com/en/notes/2015/04/15/hdf5</id>
+   <content type="html">&lt;h3&gt;HDF5 Overview&lt;/h3&gt;
+
+&lt;p&gt;HDF5 data file has hierarchical organization consisting of the groups and dataset. Groups can contain other groups and datasets, datasets contain complex multi-dimensional data. The organization looks similar to the regular UNIX file system, groups are analogous to directories, and datasets contain arbitrary data like regular files. Like directories, groups name the objects contained in them. This allows easy navigation from the &quot;top&quot; of the file to any object in that file, something like /groupA/groupB/dataset1.&lt;/p&gt;
+
+&lt;p&gt;Datasets in HDF5 file have defined element type and layout. Layout determines the dimensionality of the data and the size of each dimension (shape of the dataset). Special case of a layout called scalar which means that dataset contains exactly one element of the given type. More common layouts are multidimensional layouts. Element type describes the structure of the basic element of these multidimensional arrays or scalars. Type can be atomic, compound, or array. Atomic types include usual numeric types such as integer, floating, etc. Compound type is a collection of atomic types or other compound types, very much like structures in programming languages. Array type for elements means that each dataset element is itself an array. One has to remember that all elements of a dataset have the same type and structure, e.g. if element type is an array then all elements have to have exactly the same dimensions.&lt;/p&gt;
+
+&lt;p&gt;Groups and datasets in HDF5 could have a number of attributes attached to them which can be used to store some meta-information about the group or dataset as a whole. Each attribute has a name and associated value which usually hase some basic type - integer, float, string, etc. Attributes could be used for example to store begin/end time of the run or the run number.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://confluence.slac.stanford.edu/display/PSDM/How+to+access+HDF5+data+from+Python&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Retrieving large SRA files from NCBI using Aspera</title>
+   <link href="http://yangjl.com/en/notes/2015/04/09/aspera"/>
+   <updated>2015-04-09T00:00:00-07:00</updated>
+   <id>http://yangjl.com/en/notes/2015/04/09/aspera</id>
+   <content type="html">&lt;p&gt;NCBI has started using 3rd party commercial software to improve SRA data transferring speeds &lt;strong&gt;Aspera&lt;/strong&gt;. The download rate can reach to hundreds MB/s.&lt;/p&gt;
+
+&lt;p&gt;Here is how to use it in Linux:&lt;/p&gt;
+
+&lt;h3&gt;1. Download it:&lt;/h3&gt;
+
+&lt;p&gt;There are multiple different stuff there &lt;a href=&quot;http://downloads.asperasoft.com/downloads&quot;&gt;http://downloads.asperasoft.com/downloads&lt;/a&gt;. You should download this one for Linux system: &lt;a href=&quot;http://downloads.asperasoft.com/en/downloads/8?list&quot;&gt;Aspera connect&lt;/a&gt;, high-performance transfer browser plug-in.&lt;/p&gt;
+
+&lt;h3&gt;2. Install it:&lt;/h3&gt;
+
+&lt;p&gt;It is super simple for installation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The command line utility called &lt;strong&gt;ascp&lt;/strong&gt;, which is installed in
+&lt;code&gt;
+$HOME/.aspera/connect
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;3. Use it:&lt;/h3&gt;
+
+&lt;p&gt;You can test it by downloading the &lt;em&gt;1GB&lt;/em&gt; file. Note that the public key file should point to &lt;em&gt;.openssh&lt;/em&gt; rather than &lt;em&gt;.putty&lt;/em&gt;, which was suggested by &lt;a href=&quot;http://wiki.bioinformatics.ucdavis.edu/index.php/Aspera_upload/download_to_NCBI&quot;&gt;others&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Git version control between laptop and linux server</title>
+   <link href="http://yangjl.com/en/notes/2015/04/08/sync-git"/>
+   <updated>2015-04-08T00:00:00-07:00</updated>
+   <id>http://yangjl.com/en/notes/2015/04/08/sync-git</id>
+   <content type="html">&lt;p&gt;I have a Mac laptop with multiple git-repositories. But my computational works are mostly carried out on a linux server. From/To there I push and pull changes via SSH. I would like to sync codes and data analysis results between the two systems. Here is what I learned from others experience via a post from &lt;a href=&quot;http://stackoverflow.com/questions/4948190/git-repository-sync-between-computers-when-moving-around&quot;&gt;stackoverflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Below, I modified a little bit from above post. Lets say my netbook is called &quot;Macbook&quot;. I create a repository there&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd ~/git
+$ mkdir newThing
+$ cd newThing
+$ git init --bare
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On the Linux server I will then create a clone of it. Maybe I will add some files also&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone username@0.0.0.1:/home/username/git/newThing
+$ git add .
+$ git commit -m &quot;Initial&quot;
+$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On my Mac, I will also add the Linux address.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote add externalName username@address:/home/username/git/newThing
+$ git pull externalName master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Something to read: &lt;a href=&quot;http://progit.org/&quot;&gt;http://progit.org/&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Attending #PAGXXIII at home</title>
@@ -31,7 +228,23 @@
 
 &lt;h2&gt;Slides&lt;/h2&gt;
 
+&lt;ul&gt;
+&lt;li&gt;PAG keynote slides: &lt;a href=&quot;http://t.co/v86FA2TSw8&quot;&gt;the NIH as a Digital Enterpreise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tomato genome SL2.50 and Beyond @SahaSurya &lt;a href=&quot;http://t.co/vR36JlIwKT&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.faang.org/pub/GiuffraE_PAG2015_FAANG.pdf&quot;&gt;FAANG talk&lt;/a&gt; @faangomics&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://t.co/mtQQ5eZhCK&quot;&gt;Facilitating the use of NGS data for data-driven biology&lt;/a&gt; @drbonohu&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;PAG tweeters to follow&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/yY0Tfye.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
+
+&lt;h1&gt;DAY ONE (2015-1-10)&lt;/h1&gt;
+
+&lt;p&gt;I lost day one&#39;s data.&lt;/p&gt;
 
 &lt;h1&gt;DAY TWO (2015-1-11)&lt;/h1&gt;
 
@@ -39,10 +252,18 @@
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7B6rzAU.png?1&quot; alt=&quot;Imgur1&quot; /&gt;&lt;/p&gt;
 
-&lt;h1&gt;DAY THREE (2015-1-10)&lt;/h1&gt;
+&lt;h1&gt;DAY THREE (2015-1-12)&lt;/h1&gt;
 
 &lt;p&gt;&quot;Brown bear genome data, great!&quot;
 &lt;img src=&quot;http://i.imgur.com/0EWZrRb.png&quot; alt=&quot;Imgur2&quot; /&gt;&lt;/p&gt;
+
+&lt;h1&gt;DAY FOUR (2015-1-13)&lt;/h1&gt;
+
+&lt;p&gt;Feature of the day &quot;Assembly&quot;!
+&lt;img src=&quot;http://i.imgur.com/o5cedhm.png&quot; alt=&quot;Imgur3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Twitters of the day.
+&lt;img src=&quot;http://i.imgur.com/iGvmHIU.png&quot; alt=&quot;Imgur4&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  

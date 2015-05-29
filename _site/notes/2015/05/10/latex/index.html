@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>R package Data.Table Usage Notes</title>
-    <meta name="description" content="from my personal experience">
+    <title>LaTex citation undefined</title>
+    <meta name="description" content="latex">
     <meta name="author" content="Jinliang Yang">
 
     <!-- Enable responsive viewport -->
@@ -113,51 +113,33 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>R package Data.Table Usage Notes </h1>
+  <h1>LaTex citation undefined </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>12 December 2014</span>
+      <span>10 May 2015</span>
     </div>
     <div class="content">
-      <p>Most of those were learned from Kate Crosby's <a href="https://github.com/kate-crosby/datatable_slides">short tutorial</a> in <a href="http://www.rilab.org/">RIL lab</a>.</p>
+      <h3>LaTex citation error for PLOS 1</h3>
 
-<h2>Read in data.frame rapidly with <strong>fread</strong></h2>
-
-<pre><code>## tab delimited file
-data &lt;- fread("yourfile.txt", sep="\t")
-## csv file
-data &lt;- fread("yourfile.csv", sep=",")
-</code></pre>
-
-<h2>Subsetting dt</h2>
-
-<h3>:= NULL</h3>
-
-<pre><code>sub &lt;- data[, c("chr", "pos") := NULL]
-</code></pre>
-
-<h3>use function of <strong>subset</strong></h3>
-
-<pre><code>sub &lt;- subset(fulldata, select = c("chr", "pos"))
-</code></pre>
-
-<h3>.SD = "Subset of Data.table"</h3>
-
-<p>Select the 2nd row (SNP) for/of each chromosome!
+<p>If you got the following error message:
 <code>
-dt &lt;- dt[, .SD[2], by=chrom]
+LaTex Warning: Citation on page undefined
 </code></p>
 
-<h2>Order data really quickly with setkey()</h2>
+<p>Just simply run latex twice, the first time, it will generate <em>.aux. The next time, bibtex will look for </em>.aux.</p>
 
-<pre><code># Here in chr and then pos
-order.dt &lt;- setkey(dt, "chr", "pos")
+<h3>LaTax track chanages</h3>
+
+<pre><code>latexdiff old.tex new.tex &gt; track.tex
 </code></pre>
 
-<h2>More information</h2>
+<h3>diff through git</h3>
+
+<pre><code>git diff --word-diff=color commit1 commit2
+</code></pre>
 
     </div>
 
@@ -170,8 +152,8 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/categories.html#codes-ref">
-    		codes <span>7</span>
+    	<li><a href="/categories.html#notes-ref">
+    		notes <span>7</span>
     	</a></li>
     
   
@@ -189,13 +171,9 @@ order.dt &lt;- setkey(dt, "chr", "pos")
 
   
      
-    	<li><a href="/tags.html#tutorial-ref">tutorial <span>10</span></a></li>
+    	<li><a href="/tags.html#notes-ref">notes <span>5</span></a></li>
      
-    	<li><a href="/tags.html#usage-ref">usage <span>6</span></a></li>
-     
-    	<li><a href="/tags.html#R-ref">R <span>2</span></a></li>
-     
-    	<li><a href="/tags.html#NGS-ref">NGS <span>6</span></a></li>
+    	<li><a href="/tags.html#latex-ref">latex <span>1</span></a></li>
     
   
 
@@ -208,11 +186,11 @@ order.dt &lt;- setkey(dt, "chr", "pos")
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/codes/2014/12/11/IRanges" title="Usage of IRanges/GenomicRanges Bioconductor packages">&larr; Previous</a></li>
+        <li class="prev"><a href="/notes/2015/04/15/hdf5" title="TASSEL GBS HDF5 format">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/codes/2014/12/15/Pandas" title="R equivalent functions in Pandas">Next &rarr;</a></li>
+        <li class="next"><a href="/notes/2015/05/11/reading-list" title="Reading List">Next &rarr;</a></li>
       
       </ul>
     </div>
