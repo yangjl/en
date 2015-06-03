@@ -5,8 +5,8 @@
         <description>Jinliang Yang - Jinliang Yang</description>
         <link>http://yangjl.com/en</link>
         <link>http://yangjl.com/en</link>
-        <lastBuildDate>2015-06-03T12:59:56-07:00</lastBuildDate>
-        <pubDate>2015-06-03T12:59:56-07:00</pubDate>
+        <lastBuildDate>2015-06-03T14:17:39-07:00</lastBuildDate>
+        <pubDate>2015-06-03T14:17:39-07:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -57,6 +57,38 @@ kallisto quant -i index -o output pairA_1.fastq pairA_2.fastq pairB_1.fastq pair
 &lt;p&gt;Overall, I think &lt;code&gt;kallisto&lt;/code&gt; is a simple and rapid RNA-seq quantification alternative for alignment-based approach. However, &lt;code&gt;kallisto&lt;/code&gt; may over-estimate the read counts from genes containing repeats. For differential expression analysis, this may not be a critical problem since the over-estimation will not be biased.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/UVU28KJ.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;share-page&quot;&gt;
+&lt;h2 style=&quot;background:#faebd7;&quot;&gt;
+    Share this on &amp;rarr; 
+    &lt;a href=&quot;https://twitter.com/intent/tweet?text=RNA-seq quantification comparison: K-mer vs. alignment approaches&amp;url=http://yangjl.com/tech%20report/2015/06/03/rna-seq&amp;via=&amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
+    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://yangjl.com/tech%20report/2015/06/03/rna-seq&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
+    &lt;a href=&quot;https://plus.google.com/share?url=http://yangjl.com/tech%20report/2015/06/03/rna-seq&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
+&lt;/h2&gt; 
+&lt;style type=&quot;text/css&quot;&gt;
+    .share-page {
+        text-align: center;
+        background: $secondary-color;
+        color: $light-color;
+        padding: 8px 15px;
+        border-radius: 5px;
+        margin: 1.5 * $spacing-unit 0;
+
+        h2 {
+            font-weight: 700;
+            color: #458b74;
+            margin-left: 10px;
+
+            &amp;:hover {
+                border-bottom: 1px dashed #458b74;
+            }
+        }
+    }
+&lt;/style&gt;    
+&lt;/div&gt;
+
+
+
 </description>
                 <link>http://yangjl.com/en/tech%20report/2015/06/03/rna-seq</link>
                 <guid>http://yangjl.com/en/tech%20report/2015/06/03/rna-seq</guid>
