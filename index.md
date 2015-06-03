@@ -11,7 +11,6 @@ title: Coding Genetic Codes
 </ul>
 
 <ul class="nav">
-
 <h3 style="color:red;background:#F8F8F8;text-align:center;>
   
   <li>
