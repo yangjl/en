@@ -4,36 +4,23 @@ title: Coding Genetic Codes
 ---
 {% include JB/setup %}
 
-<div class="hm">
-	<h2 style="color:red;background:#eedfcc;">
-    	<a href="http://yangjl.com">HOME</a>
-    </h2>
-
-   	<style type="text/css">
-	.hm {
-    	text-align: center;
-    	background: $secondary-color;
-    	color: $light-color;
-    	padding: 8px 15px;
-    	border-radius: 5px;
-    	margin: 1.5 * $spacing-unit 0;
-
-    	a {
-        	font-weight: 700;
-        	color: #fff;
-        	margin-left: 10px;
-
-        	&:hover {
-            	border-bottom: 1px dashed #fff;
-        	}
-    	}
-	}
-	</style>
-</div>
-
-
 <ul class="posts">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
+</ul>
+
+<ul class="nav">
+
+<h3 style="color:red;background:#F8F8F8;text-align:center;>
+  
+  <li>
+  <a href="http://yangjl.com/en/">English</a> | 
+  <a href="http://yangjl.com/">Home</a> | 
+  <a href="http://yangjl.com/cn/">中文</a> | 
+  <a href="http://yangjl.com/about/">About</a> | 
+  <a href="http://yangjl.com/vitae/">VITAE</a>
+  
+  </li>
+</h3>
 </ul>
