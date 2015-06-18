@@ -132,7 +132,11 @@
 <h2>How to get the first few lines from the *.gz file.</h2>
 
 <pre><code>gzip -cd *.gz | head -n 30
+## gzip in a loop
+for i in *.gz; do gzip -dk $i; done
 </code></pre>
+
+<p>Note <code>-d</code>, extraction and <code>k</code>, keep the original file.</p>
 
     </div>
 
@@ -216,7 +220,7 @@
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2015 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2015-06-03 15:52:53</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2015 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2015-06-17 09:22:42</span></small></p>
       </footer>
 
     </div>
