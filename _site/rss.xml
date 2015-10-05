@@ -5,10 +5,59 @@
         <description>Jinliang Yang - Jinliang Yang</description>
         <link>http://yangjl.com/en</link>
         <link>http://yangjl.com/en</link>
-        <lastBuildDate>2015-06-17T09:22:42-07:00</lastBuildDate>
-        <pubDate>2015-06-17T09:22:42-07:00</pubDate>
+        <lastBuildDate>2015-10-05T15:39:40-07:00</lastBuildDate>
+        <pubDate>2015-10-05T15:39:40-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Comments on a RAHAB paper</title>
+                <description>&lt;p&gt;&lt;a href=&quot;http://www.pnas.org/content/112/35/E4959.long&quot;&gt;Wang &lt;em&gt;et. al.&lt;/em&gt;, 2015&lt;/a&gt; created a set of F4-F6 pure breeding lines, called hybrid mimics, which exhibit hybrid vigor similar to F1 hybrids in &lt;em&gt;Arabidopsis&lt;/em&gt;. The authors compared the differentially expressed genes in F1 hybrid and the hybrid mimics; and found similar expression pattern between them. The authors proposed that the altered expression could be a consequence of trans-regulation of genes or epigenetic modifications.&lt;/p&gt;
+
+&lt;p&gt;In general, during R-I lab &lt;a href=&quot;http://www.rilab.org/rehab.html&quot;&gt;R.E.H.A.B.&lt;/a&gt; discussion, most of us liked the paper. It was well written with explicit figures. The authors selected rosette diameter as a trait of interest. With the selection intensity of 4-10%, they were able to create F4-F6 hybrid mimics, which provided evidence to argue back early criticism about the complementation of deleterious alleles in explaining heterosis. The early idea was that if the complementation hypothesis were ture, it should be able to create an hybrid-like inbred line with all of the superior alleles. The current observation showed that the hybrid-like lines could indeed be created for rosette diameter in &lt;em&gt;Arabidopsis&lt;/em&gt;. Therefore, rejected this early criticism against dominant complementation theory for heterosis. But the trait in current study may be controlled by relative few segregating genetic variants. For more complex traits, like grain yield, hybrid mimics may be hard or almost impossible to obtain.&lt;/p&gt;
+
+&lt;p&gt;The authors referred their selection method as &quot;recurrent selection&quot;. However, I do not think it is the same recurrent selection we used in plant breeding. In plant breeding, the inbred parents were &lt;a href=&quot;https://dl.sciencesocieties.org/publications/aj/abstracts/37/2/AJ0370020134&quot;&gt;selected recurrently&lt;/a&gt; from the interbreeding plants according to their combining abilities. I think in current study, what the authors did was just &quot;selection&quot;. This potential terminology issue would not affect their analysis.&lt;/p&gt;
+
+&lt;p&gt;I liked the way the authors used to present gene expression profiles in &lt;strong&gt;Fig.4&lt;/strong&gt; and &lt;strong&gt;Fig.5&lt;/strong&gt;. We all understand that RNA-seq data are difficult to present. The authors came up with this very smart strategy to compare DEG among different lines. In panel B of &lt;strong&gt;Fig.4&lt;/strong&gt;, one of the F4 lines looks very similar to the hybrid. However, it may not that obvious for other lines, especially with only one negative control. If a test statistics was employed to quantify the difference, it would be a more solid analysis. (I know I have been too picky about this. :( ) We found that the scales for &lt;strong&gt;Fig.4&lt;/strong&gt; and &lt;strong&gt;Fig.5&lt;/strong&gt; are different. We were wondering why in one study the scales changed from -5 to 5, but in the other, from -50 to 50. And, the criterion they used for detecting DEG were less stringent than normally used (FC &gt;= 1.3 and P-value &amp;lt; 0.05 in this study, normally FC &gt; 2 and FDR &amp;lt; 0.05).&lt;/p&gt;
+
+&lt;p&gt;In &lt;strong&gt;Fig.6&lt;/strong&gt;, we expected the authors to conduct a genetic scanning to confirm whether there were heterozygosity regions shared among lines. Unfortunately, they failed to deliver this message. It would be interesting to see, in the future, the dissection of the genetic architecture of this trait and the genetic explanations of heterosis for these very interesting hybrid mimics.&lt;/p&gt;
+
+&lt;div class=&quot;share-page&quot;&gt;
+&lt;h2 style=&quot;background:#faebd7;&quot;&gt;
+    Share this on &amp;rarr; 
+    &lt;a href=&quot;https://twitter.com/intent/tweet?text=Comments on a RAHAB paper&amp;url=http://yangjl.com/journal%20club/2015/10/05/rehab&amp;via=&amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
+    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://yangjl.com/journal%20club/2015/10/05/rehab&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
+    &lt;a href=&quot;https://plus.google.com/share?url=http://yangjl.com/journal%20club/2015/10/05/rehab&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
+&lt;/h2&gt; 
+&lt;style type=&quot;text/css&quot;&gt;
+    .share-page {
+        text-align: center;
+        background: $secondary-color;
+        color: $light-color;
+        padding: 8px 15px;
+        border-radius: 5px;
+        margin: 1.5 * $spacing-unit 0;
+
+        h2 {
+            font-weight: 700;
+            color: #458b74;
+            margin-left: 10px;
+
+            &amp;:hover {
+                border-bottom: 1px dashed #458b74;
+            }
+        }
+    }
+&lt;/style&gt;    
+&lt;/div&gt;
+
+
+
+</description>
+                <link>http://yangjl.com/en/journal%20club/2015/10/05/rehab</link>
+                <guid>http://yangjl.com/en/journal%20club/2015/10/05/rehab</guid>
+                <pubDate>2015-10-05T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>The art of command line</title>
