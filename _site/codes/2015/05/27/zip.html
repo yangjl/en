@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +19,9 @@
     <!-- Le styles change to Yihui style -->
     <!-- link rel="stylesheet" href="/media/css/style.css"  -->
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -100,6 +101,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -112,6 +121,7 @@
 
       <div class="content">
         
+
 <div class="page-header">
   <h1>Compression related commands </h1>
 </div>
@@ -122,20 +132,19 @@
       <span>27 May 2015</span>
     </div>
     <div class="content">
-      <h2>How to extract tar.gz file</h2>
+      
+<h2 id="how-to-extract-targz-file">How to extract tar.gz file</h2>
 
 <pre><code>tar -zxvf file.tar.gz
 </code></pre>
-
 <p>where, <code>-z</code> works on gzip compression automatically when reading archives; <code>-x</code>, extract archives; <code>-v</code> produce verbose output; <code>-f</code> read the archive from the archive to the specififed file.</p>
 
-<h2>How to get the first few lines from the *.gz file.</h2>
+<h2 id="how-to-get-the-first-few-lines-from-the-gz-file">How to get the first few lines from the *.gz file.</h2>
 
 <pre><code>gzip -cd *.gz | head -n 30
 ## gzip in a loop
 for i in *.gz; do gzip -dk $i; done
 </code></pre>
-
 <p>Note <code>-d</code>, extraction and <code>k</code>, keep the original file.</p>
 
     </div>
@@ -220,7 +229,7 @@ for i in *.gz; do gzip -dk $i; done
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
       </footer>
 
     </div>

@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +19,9 @@
     <!-- Le styles change to Yihui style -->
     <!-- link rel="stylesheet" href="/media/css/style.css"  -->
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -100,6 +101,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -112,6 +121,7 @@
 
       <div class="content">
         
+
 <div class="page-header">
   <h1>Retrieving large SRA files from NCBI using Aspera </h1>
 </div>
@@ -122,32 +132,30 @@
       <span>09 April 2015</span>
     </div>
     <div class="content">
-      <p>NCBI has started using 3rd party commercial software to improve SRA data transferring speeds <strong>Aspera</strong>. The download rate can reach to hundreds MB/s.</p>
+      
+<p>NCBI has started using 3rd party commercial software to improve SRA data transferring speeds <strong>Aspera</strong>. The download rate can reach to hundreds MB/s.  </p>
 
 <p>Here is how to use it in Linux:</p>
 
-<h3>1. Download it:</h3>
-
+<h3 id="download-it">1. Download it:</h3>
 <p>There are multiple different stuff there <a href="http://downloads.asperasoft.com/downloads">http://downloads.asperasoft.com/downloads</a>. You should download this one for Linux system: <a href="http://downloads.asperasoft.com/en/downloads/8?list">Aspera connect</a>, high-performance transfer browser plug-in.</p>
 
-<h3>2. Install it:</h3>
-
+<h3 id="install-it">2. Install it:</h3>
 <p>It is super simple for installation.</p>
 
 <pre><code>ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
 </code></pre>
-
 <p>The command line utility called <strong>ascp</strong>, which is installed in
 <code>
 $HOME/.aspera/connect
 </code></p>
 
-<h3>3. Use it:</h3>
-
-<p>You can test it by downloading the <em>1GB</em> file. Note that the public key file should point to <em>.openssh</em> rather than <em>.putty</em>, which was suggested by <a href="http://wiki.bioinformatics.ucdavis.edu/index.php/Aspera_upload/download_to_NCBI">others</a>.</p>
+<h3 id="use-it">3. Use it:</h3>
+<p>You can test it by downloading the <em>1GB</em> file. Note that the public key file should point to <em>.openssh</em> rather than <em>.putty</em>, which was suggested by <a href="http://wiki.bioinformatics.ucdavis.edu/index.php/Aspera_upload/download_to_NCBI">others</a>. </p>
 
 <pre><code>ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
 </code></pre>
+
 
     </div>
 
@@ -233,7 +241,7 @@ $HOME/.aspera/connect
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
       </footer>
 
     </div>

@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +19,9 @@
     <!-- Le styles change to Yihui style -->
     <!-- link rel="stylesheet" href="/media/css/style.css"  -->
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -100,6 +101,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -112,6 +121,7 @@
 
       <div class="content">
         
+
 <div class="page-header">
   <h1>Usage of IRanges/GenomicRanges Bioconductor packages </h1>
 </div>
@@ -122,18 +132,20 @@
       <span>11 December 2014</span>
     </div>
     <div class="content">
-      <p><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.pdf"><strong>introduction</strong></a></p>
+      
+<p><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.pdf"><strong>introduction</strong></a></p>
 
 <p><a href="http://bioconductor.org/help/course-materials/2013/SeattleFeb2013/IntermediateSequenceAnalysis2013.pdf"><strong>class</strong></a></p>
 
 <p><a href="http://pgfe.umassmed.edu/ou/archives/3122"><strong>website</strong></a></p>
 
-<h2>Transform <strong>GRanges</strong> to <strong>Data.Frame</strong></h2>
+<h2 id="transform-granges-to-dataframe">Transform <strong>GRanges</strong> to <strong>Data.Frame</strong></h2>
 
 <pre><code>cnvdf &lt;- data.frame(chr=as.character(seqnames(mycnv)), start=start(mycnv), end=end(mycnv))
 callcnv &lt;- mcols(mycnv)
 cnvdf &lt;- cbind(cnvdf, callcnv)
 </code></pre>
+
 
     </div>
 
@@ -221,7 +233,7 @@ cnvdf &lt;- cbind(cnvdf, callcnv)
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
       </footer>
 
     </div>

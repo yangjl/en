@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +19,9 @@
     <!-- Le styles change to Yihui style -->
     <!-- link rel="stylesheet" href="/media/css/style.css"  -->
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -100,6 +101,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -112,6 +121,7 @@
 
       <div class="content">
         
+
 <div class="page-header">
   <h1>Notes on learning ANGSD </h1>
 </div>
@@ -122,10 +132,10 @@
       <span>27 May 2015</span>
     </div>
     <div class="content">
-      <p>The biggest advantages of <a href="http://popgen.dk/wiki/index.php/ANGSD">ANGSD</a> as they claimed are "<em>Most methods take genotype uncertainty into account instead of basing the analysis on called genotypes. This is especially useful for low and medium depth data</em>". The software was forked to my own <a href="https://github.com/yangjl/angsd">repo</a>.</p>
+      
+<p>The biggest advantages of <a href="http://popgen.dk/wiki/index.php/ANGSD">ANGSD</a> as they claimed are “<em>Most methods take genotype uncertainty into account instead of basing the analysis on called genotypes. This is especially useful for low and medium depth data</em>”. The software was forked to my own <a href="https://github.com/yangjl/angsd">repo</a>.</p>
 
-<h1>Install from Github</h1>
-
+<h1 id="install-from-github">Install from Github</h1>
 <p>You also need to install <code>CRAM</code> by <code>htslib</code>, although I have no idea what CRAM is, I believe it might be something more fast or a space saving format (like SAM?). I have to say the installation become so easy with github!</p>
 
 <pre><code>git clone https://github.com/samtools/htslib.git  
@@ -134,9 +144,9 @@ cd angsd
 make  
 </code></pre>
 
-<h1>Preparation for BAM input</h1>
+<h1 id="preparation-for-bam-input">Preparation for BAM input</h1>
 
-<p>The following codes all following ANGSD's tutorial.</p>
+<p>The following codes all following ANGSD’s tutorial. </p>
 
 <pre><code>### download data
 wget http://popgen.dk/software/download/angsd/bams.tar.gz
@@ -147,13 +157,13 @@ for i in bams/*.bam;do samtools index $i;done
 ls bams/*.bam &gt; bam.filelist
 </code></pre>
 
-<h1>SNP and genotype calling</h1>
+<h1 id="snp-and-genotype-calling">SNP and genotype calling</h1>
 
 <p>SNPs are called based on their allele frequencies by <code>-doMaf</code>. Basically, they will call a SNP if a site has a minor allele frequency significantly different from 0. (Note: how about really minor allele?)</p>
 
-<pre><code class="">### MAF for every basepair
+<pre><code>### MAF for every basepair
 angsd -bam bam.filelist -doMajorMinor 2 -doMaf 8  -doCounts 1 -out out
-
+ 
 ### SNP calling
 angsd -bam bam.filelist -GL 1 -out outfile -doMaf 2 -SNP_pval 1e-6 -doMajorMinor 1
 
@@ -163,10 +173,9 @@ angsd -bam bam.filelist -GL 1 -doGlf 2 -doMajorMinor 1 -doMaf 2 -SNP_pval 2e-6 -
 ### Genotype calling in one step
 angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doGeno 5 -doPost 1 -postCutoff 0.95
 </code></pre>
+<p>with option <code>-doPlink 1</code>, it will output PLINK format. </p>
 
-<p>with option <code>-doPlink 1</code>, it will output PLINK format.</p>
-
-<h1>Population Genetics</h1>
+<h1 id="population-genetics">Population Genetics</h1>
 
     </div>
 
@@ -258,7 +267,7 @@ angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pv
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
       </footer>
 
     </div>

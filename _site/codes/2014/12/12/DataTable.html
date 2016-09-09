@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +19,9 @@
     <!-- Le styles change to Yihui style -->
     <!-- link rel="stylesheet" href="/media/css/style.css"  -->
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -100,6 +101,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -112,6 +121,7 @@
 
       <div class="content">
         
+
 <div class="page-header">
   <h1>R package Data.Table Usage Notes </h1>
 </div>
@@ -122,9 +132,10 @@
       <span>12 December 2014</span>
     </div>
     <div class="content">
-      <p>Most of those were learned from Kate Crosby's <a href="https://github.com/kate-crosby/datatable_slides">short tutorial</a> in <a href="http://www.rilab.org/">RIL lab</a>.</p>
+      
+<p>Most of those were learned from Kate Crosby’s <a href="https://github.com/kate-crosby/datatable_slides">short tutorial</a> in <a href="http://www.rilab.org/">RIL lab</a>.</p>
 
-<h2>Read in data.frame rapidly with <strong>fread</strong></h2>
+<h2 id="read-in-dataframe-rapidly-with-fread">Read in data.frame rapidly with <strong>fread</strong></h2>
 
 <pre><code>## tab delimited file
 data &lt;- fread("yourfile.txt", sep="\t")
@@ -132,32 +143,29 @@ data &lt;- fread("yourfile.txt", sep="\t")
 data &lt;- fread("yourfile.csv", sep=",")
 </code></pre>
 
-<h2>Subsetting dt</h2>
-
-<h3>:= NULL</h3>
+<h2 id="subsetting-dt">Subsetting dt</h2>
+<p>### := NULL</p>
 
 <pre><code>sub &lt;- data[, c("chr", "pos") := NULL]
 </code></pre>
-
-<h3>use function of <strong>subset</strong></h3>
-
-<pre><code>sub &lt;- subset(fulldata, select = c("chr", "pos"))
-</code></pre>
-
-<h3>.SD = "Subset of Data.table"</h3>
-
-<p>Select the 2nd row (SNP) for/of each chromosome!
+<p>### use function of <strong>subset</strong>
+<code>
+sub &lt;- subset(fulldata, select = c("chr", "pos"))
+</code>
+### .SD = “Subset of Data.table”
+Select the 2nd row (SNP) for/of each chromosome!
 <code>
 dt &lt;- dt[, .SD[2], by=chrom]
 </code></p>
 
-<h2>Order data really quickly with setkey()</h2>
+<h2 id="order-data-really-quickly-with-setkey">Order data really quickly with setkey()</h2>
 
 <pre><code># Here in chr and then pos
 order.dt &lt;- setkey(dt, "chr", "pos")
 </code></pre>
 
-<h2>More information</h2>
+<h2 id="more-information">More information</h2>
+
 
     </div>
 
@@ -245,7 +253,7 @@ order.dt &lt;- setkey(dt, "chr", "pos")
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
       </footer>
 
     </div>

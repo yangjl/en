@@ -8,6 +8,8 @@ http://yangjl.com/en/pages
 http://yangjl.com/en/rss.xml
 http://yangjl.com/en/sitemap.txt
 http://yangjl.com/en/tags
+http://yangjl.com/en/page2/
+http://yangjl.com/en/page3/
 
 http://yangjl.com/en/journal%20club/2016/09/09/atom
 http://yangjl.com/en/journal%20club/2015/10/05/rehab

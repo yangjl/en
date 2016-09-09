@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +19,9 @@
     <!-- Le styles change to Yihui style -->
     <!-- link rel="stylesheet" href="/media/css/style.css"  -->
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -100,6 +101,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -112,6 +121,7 @@
 
       <div class="content">
         
+
 <div class="page-header">
   <h1>TASSEL GBS HDF5 format </h1>
 </div>
@@ -122,15 +132,17 @@
       <span>15 April 2015</span>
     </div>
     <div class="content">
-      <h3>HDF5 Overview</h3>
+      
+<h3 id="hdf5-overview">HDF5 Overview</h3>
 
-<p>HDF5 data file has hierarchical organization consisting of the groups and dataset. Groups can contain other groups and datasets, datasets contain complex multi-dimensional data. The organization looks similar to the regular UNIX file system, groups are analogous to directories, and datasets contain arbitrary data like regular files. Like directories, groups name the objects contained in them. This allows easy navigation from the "top" of the file to any object in that file, something like /groupA/groupB/dataset1.</p>
+<p>HDF5 data file has hierarchical organization consisting of the groups and dataset. Groups can contain other groups and datasets, datasets contain complex multi-dimensional data. The organization looks similar to the regular UNIX file system, groups are analogous to directories, and datasets contain arbitrary data like regular files. Like directories, groups name the objects contained in them. This allows easy navigation from the “top” of the file to any object in that file, something like /groupA/groupB/dataset1.</p>
 
 <p>Datasets in HDF5 file have defined element type and layout. Layout determines the dimensionality of the data and the size of each dimension (shape of the dataset). Special case of a layout called scalar which means that dataset contains exactly one element of the given type. More common layouts are multidimensional layouts. Element type describes the structure of the basic element of these multidimensional arrays or scalars. Type can be atomic, compound, or array. Atomic types include usual numeric types such as integer, floating, etc. Compound type is a collection of atomic types or other compound types, very much like structures in programming languages. Array type for elements means that each dataset element is itself an array. One has to remember that all elements of a dataset have the same type and structure, e.g. if element type is an array then all elements have to have exactly the same dimensions.</p>
 
 <p>Groups and datasets in HDF5 could have a number of attributes attached to them which can be used to store some meta-information about the group or dataset as a whole. Each attribute has a name and associated value which usually hase some basic type - integer, float, string, etc. Attributes could be used for example to store begin/end time of the run or the run number.</p>
 
 <p><a href="https://confluence.slac.stanford.edu/display/PSDM/How+to+access+HDF5+data+from+Python">here</a></p>
+
 
     </div>
 
@@ -216,7 +228,7 @@
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
       </footer>
 
     </div>

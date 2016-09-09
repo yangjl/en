@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +19,9 @@
     <!-- Le styles change to Yihui style -->
     <!-- link rel="stylesheet" href="/media/css/style.css"  -->
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -100,6 +101,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -112,6 +121,7 @@
 
       <div class="content">
         
+
 <div class="page-header">
   <h1>R equivalent functions in Pandas </h1>
 </div>
@@ -122,42 +132,37 @@
       <span>15 December 2014</span>
     </div>
     <div class="content">
-      <p>Pandas <a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html">Tutorials</a></p>
+      
+<p>Pandas <a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html">Tutorials</a></p>
 
-<h3>Direct link to some useful functions</h3>
-
+<h3 id="direct-link-to-some-useful-functions">Direct link to some useful functions</h3>
 <ul>
-<li>Group by: <a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html?highlight=aggregate">split-apply-combine</a></li>
-<li>Comparison with <a href="http://pandas.pydata.org/pandas-docs/dev/comparison_with_r.html">R/R libraries</a></li>
+  <li>Group by: <a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html?highlight=aggregate">split-apply-combine</a>  </li>
+  <li>Comparison with <a href="http://pandas.pydata.org/pandas-docs/dev/comparison_with_r.html">R/R libraries</a></li>
 </ul>
 
-
-<h3>read.table</h3>
-
+<h3 id="readtable">read.table</h3>
 <pre><code>snpibd = pd.read_table("largedata/IBD/allsnps_11m_IBD.bed", sep="\t", header= None)
 gerp = pd.read_csv("largedata/SNP/allsnps_11m_gerpv2_tidy.csv")
 </code></pre>
 
-<h3>replace = gsub</h3>
-
+<h3 id="replace--gsub">replace = gsub</h3>
 <pre><code>snpibd[3].replace("chr", "", regex=True, inplace=True)
 </code></pre>
 
-<h3>paste</h3>
-
+<h3 id="paste">paste</h3>
 <pre><code>snpibd['snpid'] = snpibd[3].map(str) + "_" + snpibd[2].map(str)
 snpibd['ibdid'] = snpibd[3].map(str) + "_" + snpibd[4].map(str)
 </code></pre>
 
-<h3>merge</h3>
-
+<h3 id="merge">merge</h3>
 <pre><code>snp11mgp = pd.merge(gerp130m[["snpid", "N", "RS"]], snp11m, on='snpid', sort=False, how='right')
 </code></pre>
 
-<h3>write.csv</h3>
-
+<h3 id="writecsv">write.csv</h3>
 <pre><code>snp11mgp.to_csv("largedata/SNP/allsnps_11m_gerpv2.csv", index=False)
 </code></pre>
+
 
     </div>
 
@@ -247,7 +252,7 @@ snpibd['ibdid'] = snpibd[3].map(str) + "_" + snpibd[4].map(str)
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
       </footer>
 
     </div>

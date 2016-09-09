@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,9 +19,9 @@
     <!-- Le styles change to Yihui style -->
     <!-- link rel="stylesheet" href="/media/css/style.css"  -->
     <link rel="stylesheet" href="/media/css/highlight.css">
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -100,6 +101,14 @@
       
     
   
+    
+      
+    
+  
+    
+      
+    
+  
 
 
 
@@ -112,6 +121,7 @@
 
       <div class="content">
         
+
 <div class="page-header">
   <h1>Bedtools Usage Notes </h1>
 </div>
@@ -122,41 +132,37 @@
       <span>10 December 2014</span>
     </div>
     <div class="content">
-      <p><a href="http://bedtools.readthedocs.org/en/latest/index.html"><strong>Bedtools</strong></a> contain several handy utilities for genomic data analysis, especially useful for feature intersection analysis by using the function <strong>intersect</strong>. I like bedtools because of the simple <strong>BED</strong> format and speed of their algorithm. Below listed some of my personal usage examples for your reference.</p>
+      
+<p><a href="http://bedtools.readthedocs.org/en/latest/index.html"><strong>Bedtools</strong></a> contain several handy utilities for genomic data analysis, especially useful for feature intersection analysis by using the function <strong>intersect</strong>. I like bedtools because of the simple <strong>BED</strong> format and speed of their algorithm. Below listed some of my personal usage examples for your reference.</p>
 
 <hr />
+<p>## BED and other formats</p>
 
-<h2>BED and other formats</h2>
-
-<h3>BED <a href="http://bedtools.readthedocs.org/en/latest/content/general-usage.html">format</a></h3>
-
+<h3 id="bed-formathttpbedtoolsreadthedocsorgenlatestcontentgeneral-usagehtml">BED <a href="http://bedtools.readthedocs.org/en/latest/content/general-usage.html">format</a></h3>
 <ol>
-<li>BED3: A BED file where each feature is described by <em>chrom</em>, <em>start</em>, and <em>end</em>.</li>
+  <li>BED3: A BED file where each feature is described by <em>chrom</em>, <em>start</em>, and <em>end</em>. </li>
 </ol>
 
-
-<pre><code class="">For example: chr1 110 120  
+<pre><code>For example: chr1 110 120  
 Note: start is zero-based, where the first base in a chr is numbered 0. And the end is one-based. For example, a SNP at 10 should be coded as start=9, end=10.
 </code></pre>
 
 <ol>
-<li>BED4: <em>chrom</em>, <em>start</em>, <em>end</em> and <em>name</em>.</li>
+  <li>BED4: <em>chrom</em>, <em>start</em>, <em>end</em> and <em>name</em>.</li>
 </ol>
 
-
-<h3>Other genomic data format can be found from UCSC Genome Browser <a href="http://genome.ucsc.edu/FAQ/FAQformat#format1">website</a></h3>
+<h3 id="other-genomic-data-format-can-be-found-from-ucsc-genome-browser-websitehttpgenomeucscedufaqfaqformatformat1">Other genomic data format can be found from UCSC Genome Browser <a href="http://genome.ucsc.edu/FAQ/FAQformat#format1">website</a></h3>
 
 <hr />
-
-<h2>Find SNPs in window, report SNPs and the windows they belong to.</h2>
+<p>## Find SNPs in window, report SNPs and the windows they belong to.</p>
 
 <pre><code>bedtools intersect -a window.bed -b SNP.bed -wb
 </code></pre>
+<p>More details see here: <a href="http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html"><strong>intersect</strong></a>  <br />
+* <strong>-a:</strong> window of bed format<br />
+* <strong>-b:</strong> SNPs of bed format<br />
+* <strong>-wb:</strong> write the original entry in B for each overlap  </p>
 
-<p>More details see here: <a href="http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html"><strong>intersect</strong></a>  <br/>
-* <strong>-a:</strong> window of bed format<br/>
-* <strong>-b:</strong> SNPs of bed format<br/>
-* <strong>-wb:</strong> write the original entry in B for each overlap</p>
 
     </div>
 
@@ -244,7 +250,7 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
       </footer>
 
     </div>
