@@ -5,10 +5,90 @@
         <description>Jinliang Yang - Jinliang Yang</description>
         <link>http://yangjl.com/en</link>
         <link>http://yangjl.com/en</link>
-        <lastBuildDate>2015-10-05T15:39:40-07:00</lastBuildDate>
-        <pubDate>2015-10-05T15:39:40-07:00</pubDate>
+        <lastBuildDate>2016-09-09T12:26:17-07:00</lastBuildDate>
+        <pubDate>2016-09-09T12:26:17-07:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Customize Atom as a latex and markdown editor</title>
+                <description>&lt;p&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt; is rapidly becoming my 2nd favorite code editor (after &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt;). Thanks to be an open source project, many add-on &lt;code&gt;themes&lt;/code&gt; and &lt;code&gt;packages&lt;/code&gt; hosted on &lt;code&gt;github&lt;/code&gt; make it very flexible. Here, I added some customized items to make it a text editor for &lt;code&gt;markdown&lt;/code&gt;, i.e., to write this blog, and a &lt;code&gt;LaTex&lt;/code&gt; editor, i.e., to write my research papers. I am using a Mac with &lt;code&gt;OS X El Capitan v10.11.6&lt;/code&gt; and installed Atom &lt;code&gt;v1.10.2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Basic Setting&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In &lt;code&gt;Editor Setting&lt;/code&gt;, check &lt;code&gt;Soft Wrap&lt;/code&gt; and &lt;code&gt;Soft Wrap at preferred line length&lt;/code&gt;. By doing this, we can take advantage of multiple panels viewing of the editor.&lt;/li&gt;
+&lt;li&gt;Install some &lt;code&gt;UI Themes&lt;/code&gt; and &lt;code&gt;Syntax Themes&lt;/code&gt; for your languages. I installed &lt;code&gt;genesis-ui&lt;/code&gt; and &lt;code&gt;flatwhite-syntax&lt;/code&gt; for &lt;code&gt;markdown&lt;/code&gt; and &lt;code&gt;Textmate Forlatex&lt;/code&gt; for &lt;code&gt;LaTex&lt;/code&gt;. There are many other choices, which is the beauty of this editor.&lt;/li&gt;
+&lt;li&gt;Note to correct a spelling error (there is a build-in spelling check package. we can also add &lt;code&gt;Linter&lt;/code&gt; and sub-packages), just click &lt;code&gt;cmd+:&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;File-icons&lt;/code&gt;. Pretty beautiful for visualization.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.scotch.io/1298/gdgVgQnR8CcfYqg8Oi0Y_rangersteve_-_app_js_-_master.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Github&lt;/h2&gt;
+
+&lt;p&gt;I like everything to be version controlled. Therefore, some github add-ons would be necessary.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Git-time-machine&lt;/code&gt; allows you to travel back in time. It shows visual plot of commits to the current file over time.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Merge-conflicts&lt;/code&gt; may also worth to try.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;For &lt;code&gt;markdown&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;With a build-in package &lt;code&gt;Markdown Preview&lt;/code&gt;, now I can writing and viewing this blog post at the same time. What an awesome experience!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/TuMkYDU.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;For &lt;code&gt;LaTex&lt;/code&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;latextools&lt;/code&gt; tends to provide all you needs for &lt;code&gt;LaTex&lt;/code&gt; editing. It can compile and view PDF files. And jump to the line.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;linter-chktex&lt;/code&gt; provides real-time stylistic checking as you write.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;todo-show&lt;/code&gt; finds all the TODOs, FIXMEs, etc. in your projects. Note only search key words in Capitan. It could be a useful tool for &lt;code&gt;Latex&lt;/code&gt; commenting and editing.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/XyOVDWX.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;share-page&quot;&gt;
+&lt;h2 style=&quot;background:#faebd7;&quot;&gt;
+    Share this on &amp;rarr; 
+    &lt;a href=&quot;https://twitter.com/intent/tweet?text=Customize Atom as a latex and markdown editor&amp;url=http://yangjl.com/journal%20club/2016/09/09/atom&amp;via=&amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
+    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://yangjl.com/journal%20club/2016/09/09/atom&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
+    &lt;a href=&quot;https://plus.google.com/share?url=http://yangjl.com/journal%20club/2016/09/09/atom&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
+&lt;/h2&gt; 
+&lt;style type=&quot;text/css&quot;&gt;
+    .share-page {
+        text-align: center;
+        background: $secondary-color;
+        color: $light-color;
+        padding: 8px 15px;
+        border-radius: 5px;
+        margin: 1.5 * $spacing-unit 0;
+
+        h2 {
+            font-weight: 700;
+            color: #458b74;
+            margin-left: 10px;
+
+            &amp;:hover {
+                border-bottom: 1px dashed #458b74;
+            }
+        }
+    }
+&lt;/style&gt;    
+&lt;/div&gt;
+
+
+
+</description>
+                <link>http://yangjl.com/en/journal%20club/2016/09/09/atom</link>
+                <guid>http://yangjl.com/en/journal%20club/2016/09/09/atom</guid>
+                <pubDate>2016-09-09T00:00:00-07:00</pubDate>
+        </item>
 
         <item>
                 <title>Comments on a RAHAB paper</title>
@@ -63,13 +143,13 @@
                 <title>The art of command line</title>
                 <description>&lt;h1&gt;The Art of Command Line (copied from &lt;a href=&quot;https://github.com/jlevy/the-art-of-command-line/blob/master/README.md&quot;&gt;jlevy&lt;/a&gt;@github)&lt;/h1&gt;
 
-&lt;p&gt;Fluency on the command line is a skill often neglected or considered arcane, but it improves your flexibility and productivity as an engineer in both obvious and subtle ways. This is a selection of notes and tips on using the command-line that I&#39;ve found useful when working on Linux. Some tips are elementary, and some are fairly specific, sophisticated, or obscure. This page is not long, but if you can use and recall all the items here, you know a lot.&lt;/p&gt;
+&lt;p&gt;Fluency on the command line is a skill often neglected or considered arcane, but it improves your flexibility and productivity as an engineer in both obvious and subtle ways. This is a selection of notes and tips on using the command-line that I've found useful when working on Linux. Some tips are elementary, and some are fairly specific, sophisticated, or obscure. This page is not long, but if you can use and recall all the items here, you know a lot.&lt;/p&gt;
 
 &lt;p&gt;Much of this
 &lt;a href=&quot;http://www.quora.com/What-are-some-lesser-known-but-useful-Unix-commands&quot;&gt;originally&lt;/a&gt;
 &lt;a href=&quot;http://www.quora.com/What-are-the-most-useful-Swiss-army-knife-one-liners-on-Unix&quot;&gt;appeared&lt;/a&gt;
 on &lt;a href=&quot;http://www.quora.com/What-are-some-time-saving-tips-that-every-Linux-user-should-know&quot;&gt;Quora&lt;/a&gt;,
-but given the interest there, it seems it&#39;s worth using Github, where people more talented than I can readily suggest improvements. If you see an error or something that could be better, please submit an issue or PR!&lt;/p&gt;
+but given the interest there, it seems it's worth using Github, where people more talented than I can readily suggest improvements. If you see an error or something that could be better, please submit an issue or PR!&lt;/p&gt;
 
 &lt;p&gt;Scope:&lt;/p&gt;
 
@@ -77,17 +157,17 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 &lt;li&gt;The goals are breadth and brevity. Every tip is essential in some situation or significantly saves time over alternatives.&lt;/li&gt;
 &lt;li&gt;This is written for Linux. Many but not all items apply equally to MacOS (or even Cygwin).&lt;/li&gt;
 &lt;li&gt;The focus is on interactive Bash, though many tips apply to other shells and to general Bash scripting.&lt;/li&gt;
-&lt;li&gt;Descriptions are intentionally minimal, with the expectation you&#39;ll use &lt;code&gt;man&lt;/code&gt;, &lt;code&gt;apt-get&lt;/code&gt;/&lt;code&gt;yum&lt;/code&gt;/&lt;code&gt;dnf&lt;/code&gt; to install, and Google for more background.&lt;/li&gt;
+&lt;li&gt;Descriptions are intentionally minimal, with the expectation you'll use &lt;code&gt;man&lt;/code&gt;, &lt;code&gt;apt-get&lt;/code&gt;/&lt;code&gt;yum&lt;/code&gt;/&lt;code&gt;dnf&lt;/code&gt; to install, and Google for more background.&lt;/li&gt;
 &lt;/ul&gt;
 
 
 &lt;h2&gt;Basics&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Learn basic Bash. Actually, type &lt;code&gt;man bash&lt;/code&gt; and at least skim the whole thing; it&#39;s pretty easy to follow and not that long. Alternate shells can be nice, but Bash is powerful and always available (learning &lt;em&gt;only&lt;/em&gt; zsh, fish, etc., while tempting on your own laptop, restricts you in many situations, such as using existing servers).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Learn at least one text-based editor well. Ideally Vim (&lt;code&gt;vi&lt;/code&gt;), as there&#39;s really no competition for random editing in a terminal (even if you use Emacs, a big IDE, or a modern hipster editor most of the time).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Learn basic Bash. Actually, type &lt;code&gt;man bash&lt;/code&gt; and at least skim the whole thing; it's pretty easy to follow and not that long. Alternate shells can be nice, but Bash is powerful and always available (learning &lt;em&gt;only&lt;/em&gt; zsh, fish, etc., while tempting on your own laptop, restricts you in many situations, such as using existing servers).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Learn at least one text-based editor well. Ideally Vim (&lt;code&gt;vi&lt;/code&gt;), as there's really no competition for random editing in a terminal (even if you use Emacs, a big IDE, or a modern hipster editor most of the time).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Learn about redirection of output and input using &lt;code&gt;&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;&lt;/code&gt; and pipes using &lt;code&gt;|&lt;/code&gt;. Learn about stdout and stderr.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Learn about file glob expansion with &lt;code&gt;*&lt;/code&gt; (and perhaps &lt;code&gt;?&lt;/code&gt; and &lt;code&gt;{&lt;/code&gt;...&lt;code&gt;}&lt;/code&gt;) and quoting and the difference between double &lt;code&gt;&quot;&lt;/code&gt; and single &lt;code&gt;&#39;&lt;/code&gt; quotes. (See more on variable expansion below.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Learn about file glob expansion with &lt;code&gt;*&lt;/code&gt; (and perhaps &lt;code&gt;?&lt;/code&gt; and &lt;code&gt;{&lt;/code&gt;...&lt;code&gt;}&lt;/code&gt;) and quoting and the difference between double &lt;code&gt;&quot;&lt;/code&gt; and single &lt;code&gt;'&lt;/code&gt; quotes. (See more on variable expansion below.)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Be familiar with Bash job management: &lt;code&gt;&amp;amp;&lt;/code&gt;, &lt;strong&gt;ctrl-z&lt;/strong&gt;, &lt;strong&gt;ctrl-c&lt;/strong&gt;, &lt;code&gt;jobs&lt;/code&gt;, &lt;code&gt;fg&lt;/code&gt;, &lt;code&gt;bg&lt;/code&gt;, &lt;code&gt;kill&lt;/code&gt;, etc.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Know &lt;code&gt;ssh&lt;/code&gt;, and the basics of passwordless authentication, via &lt;code&gt;ssh-agent&lt;/code&gt;, &lt;code&gt;ssh-add&lt;/code&gt;, etc.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Basic file management: &lt;code&gt;ls&lt;/code&gt; and &lt;code&gt;ls -l&lt;/code&gt; (in particular, learn what every column in &lt;code&gt;ls -l&lt;/code&gt; means), &lt;code&gt;less&lt;/code&gt;, &lt;code&gt;head&lt;/code&gt;, &lt;code&gt;tail&lt;/code&gt; and &lt;code&gt;tail -f&lt;/code&gt; (or even better, &lt;code&gt;less +F&lt;/code&gt;), &lt;code&gt;ln&lt;/code&gt; and &lt;code&gt;ln -s&lt;/code&gt; (learn the differences and advantages of hard versus soft links), &lt;code&gt;chown&lt;/code&gt;, &lt;code&gt;chmod&lt;/code&gt;, &lt;code&gt;du&lt;/code&gt; (for a quick summary of disk usage: &lt;code&gt;du -sk *&lt;/code&gt;), &lt;code&gt;df&lt;/code&gt;, &lt;code&gt;mount&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
@@ -104,11 +184,11 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 &lt;li&gt;&lt;p&gt;In Bash, use &lt;strong&gt;ctrl-w&lt;/strong&gt; to delete the last word, and &lt;strong&gt;ctrl-u&lt;/strong&gt; to delete the whole line. Use &lt;strong&gt;alt-b&lt;/strong&gt; and &lt;strong&gt;alt-f&lt;/strong&gt; to move by word, and &lt;strong&gt;ctrl-k&lt;/strong&gt; to kill to the end of the line. See &lt;code&gt;man readline&lt;/code&gt; for all the default keybindings in Bash. There are a lot. For example &lt;strong&gt;alt-.&lt;/strong&gt; cycles through previous arguments, and &lt;strong&gt;alt-&lt;/strong&gt;* expands a glob.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;To go back to the previous working directory: &lt;code&gt;cd -&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;If you are halfway through typing a command but change your mind, hit &lt;strong&gt;alt-#&lt;/strong&gt; to add a &lt;code&gt;#&lt;/code&gt; at the beginning and enter it as a comment (or use &lt;strong&gt;ctrl-a&lt;/strong&gt;, &lt;strong&gt;#&lt;/strong&gt;, &lt;strong&gt;enter&lt;/strong&gt;). You can then return to it later via command history.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Use &lt;code&gt;xargs&lt;/code&gt; (or &lt;code&gt;parallel&lt;/code&gt;). It&#39;s very powerful. Note you can control how many items execute per line (&lt;code&gt;-L&lt;/code&gt;) as well as parallelism (&lt;code&gt;-P&lt;/code&gt;). If you&#39;re not sure if it&#39;ll do the right thing, use &lt;code&gt;xargs echo&lt;/code&gt; first. Also, &lt;code&gt;-I{}&lt;/code&gt; is handy.   Examples:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use &lt;code&gt;xargs&lt;/code&gt; (or &lt;code&gt;parallel&lt;/code&gt;). It's very powerful. Note you can control how many items execute per line (&lt;code&gt;-L&lt;/code&gt;) as well as parallelism (&lt;code&gt;-P&lt;/code&gt;). If you're not sure if it'll do the right thing, use &lt;code&gt;xargs echo&lt;/code&gt; first. Also, &lt;code&gt;-I{}&lt;/code&gt; is handy.   Examples:&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 
-&lt;pre&gt;&lt;code class=&quot;&quot;&gt;      find . -name &#39;*.py&#39; | xargs grep some_function 
+&lt;pre&gt;&lt;code class=&quot;&quot;&gt;      find . -name '*.py' | xargs grep some_function 
       cat hosts | xargs -I{} ssh root@{} hostname 
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -161,7 +241,7 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 &lt;li&gt;&lt;p&gt;A few other options relevant to ssh are security sensitive and should be enabled with care, e.g. per subnet or host or in trusted networks: &lt;code&gt;StrictHostKeyChecking=no&lt;/code&gt;, &lt;code&gt;ForwardAgent=yes&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;To get the permissions on a file in octal form, which is useful for system configuration but not available in &lt;code&gt;ls&lt;/code&gt; and easy to bungle, use something like
 &lt;code&gt;sh
-    stat -c &#39;%A %a %n&#39; /etc/timezone
+    stat -c '%A %a %n' /etc/timezone
 &lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For interactive selection of values from the output of another command, use &lt;a href=&quot;https://github.com/mooz/percol&quot;&gt;&lt;code&gt;percol&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For interaction with files based on the output of another command (like &lt;code&gt;git&lt;/code&gt;), use &lt;code&gt;fpp&lt;/code&gt; (&lt;a href=&quot;https://github.com/facebook/PathPicker&quot;&gt;PathPicker&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt;
@@ -173,23 +253,23 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 &lt;h2&gt;Processing files and data&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;To locate a file by name in the current directory, &lt;code&gt;find . -iname &#39;*something*&#39;&lt;/code&gt; (or similar). To find a file anywhere by name, use &lt;code&gt;locate something&lt;/code&gt; (but bear in mind &lt;code&gt;updatedb&lt;/code&gt; may not have indexed recently created files).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To locate a file by name in the current directory, &lt;code&gt;find . -iname '*something*'&lt;/code&gt; (or similar). To find a file anywhere by name, use &lt;code&gt;locate something&lt;/code&gt; (but bear in mind &lt;code&gt;updatedb&lt;/code&gt; may not have indexed recently created files).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For general searching through source or data files (more advanced than &lt;code&gt;grep -r&lt;/code&gt;), use &lt;a href=&quot;https://github.com/ggreer/the_silver_searcher&quot;&gt;&lt;code&gt;ag&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;To convert HTML to text: &lt;code&gt;lynx -dump -stdin&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For Markdown, HTML, and all kinds of document conversion, try &lt;a href=&quot;http://pandoc.org/&quot;&gt;&lt;code&gt;pandoc&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;If you must handle XML, &lt;code&gt;xmlstarlet&lt;/code&gt; is old but good.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For JSON, use &lt;code&gt;jq&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For Excel or CSV files, &lt;a href=&quot;https://github.com/onyxfish/csvkit&quot;&gt;csvkit&lt;/a&gt; provides &lt;code&gt;in2csv&lt;/code&gt;, &lt;code&gt;csvcut&lt;/code&gt;, &lt;code&gt;csvjoin&lt;/code&gt;, &lt;code&gt;csvgrep&lt;/code&gt;, etc.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For Amazon S3, &lt;a href=&quot;https://github.com/s3tools/s3cmd&quot;&gt;&lt;code&gt;s3cmd&lt;/code&gt;&lt;/a&gt; is convenient and &lt;a href=&quot;https://github.com/bloomreach/s4cmd&quot;&gt;&lt;code&gt;s4cmd&lt;/code&gt;&lt;/a&gt; is faster. Amazon&#39;s &lt;a href=&quot;https://github.com/aws/aws-cli&quot;&gt;&lt;code&gt;aws&lt;/code&gt;&lt;/a&gt; is essential for other AWS-related tasks.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Know about &lt;code&gt;sort&lt;/code&gt; and &lt;code&gt;uniq&lt;/code&gt;, including uniq&#39;s &lt;code&gt;-u&lt;/code&gt; and &lt;code&gt;-d&lt;/code&gt; options -- see one-liners below.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For Amazon S3, &lt;a href=&quot;https://github.com/s3tools/s3cmd&quot;&gt;&lt;code&gt;s3cmd&lt;/code&gt;&lt;/a&gt; is convenient and &lt;a href=&quot;https://github.com/bloomreach/s4cmd&quot;&gt;&lt;code&gt;s4cmd&lt;/code&gt;&lt;/a&gt; is faster. Amazon's &lt;a href=&quot;https://github.com/aws/aws-cli&quot;&gt;&lt;code&gt;aws&lt;/code&gt;&lt;/a&gt; is essential for other AWS-related tasks.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Know about &lt;code&gt;sort&lt;/code&gt; and &lt;code&gt;uniq&lt;/code&gt;, including uniq's &lt;code&gt;-u&lt;/code&gt; and &lt;code&gt;-d&lt;/code&gt; options -- see one-liners below.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Know about &lt;code&gt;cut&lt;/code&gt;, &lt;code&gt;paste&lt;/code&gt;, and &lt;code&gt;join&lt;/code&gt; to manipulate text files. Many people use &lt;code&gt;cut&lt;/code&gt; but forget about &lt;code&gt;join&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Know that locale affects a lot of command line tools in subtle ways, including sorting order (collation) and performance. Most Linux installations will set &lt;code&gt;LANG&lt;/code&gt; or other locale variables to a local setting like US English. But be aware sorting will change if you change locale. And know i18n routines can make sort or other commands run &lt;em&gt;many times&lt;/em&gt; slower. In some situations (such as the set operations or uniqueness operations below) you can safely ignore slow i18n routines entirely and use traditional byte-based sort order, using &lt;code&gt;export LC_ALL=C&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Know basic &lt;code&gt;awk&lt;/code&gt; and &lt;code&gt;sed&lt;/code&gt; for simple data munging. For example, summing all numbers in the third column of a text file: &lt;code&gt;awk &#39;{ x += $3 } END { print x }&#39;&lt;/code&gt;. This is probably 3X faster and 3X shorter than equivalent Python.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Know basic &lt;code&gt;awk&lt;/code&gt; and &lt;code&gt;sed&lt;/code&gt; for simple data munging. For example, summing all numbers in the third column of a text file: &lt;code&gt;awk '{ x += $3 } END { print x }'&lt;/code&gt;. This is probably 3X faster and 3X shorter than equivalent Python.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;To replace all occurrences of a string in place, in one or more files:&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 
-&lt;pre&gt;&lt;code&gt;      perl -pi.bak -e &#39;s/old-string/new-string/g&#39; my-files-*.txt
+&lt;pre&gt;&lt;code&gt;      perl -pi.bak -e 's/old-string/new-string/g' my-files-*.txt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
@@ -198,23 +278,23 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 
 
 &lt;pre&gt;&lt;code&gt;      # Recover backup files foo.bak -&amp;gt; foo:
-      rename &#39;s/\.bak$//&#39; *.bak
+      rename 's/\.bak$//' *.bak
       # Full rename of filenames, directories, and contents foo -&amp;gt; bar:
       repren --full --preserve-case --from foo --to bar .
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Use &lt;code&gt;shuf&lt;/code&gt; to shuffle or select random lines from a file.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Know &lt;code&gt;sort&lt;/code&gt;&#39;s options. Know how keys work (&lt;code&gt;-t&lt;/code&gt; and &lt;code&gt;-k&lt;/code&gt;). In particular, watch out that you need to write &lt;code&gt;-k1,1&lt;/code&gt; to sort by only the first field; &lt;code&gt;-k1&lt;/code&gt; means sort according to the whole line.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Know &lt;code&gt;sort&lt;/code&gt;'s options. Know how keys work (&lt;code&gt;-t&lt;/code&gt; and &lt;code&gt;-k&lt;/code&gt;). In particular, watch out that you need to write &lt;code&gt;-k1,1&lt;/code&gt; to sort by only the first field; &lt;code&gt;-k1&lt;/code&gt; means sort according to the whole line.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Stable sort (&lt;code&gt;sort -s&lt;/code&gt;) can be useful. For example, to sort first by field 2, then secondarily by field 1, you can use &lt;code&gt;sort -k1,1 | sort -s -k2,2&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;If you ever need to write a tab literal in a command line in Bash (e.g. for the -t argument to sort), press &lt;strong&gt;ctrl-v&lt;/strong&gt; &lt;strong&gt;[Tab]&lt;/strong&gt; or write &lt;code&gt;$&#39;\t&#39;&lt;/code&gt; (the latter is better as you can copy/paste it).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you ever need to write a tab literal in a command line in Bash (e.g. for the -t argument to sort), press &lt;strong&gt;ctrl-v&lt;/strong&gt; &lt;strong&gt;[Tab]&lt;/strong&gt; or write &lt;code&gt;$'\t'&lt;/code&gt; (the latter is better as you can copy/paste it).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For binary files, use &lt;code&gt;hd&lt;/code&gt; for simple hex dumps and &lt;code&gt;bvi&lt;/code&gt; for binary editing.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Also for binary files, &lt;code&gt;strings&lt;/code&gt; (plus &lt;code&gt;grep&lt;/code&gt;, etc.) lets you find bits of text.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;To convert text encodings, try &lt;code&gt;iconv&lt;/code&gt;. Or &lt;code&gt;uconv&lt;/code&gt; for more advanced use; it supports some advanced Unicode things. For example, this command lowercases and removes all accents (by expanding and dropping them):&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 
-&lt;pre&gt;&lt;code&gt;      uconv -f utf-8 -t utf-8 -x &#39;::Any-Lower; ::Any-NFD; [:Nonspacing Mark:] &amp;gt;; ::Any-NFC; &#39; &amp;lt; input.txt &amp;gt; output.txt
+&lt;pre&gt;&lt;code&gt;      uconv -f utf-8 -t utf-8 -x '::Any-Lower; ::Any-NFD; [:Nonspacing Mark:] &amp;gt;; ::Any-NFC; ' &amp;lt; input.txt &amp;gt; output.txt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
@@ -227,23 +307,23 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;For web debugging, &lt;code&gt;curl&lt;/code&gt; and &lt;code&gt;curl -I&lt;/code&gt; are handy, or their &lt;code&gt;wget&lt;/code&gt; equivalents, or the more modern &lt;a href=&quot;https://github.com/jakubroztocil/httpie&quot;&gt;&lt;code&gt;httpie&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To know disk/cpu/network status, use &lt;code&gt;iostat&lt;/code&gt;, &lt;code&gt;netstat&lt;/code&gt;, &lt;code&gt;top&lt;/code&gt; (or the better &lt;code&gt;htop&lt;/code&gt;), and (especially) &lt;code&gt;dstat&lt;/code&gt;. Good for getting a quick idea of what&#39;s happening on a system.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To know disk/cpu/network status, use &lt;code&gt;iostat&lt;/code&gt;, &lt;code&gt;netstat&lt;/code&gt;, &lt;code&gt;top&lt;/code&gt; (or the better &lt;code&gt;htop&lt;/code&gt;), and (especially) &lt;code&gt;dstat&lt;/code&gt;. Good for getting a quick idea of what's happening on a system.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For a more in-depth system overview, use &lt;a href=&quot;https://github.com/nicolargo/glances&quot;&gt;&lt;code&gt;glances&lt;/code&gt;&lt;/a&gt;. It presents you with several system level statistics in one terminal window. Very helpful for quickly checking on various subsystems.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;To know memory status, run and understand the output of &lt;code&gt;free&lt;/code&gt; and &lt;code&gt;vmstat&lt;/code&gt;. In particular, be aware the &quot;cached&quot; value is memory held by the Linux kernel as file cache, so effectively counts toward the &quot;free&quot; value.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Java system debugging is a different kettle of fish, but a simple trick on Oracle&#39;s and some other JVMs is that you can run &lt;code&gt;kill -3 &amp;lt;pid&amp;gt;&lt;/code&gt; and a full stack trace and heap summary (including generational garbage collection details, which can be highly informative) will be dumped to stderr/logs.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Java system debugging is a different kettle of fish, but a simple trick on Oracle's and some other JVMs is that you can run &lt;code&gt;kill -3 &amp;lt;pid&amp;gt;&lt;/code&gt; and a full stack trace and heap summary (including generational garbage collection details, which can be highly informative) will be dumped to stderr/logs.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Use &lt;code&gt;mtr&lt;/code&gt; as a better traceroute, to identify network issues.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For looking at why a disk is full, &lt;code&gt;ncdu&lt;/code&gt; saves time over the usual commands like &lt;code&gt;du -sh *&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;To find which socket or process is using bandwidth, try &lt;code&gt;iftop&lt;/code&gt; or &lt;code&gt;nethogs&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The &lt;code&gt;ab&lt;/code&gt; tool (comes with Apache) is helpful for quick-and-dirty checking of web server performance. For more complex load testing, try &lt;code&gt;siege&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For more serious network debugging, &lt;code&gt;wireshark&lt;/code&gt;, &lt;code&gt;tshark&lt;/code&gt;, or &lt;code&gt;ngrep&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Know about &lt;code&gt;strace&lt;/code&gt; and &lt;code&gt;ltrace&lt;/code&gt;. These can be helpful if a program is failing, hanging, or crashing, and you don&#39;t know why, or if you want to get a general idea of performance. Note the profiling option (&lt;code&gt;-c&lt;/code&gt;), and the ability to attach to a running process (&lt;code&gt;-p&lt;/code&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Know about &lt;code&gt;strace&lt;/code&gt; and &lt;code&gt;ltrace&lt;/code&gt;. These can be helpful if a program is failing, hanging, or crashing, and you don't know why, or if you want to get a general idea of performance. Note the profiling option (&lt;code&gt;-c&lt;/code&gt;), and the ability to attach to a running process (&lt;code&gt;-p&lt;/code&gt;).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Know about &lt;code&gt;ldd&lt;/code&gt; to check shared libraries etc.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Know how to connect to a running process with &lt;code&gt;gdb&lt;/code&gt; and get its stack traces.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Use &lt;code&gt;/proc&lt;/code&gt;. It&#39;s amazingly helpful sometimes when debugging live problems. Examples: &lt;code&gt;/proc/cpuinfo&lt;/code&gt;, &lt;code&gt;/proc/xxx/cwd&lt;/code&gt;, &lt;code&gt;/proc/xxx/exe&lt;/code&gt;, &lt;code&gt;/proc/xxx/fd/&lt;/code&gt;, &lt;code&gt;/proc/xxx/smaps&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use &lt;code&gt;/proc&lt;/code&gt;. It's amazingly helpful sometimes when debugging live problems. Examples: &lt;code&gt;/proc/cpuinfo&lt;/code&gt;, &lt;code&gt;/proc/xxx/cwd&lt;/code&gt;, &lt;code&gt;/proc/xxx/exe&lt;/code&gt;, &lt;code&gt;/proc/xxx/fd/&lt;/code&gt;, &lt;code&gt;/proc/xxx/smaps&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;When debugging why something went wrong in the past, &lt;code&gt;sar&lt;/code&gt; can be very helpful. It shows historic statistics on CPU, memory, network, etc.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For deeper systems and performance analyses, look at &lt;code&gt;stap&lt;/code&gt; (&lt;a href=&quot;https://sourceware.org/systemtap/wiki&quot;&gt;SystemTap&lt;/a&gt;), &lt;a href=&quot;http://en.wikipedia.org/wiki/Perf_(Linux&quot;&gt;&lt;code&gt;perf&lt;/code&gt;&lt;/a&gt;), and &lt;a href=&quot;https://github.com/draios/sysdig&quot;&gt;&lt;code&gt;sysdig&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Confirm what Linux distribution you&#39;re using (works on most distros): &lt;code&gt;lsb_release -a&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Use &lt;code&gt;dmesg&lt;/code&gt; whenever something&#39;s acting really funny (it could be hardware or driver issues).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Confirm what Linux distribution you're using (works on most distros): &lt;code&gt;lsb_release -a&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use &lt;code&gt;dmesg&lt;/code&gt; whenever something's acting really funny (it could be hardware or driver issues).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 
@@ -266,7 +346,7 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 &lt;/ul&gt;
 
 
-&lt;pre&gt;&lt;code&gt;      awk &#39;{ x += $3 } END { print x }&#39; myfile
+&lt;pre&gt;&lt;code&gt;      awk '{ x += $3 } END { print x }' myfile
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
@@ -278,11 +358,11 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Use &lt;code&gt;xargs&lt;/code&gt; or &lt;code&gt;parallel&lt;/code&gt; whenever you can. Note you can control how many items execute per line (&lt;code&gt;-L&lt;/code&gt;) as well as parallelism (&lt;code&gt;-P&lt;/code&gt;). If you&#39;re not sure if it&#39;ll do the right thing, use xargs echo first. Also, &lt;code&gt;-I{}&lt;/code&gt; is handy. Examples:&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;xargs&lt;/code&gt; or &lt;code&gt;parallel&lt;/code&gt; whenever you can. Note you can control how many items execute per line (&lt;code&gt;-L&lt;/code&gt;) as well as parallelism (&lt;code&gt;-P&lt;/code&gt;). If you're not sure if it'll do the right thing, use xargs echo first. Also, &lt;code&gt;-I{}&lt;/code&gt; is handy. Examples:&lt;/li&gt;
 &lt;/ul&gt;
 
 
-&lt;pre&gt;&lt;code&gt;      find . -name &#39;*.py&#39; | xargs grep some_function
+&lt;pre&gt;&lt;code&gt;      find . -name '*.py' | xargs grep some_function
       cat hosts | xargs -I{} ssh root@{} hostname
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -291,7 +371,7 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 &lt;/ul&gt;
 
 
-&lt;pre&gt;&lt;code&gt;      cat access.log | egrep -o &#39;acct_id=[0-9]+&#39; | cut -d= -f2 | sort | uniq -c | sort -rn
+&lt;pre&gt;&lt;code&gt;      cat access.log | egrep -o 'acct_id=[0-9]+' | cut -d= -f2 | sort | uniq -c | sort -rn
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
@@ -358,7 +438,7 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 &lt;li&gt;&lt;p&gt;&lt;code&gt;iostat&lt;/code&gt;: CPU and disk usage stats&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;htop&lt;/code&gt;: improved version of top&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;last&lt;/code&gt;: login history&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;w&lt;/code&gt;: who&#39;s logged on&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;w&lt;/code&gt;: who's logged on&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;id&lt;/code&gt;: user/group identity info&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;sar&lt;/code&gt;: historic system stats&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;iftop&lt;/code&gt; or &lt;code&gt;nethogs&lt;/code&gt;: network utilization by socket or process&lt;/p&gt;&lt;/li&gt;
@@ -381,7 +461,7 @@ but given the interest there, it seems it&#39;s worth using Github, where people
 
 &lt;h2&gt;Disclaimer&lt;/h2&gt;
 
-&lt;p&gt;With the exception of very small tasks, code is written so others can read it. With power comes responsibility. The fact you &lt;em&gt;can&lt;/em&gt; do something in Bash doesn&#39;t necessarily mean you should! ;)&lt;/p&gt;
+&lt;p&gt;With the exception of very small tasks, code is written so others can read it. With power comes responsibility. The fact you &lt;em&gt;can&lt;/em&gt; do something in Bash doesn't necessarily mean you should! ;)&lt;/p&gt;
 
 &lt;div class=&quot;share-page&quot;&gt;
 &lt;h2 style=&quot;background:#faebd7;&quot;&gt;
@@ -425,7 +505,7 @@ but given the interest there, it seems it&#39;s worth using Github, where people
                 <description>&lt;h1&gt;Background&lt;/h1&gt;
 
 &lt;p&gt;RNA-seq short reads quantification, or simply, counting how many reads mapped to a set of genes, is the key step for differential expression analysis. Traditionally, reads were mapped to the reference genome and then were counted based on the mapping information. It normally takes days or weeks with multiple CPUs, just for the alignment. Recently, K-mer strategy was proposed as an alignment-free alternative, including &lt;a href=&quot;http://www.nature.com/nbt/journal/v32/n5/full/nbt.2862.html&quot;&gt;Sailfish&lt;/a&gt; and &lt;a href=&quot;http://arxiv.org/pdf/1505.02710v2.pdf&quot;&gt;kallisto&lt;/a&gt;. Strange names, are they?
-Anyway, with no doubt, these K-mer approaches run much faster comparing to alignment-based approaches. See below figure stole from &lt;a href=&quot;http://www.cs.cmu.edu/~ckingsf/class/02-714/Lec05-sailfish.pdf&quot;&gt;Rob Patro&#39;s presentation&lt;/a&gt;.
+Anyway, with no doubt, these K-mer approaches run much faster comparing to alignment-based approaches. See below figure stole from &lt;a href=&quot;http://www.cs.cmu.edu/~ckingsf/class/02-714/Lec05-sailfish.pdf&quot;&gt;Rob Patro's presentation&lt;/a&gt;.
 &lt;img src=&quot;http://i.imgur.com/YVhf5tz.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;What is K-mer? Simply speaking, K-mer is a string of length K. For instance, &quot;ATCG&quot; is 4-mer sequence. For a given sequence of length N, it will extract &lt;code&gt;N-k+1&lt;/code&gt; k-mers.
@@ -462,7 +542,7 @@ kallisto quant -i index -o output pairA_1.fastq pairA_2.fastq pairB_1.fastq pair
 
 &lt;h1&gt;Comparing of the results&lt;/h1&gt;
 
-&lt;p&gt;The Pearson&#39;s correlation coefficient (r) ranged from 0.8 to 0.94. That is an impressive correlation, indicating the &lt;code&gt;kallisto&lt;/code&gt; is indeed as accurate as alignment-based approach. I looked into the outliers on the left sides of the plots and found those dots were from genes with repeat sequences. Note that with the alignment-based approach, I kept only uniquely mapped reads for quantification purpose. After removing these several outlier genes, the correlations become more significant.&lt;/p&gt;
+&lt;p&gt;The Pearson's correlation coefficient (r) ranged from 0.8 to 0.94. That is an impressive correlation, indicating the &lt;code&gt;kallisto&lt;/code&gt; is indeed as accurate as alignment-based approach. I looked into the outliers on the left sides of the plots and found those dots were from genes with repeat sequences. Note that with the alignment-based approach, I kept only uniquely mapped reads for quantification purpose. After removing these several outlier genes, the correlations become more significant.&lt;/p&gt;
 
 &lt;p&gt;Overall, I think &lt;code&gt;kallisto&lt;/code&gt; is a simple and rapid RNA-seq quantification alternative for alignment-based approach. However, &lt;code&gt;kallisto&lt;/code&gt; may over-estimate the read counts from genes containing repeats. For differential expression analysis, this may not be a critical problem since the over-estimation will not be biased.&lt;/p&gt;
 
@@ -544,7 +624,7 @@ make
 
 &lt;h1&gt;Preparation for BAM input&lt;/h1&gt;
 
-&lt;p&gt;The following codes all following ANGSD&#39;s tutorial.&lt;/p&gt;
+&lt;p&gt;The following codes all following ANGSD's tutorial.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;### download data
 wget http://popgen.dk/software/download/angsd/bams.tar.gz
@@ -710,7 +790,7 @@ $ git pull externalName master
                 <title>Attending #PAGXXIII at home</title>
                 <description>&lt;p&gt;I missed #PAG meetings (International Plant &amp;amp; Animal Genome Conference) two years in a row partly because of my newborn. Thanks to the social media such as &lt;a href=&quot;https://twitter.com/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;github.com&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;Slideshare&lt;/a&gt;, which keep people like me updated about the excitements (mainly biotech progresses) in San Diego. Here, I extracted some information from the web regarding #PAGXXIII and tried to digest the meeting info a little bit at home.&lt;/p&gt;
 
-&lt;p&gt;All the tweets with the dash tag #PAGXXIII were obtained every day during the meeting and were achieved in this Github repo &lt;a href=&quot;https://github.com/yangjl/MeetingTweets&quot;&gt;MeetingTweets&lt;/a&gt;. It also includes the tweets from last year&#39;s meeting. Most of this code was adapted from &lt;a href=&quot;http://gettinggeneticsdone.blogspot.com/search/label/Twitter&quot;&gt;Stephen Turner&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All the tweets with the dash tag #PAGXXIII were obtained every day during the meeting and were achieved in this Github repo &lt;a href=&quot;https://github.com/yangjl/MeetingTweets&quot;&gt;MeetingTweets&lt;/a&gt;. It also includes the tweets from last year's meeting. Most of this code was adapted from &lt;a href=&quot;http://gettinggeneticsdone.blogspot.com/search/label/Twitter&quot;&gt;Stephen Turner&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -738,11 +818,11 @@ $ git pull externalName master
 
 &lt;h1&gt;DAY ONE (2015-1-10)&lt;/h1&gt;
 
-&lt;p&gt;I lost day one&#39;s data.&lt;/p&gt;
+&lt;p&gt;I lost day one's data.&lt;/p&gt;
 
 &lt;h1&gt;DAY TWO (2015-1-11)&lt;/h1&gt;
 
-&lt;p&gt;The &lt;strong&gt;&#39;wordcloud&#39;&lt;/strong&gt; of day one says that &quot;Ancient dna sequencing data can assembly, need to see booth now&quot;. Really?&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;'wordcloud'&lt;/strong&gt; of day one says that &quot;Ancient dna sequencing data can assembly, need to see booth now&quot;. Really?&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7B6rzAU.png?1&quot; alt=&quot;Imgur1&quot; /&gt;&lt;/p&gt;
 
@@ -789,8 +869,8 @@ $ git pull externalName master
 
 &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/419163/what-does-if-name-main-do&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;When the Python interpreter reads a source file, it executes all of the code found in it. Before executing the code, it will define a few special variables. For example, if the python interpreter is running that module (the source file) as the main program, it sets the special &lt;strong&gt;name&lt;/strong&gt; variable to have a value &quot;&lt;strong&gt;main&lt;/strong&gt;&quot;. If this file is being imported from another module, &lt;strong&gt;name&lt;/strong&gt; will be set to the module&#39;s name.
-In the case of your script, let&#39;s assume that it&#39;s executing as the main function, e.g. you said something like&lt;br/&gt;
+&lt;p&gt;When the Python interpreter reads a source file, it executes all of the code found in it. Before executing the code, it will define a few special variables. For example, if the python interpreter is running that module (the source file) as the main program, it sets the special &lt;strong&gt;name&lt;/strong&gt; variable to have a value &quot;&lt;strong&gt;main&lt;/strong&gt;&quot;. If this file is being imported from another module, &lt;strong&gt;name&lt;/strong&gt; will be set to the module's name.
+In the case of your script, let's assume that it's executing as the main function, e.g. you said something like&lt;br/&gt;
 &lt;code&gt;python threading_example.py&lt;/code&gt;&lt;br/&gt;
 on the command line. After setting up the special variables, it will execute the import statement and load those modules. It will then evaluate the def block, creating a function object and creating a variable called myfunction that points to the function object. It will then read the if statement and see that &lt;strong&gt;name&lt;/strong&gt; does equal &quot;&lt;strong&gt;main&lt;/strong&gt;&quot;, so it will execute the block shown there.&lt;/p&gt;
 
@@ -845,13 +925,13 @@ gerp = pd.read_csv(&quot;largedata/SNP/allsnps_11m_gerpv2_tidy.csv&quot;)
 
 &lt;h3&gt;paste&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;snpibd[&#39;snpid&#39;] = snpibd[3].map(str) + &quot;_&quot; + snpibd[2].map(str)
-snpibd[&#39;ibdid&#39;] = snpibd[3].map(str) + &quot;_&quot; + snpibd[4].map(str)
+&lt;pre&gt;&lt;code&gt;snpibd['snpid'] = snpibd[3].map(str) + &quot;_&quot; + snpibd[2].map(str)
+snpibd['ibdid'] = snpibd[3].map(str) + &quot;_&quot; + snpibd[4].map(str)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3&gt;merge&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;snp11mgp = pd.merge(gerp130m[[&quot;snpid&quot;, &quot;N&quot;, &quot;RS&quot;]], snp11m, on=&#39;snpid&#39;, sort=False, how=&#39;right&#39;)
+&lt;pre&gt;&lt;code&gt;snp11mgp = pd.merge(gerp130m[[&quot;snpid&quot;, &quot;N&quot;, &quot;RS&quot;]], snp11m, on='snpid', sort=False, how='right')
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3&gt;write.csv&lt;/h3&gt;
@@ -866,7 +946,7 @@ snpibd[&#39;ibdid&#39;] = snpibd[3].map(str) + &quot;_&quot; + snpibd[4].map(str
 
         <item>
                 <title>R package Data.Table Usage Notes</title>
-                <description>&lt;p&gt;Most of those were learned from Kate Crosby&#39;s &lt;a href=&quot;https://github.com/kate-crosby/datatable_slides&quot;&gt;short tutorial&lt;/a&gt; in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;RIL lab&lt;/a&gt;.&lt;/p&gt;
+                <description>&lt;p&gt;Most of those were learned from Kate Crosby's &lt;a href=&quot;https://github.com/kate-crosby/datatable_slides&quot;&gt;short tutorial&lt;/a&gt; in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;RIL lab&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2&gt;Read in data.frame rapidly with &lt;strong&gt;fread&lt;/strong&gt;&lt;/h2&gt;
 
@@ -982,9 +1062,9 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
 &lt;p&gt;The right corner icon of &lt;strong&gt;RStudio&lt;/strong&gt; will enable you to manage your &lt;em&gt;New Project&lt;/em&gt;.    &lt;br/&gt;
 I normally start a project with&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#install.packages(&#39;ProjectTemplate&#39;)
-library(&#39;ProjectTemplate&#39;)
-create.project(&#39;temp&#39;)
+&lt;pre&gt;&lt;code&gt;#install.packages('ProjectTemplate')
+library('ProjectTemplate')
+create.project('temp')
 system(&quot;mv temp/* .&quot;)
 system(&quot;rm -r temp/&quot;)
 &lt;/code&gt;&lt;/pre&gt;
@@ -1087,14 +1167,14 @@ line break&lt;/p&gt;
 
 &lt;p&gt;This is an example of a draft. Read more here: &lt;a href=&quot;http://jekyllrb.com/docs/drafts/&quot;&gt;http://jekyllrb.com/docs/drafts/&lt;/a&gt;&lt;/p&gt;
 </description>
-                <link>http://yangjl.com/en/reproducible/2014/11/05/reproducible-research+copy</link>
+                <link>http://yangjl.com/en/reproducible/2014/11/05/reproducible-research-copy</link>
                 <guid>http://yangjl.com/en/reproducible/2014/11/05/reproducible-research copy</guid>
                 <pubDate>2014-11-05T00:00:00-08:00</pubDate>
         </item>
 
         <item>
                 <title>Journal Club（2）</title>
-                <description>&lt;p&gt;This nature&#39;s cover story &quot;THE GREEN HOURGLASS&quot; was really an exciting paper. I regret to not be able to fully capture it two years ago.&lt;/p&gt;
+                <description>&lt;p&gt;This nature's cover story &quot;THE GREEN HOURGLASS&quot; was really an exciting paper. I regret to not be able to fully capture it two years ago.&lt;/p&gt;
 
 &lt;p&gt;The authors adapted the embryonic hourclass model proposed from vertebrates (as the figure show below) to plants, and provided the transcriptomic evidence from two complementary analyses. What is the embryonic hourclass? It refers to embryos from various taxa appear different in early stages, and converge to a similar form during mid-embryogenesis (or called phylotypic stage), and again diverge in later stages.&lt;/p&gt;
 
@@ -1120,11 +1200,11 @@ line break&lt;/p&gt;
                 <title>NGS data of Maize</title>
                 <description>&lt;p&gt;We are now in the Big Data era, where &quot;the data scientist will become the most sexy job in the world&quot; said by &lt;a href=&quot;http://www.nytimes.com/2013/04/14/education/edlife/universities-offer-courses-in-a-hot-new-field-data-science.html?pagewanted=all&amp;amp;_r=0&quot;&gt;NYT&lt;/a&gt;. And the IT world frequently mentioned &quot;90% of the data in the world today has been created in the last two years alone&quot;. It seems like a strong wave of data explosion is coming!&lt;/p&gt;
 
-&lt;p&gt;Amazing! However, I feel like we have nothing to do with it until recently when I checked the NCBI SRA database for a talk. I found that, we, the maize community, are right in the midst of the Big Data explosion. According to the database report, while after doing some accessions lookup, in the past several years, especially the last two years, about 13,000 Giga base-pairs were deposited from the maize community. That is about 6,500 depth of coverage of the maize genome if roughly assuming the maize genome is 2 Giba bases in size. This estimation not includes the on-going projects and non-submitted datasets. More importantly, this is happening just five years after the accomplishment of the maize B73 reference genome project. If we review the complete datasets in the SRA database, maize NGS data actually only accounted for &amp;lt; 0.1%. Until the end of Feb. 2014, more than 2,300 Tera bases reside there. The &quot;90% &lt;strong&gt;genome sequencing data&lt;/strong&gt; were generated in the past two years alone&quot;. See, IT&#39;s data theory could be perfectly aligned to the sequencing industry (see the figure below).&lt;/p&gt;
+&lt;p&gt;Amazing! However, I feel like we have nothing to do with it until recently when I checked the NCBI SRA database for a talk. I found that, we, the maize community, are right in the midst of the Big Data explosion. According to the database report, while after doing some accessions lookup, in the past several years, especially the last two years, about 13,000 Giga base-pairs were deposited from the maize community. That is about 6,500 depth of coverage of the maize genome if roughly assuming the maize genome is 2 Giba bases in size. This estimation not includes the on-going projects and non-submitted datasets. More importantly, this is happening just five years after the accomplishment of the maize B73 reference genome project. If we review the complete datasets in the SRA database, maize NGS data actually only accounted for &amp;lt; 0.1%. Until the end of Feb. 2014, more than 2,300 Tera bases reside there. The &quot;90% &lt;strong&gt;genome sequencing data&lt;/strong&gt; were generated in the past two years alone&quot;. See, IT's data theory could be perfectly aligned to the sequencing industry (see the figure below).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Mb5Z1Yi.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As the data explosion, NGS data&#39;s storage, sharing and publishing become a worldwide challenge. To overcome it, ~150 academic institutions and private companies went together to join the &lt;a href=&quot;http://genomicsandhealth.org/&quot;&gt;Global Alliance for Genomics and Health&lt;/a&gt;. While, &lt;a href=&quot;http://googleresearch.blogspot.co.uk/2014/02/google-joins-global-alliance-for.html&quot;&gt;Google Genomics&lt;/a&gt; is one of them. As the joining of some IT tycoons, &lt;strong&gt;genomics&lt;/strong&gt; now become a multi-disciplinary challenge. &lt;strong&gt;Genomics&lt;/strong&gt; and its related &lt;strong&gt;Bioinformatics&lt;/strong&gt; are upgraded to their 2.0 version. I never thought that, trained as a geneticist, I may one day work for Google. Good, bad or ironic? It might be too optimistic. There is a long way to go and the industries are actually more interested in the human health related area. As a relative small research community for maize or plant genomics studies, we are less attractive from industry&#39;s point of view.&lt;/p&gt;
+&lt;p&gt;As the data explosion, NGS data's storage, sharing and publishing become a worldwide challenge. To overcome it, ~150 academic institutions and private companies went together to join the &lt;a href=&quot;http://genomicsandhealth.org/&quot;&gt;Global Alliance for Genomics and Health&lt;/a&gt;. While, &lt;a href=&quot;http://googleresearch.blogspot.co.uk/2014/02/google-joins-global-alliance-for.html&quot;&gt;Google Genomics&lt;/a&gt; is one of them. As the joining of some IT tycoons, &lt;strong&gt;genomics&lt;/strong&gt; now become a multi-disciplinary challenge. &lt;strong&gt;Genomics&lt;/strong&gt; and its related &lt;strong&gt;Bioinformatics&lt;/strong&gt; are upgraded to their 2.0 version. I never thought that, trained as a geneticist, I may one day work for Google. Good, bad or ironic? It might be too optimistic. There is a long way to go and the industries are actually more interested in the human health related area. As a relative small research community for maize or plant genomics studies, we are less attractive from industry's point of view.&lt;/p&gt;
 
 &lt;p&gt;Here, I will try to interpret the maize NGS data a little. This kind of study may be extended to other crop species later. After a close look, the data presented their own story. This kind of story might not be extracted from the papers alone. Below, I listed the top 10 maize projects according to their data output.&lt;/p&gt;
 
@@ -1212,7 +1292,7 @@ line break&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;In the U.S., from the above summary table of the sequencing data, I learned that different labs have their own focus. The &lt;strong&gt;lab&lt;/strong&gt; here, sometimes, should also refer to the efforts from their collaborators. Among these labs, Buckler&#39;s group at Cornell, after finishing the zea mays HapMap project, was now aiming to sequencing every species of maize in the world using Genotyping-By-Sequencing (GBS). Recently, Buell&#39;s lab at MSU released a large set of transcriptomic data. This group may lead the maize transcriptome analysis in the future. A group at CSHL did a lot of Methylome study. Another group at CSHL, Jackson&#39;s lab, focused on the development studies, their efforts of transcriptomic sequencing at various developmental stages may eventually lead to a developmentome (I invented this term) some day. Other research subjects, such as ISU&#39;s Zeanome and PAV, UC Davis R-I group&#39;s domestication and evolution and University of Minnesota&#39;s IBM RIL eQTL mapping, et. al..&lt;/p&gt;
+&lt;p&gt;In the U.S., from the above summary table of the sequencing data, I learned that different labs have their own focus. The &lt;strong&gt;lab&lt;/strong&gt; here, sometimes, should also refer to the efforts from their collaborators. Among these labs, Buckler's group at Cornell, after finishing the zea mays HapMap project, was now aiming to sequencing every species of maize in the world using Genotyping-By-Sequencing (GBS). Recently, Buell's lab at MSU released a large set of transcriptomic data. This group may lead the maize transcriptome analysis in the future. A group at CSHL did a lot of Methylome study. Another group at CSHL, Jackson's lab, focused on the development studies, their efforts of transcriptomic sequencing at various developmental stages may eventually lead to a developmentome (I invented this term) some day. Other research subjects, such as ISU's Zeanome and PAV, UC Davis R-I group's domestication and evolution and University of Minnesota's IBM RIL eQTL mapping, et. al..&lt;/p&gt;
 
 &lt;p&gt;Sequencing alone could not solve the biological problems until applied with sophisticated analyses. When genetics meets Big Data, the analysis itself become a problem. Traditional training did not prepared genetists with big data skills. In the future, the one who mastering the data tools and making sense of data would be more likely to success I guess. Genetics is now not limited to pipetting, pollinating or cloning, coding skills should be added to our toolkit as well.&lt;/p&gt;
 
@@ -1226,7 +1306,7 @@ line break&lt;/p&gt;
         <item>
                 <title>Jekyll Introduction</title>
                 <description>&lt;p&gt;This Jekyll introduction will outline specifically  what Jekyll is and why you would want to use it.
-Directly following the intro we&#39;ll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
+Directly following the intro we'll learn exactly &lt;em&gt;how&lt;/em&gt; Jekyll does what it does.&lt;/p&gt;
 
 &lt;h2&gt;Overview&lt;/h2&gt;
 
@@ -1295,7 +1375,7 @@ help you better understand the code examples contained throughout Jekyll-Bootstr
 
 &lt;h2&gt;Initial Setup&lt;/h2&gt;
 
-&lt;p&gt;After &lt;a href=&quot;/index.html#start-now&quot;&gt;installing jekyll&lt;/a&gt; you&#39;ll need to format your website directory in a way jekyll expects.
+&lt;p&gt;After &lt;a href=&quot;/index.html#start-now&quot;&gt;installing jekyll&lt;/a&gt; you'll need to format your website directory in a way jekyll expects.
 Jekyll-bootstrap conveniently provides the base directory format.&lt;/p&gt;
 
 &lt;h3&gt;The Jekyll Application Base Format&lt;/h3&gt;
@@ -1375,7 +1455,7 @@ Only reverse chronological and chronological ordering is supported in Jekyll.&lt
 
 &lt;p&gt;&lt;strong&gt;Tags&lt;/strong&gt; &lt;br/&gt;
 Posts can have tags associated with them as part of their meta-data.
-Tags may be placed on posts by providing them in the post&#39;s YAML front matter.
+Tags may be placed on posts by providing them in the post's YAML front matter.
 You have access to the post-specific tags in the templates. These tags also get added to the sitewide collection.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Categories&lt;/strong&gt; &lt;br/&gt;
@@ -1392,7 +1472,7 @@ categories : [lessons, beginner]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This defines the category hierarchy &quot;lessons/beginner&quot;. Note this is &lt;em&gt;one category&lt;/em&gt; node in Jekyll.
-You won&#39;t find &quot;lessons&quot; and &quot;beginner&quot; as two separate categories unless you define them elsewhere as singular categories.&lt;/p&gt;
+You won't find &quot;lessons&quot; and &quot;beginner&quot; as two separate categories unless you define them elsewhere as singular categories.&lt;/p&gt;
 
 &lt;h3&gt;Working With Pages&lt;/h3&gt;
 
@@ -1434,7 +1514,7 @@ A nice about page is easy to do and gives the human perspective to your website.
 
 &lt;h2&gt;Templates in Jekyll&lt;/h2&gt;
 
-&lt;p&gt;Templates are used to contain a page&#39;s or post&#39;s content.
+&lt;p&gt;Templates are used to contain a page's or post's content.
 All templates have access to a global site object variable: &lt;code&gt;site&lt;/code&gt; as well as a page object variable: &lt;code&gt;page&lt;/code&gt;.
 The site variable holds all accessible content and metadata relative to the site.
 The page variable holds accessible data for the given page or post being rendered at that point.&lt;/p&gt;
@@ -1444,7 +1524,7 @@ Templates are created by properly formatting a file and placing it in the &lt;co
 
 &lt;p&gt;&lt;strong&gt;Formatting&lt;/strong&gt;&lt;br/&gt;
 Templates should be coded in HTML and contain YAML Front Matter.
-All templates can contain Liquid code to work with your site&#39;s data.&lt;/p&gt;
+All templates can contain Liquid code to work with your site's data.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Rending Page/Post Content in a Template&lt;/strong&gt;&lt;br/&gt;
 There is a special variable in all templates named : &lt;code&gt;content&lt;/code&gt;.
@@ -1496,10 +1576,10 @@ GitHub cannot afford to run arbitrary code on their servers so they lock develop
 &lt;h3&gt;Liquid is Not Programmer-Friendly.&lt;/h3&gt;
 
 &lt;p&gt;The short story is liquid is not real code and its not intended to execute real code.
-The point being you can&#39;t do jackshit in liquid that hasn&#39;t been allowed explicitly by the implementation.
-What&#39;s more you can only access data-structures that have been explicitly passed to the template.&lt;/p&gt;
+The point being you can't do jackshit in liquid that hasn't been allowed explicitly by the implementation.
+What's more you can only access data-structures that have been explicitly passed to the template.&lt;/p&gt;
 
-&lt;p&gt;In Jekyll&#39;s case it is not possible to alter what is passed to Liquid without hacking the gem or running custom plugins.
+&lt;p&gt;In Jekyll's case it is not possible to alter what is passed to Liquid without hacking the gem or running custom plugins.
 Both of which cannot be supported by GitHub Pages.&lt;/p&gt;
 
 &lt;p&gt;As a programmer - this is very frustrating.&lt;/p&gt;
@@ -1508,9 +1588,9 @@ Both of which cannot be supported by GitHub Pages.&lt;/p&gt;
 suck it up and view it as an opportunity to work around limitations and adopt client-side solutions when possible.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Aside&lt;/strong&gt; &lt;br/&gt;
-My personal stance is to not invest time trying to hack liquid. It&#39;s really unnecessary
-&lt;em&gt;from a programmer&#39;s&lt;/em&gt; perspective. That is to say if you have the ability to run custom plugins (i.e. run arbitrary ruby code)
-you are better off sticking with ruby. Toward that end I&#39;ve built &lt;a href=&quot;http://github.com/plusjade/mustache-with-jekyll&quot;&gt;Mustache-with-Jekyll&lt;/a&gt;&lt;/p&gt;
+My personal stance is to not invest time trying to hack liquid. It's really unnecessary
+&lt;em&gt;from a programmer's&lt;/em&gt; perspective. That is to say if you have the ability to run custom plugins (i.e. run arbitrary ruby code)
+you are better off sticking with ruby. Toward that end I've built &lt;a href=&quot;http://github.com/plusjade/mustache-with-jekyll&quot;&gt;Mustache-with-Jekyll&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;Static Assets&lt;/h2&gt;
 
@@ -1548,7 +1628,7 @@ Jekyll untouched and reside on your blog in the exact structure and format they 
 
 &lt;h3&gt;Formatting Files for Parsing.&lt;/h3&gt;
 
-&lt;p&gt;We&#39;ve outlined the need for valid formatting using &lt;strong&gt;YAML Front Matter&lt;/strong&gt;.
+&lt;p&gt;We've outlined the need for valid formatting using &lt;strong&gt;YAML Front Matter&lt;/strong&gt;.
 Templates, posts, and pages all need to provide valid YAML Front Matter even if the Matter is empty.
 This is the only way Jekyll knows you want the file processed.&lt;/p&gt;
 
@@ -1573,12 +1653,12 @@ The data inside the block must be valid YAML.&lt;/p&gt;
 
 &lt;p&gt;The &lt;code&gt;layout&lt;/code&gt; parameter in the YAML Front Matter defines the template file for which the given post or template should be injected into.
 If a template file specifies its own layout, it is effectively being used as a &lt;code&gt;sub-template.&lt;/code&gt;
-That is to say loading a post file into a template file that refers to another template file with work in the way you&#39;d expect; as a nested sub-template.&lt;/p&gt;
+That is to say loading a post file into a template file that refers to another template file with work in the way you'd expect; as a nested sub-template.&lt;/p&gt;
 
 &lt;h2&gt;How Jekyll Generates the Final Static Files.&lt;/h2&gt;
 
-&lt;p&gt;Ultimately, Jekyll&#39;s job is to generate a static representation of your website.
-The following is an outline of how that&#39;s done:&lt;/p&gt;
+&lt;p&gt;Ultimately, Jekyll's job is to generate a static representation of your website.
+The following is an outline of how that's done:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Jekyll collects data.&lt;/strong&gt; &lt;br/&gt;
@@ -1600,7 +1680,7 @@ hash representation of the ruby post object. These simplified data structures ar
 
 &lt;p&gt;&lt;strong&gt;Notes.&lt;/strong&gt;&lt;br/&gt;
 Because Jekyll computes the entire site in one fell swoop, each template is given access to
-a global &lt;code&gt;site&lt;/code&gt; hash that contains useful data. It is this data that you&#39;ll iterate through and format
+a global &lt;code&gt;site&lt;/code&gt; hash that contains useful data. It is this data that you'll iterate through and format
 using the Liquid tags and filters in order to render it onto a given page.&lt;/p&gt;
 
 &lt;p&gt;Remember, in Jekyll you are an end-user. Your API has only two components:&lt;/p&gt;
@@ -1626,7 +1706,7 @@ As noted, our main programming constraint is the fact that our API is limited to
 &lt;h2&gt;Next Steps&lt;/h2&gt;
 
 &lt;p&gt;Please take a look at &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
-or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you&#39;d like.&lt;/p&gt;
+or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you'd like.&lt;/p&gt;
 </description>
                 <link>http://yangjl.com/en/lessons/2011/12/29/jekyll-introduction</link>
                 <guid>http://yangjl.com/en/lessons/2011/12/29/jekyll-introduction</guid>

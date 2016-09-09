@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Notes on learning ANGSD</title>
+    <meta name="description" content="reading">
+    <meta name="author" content="Jinliang Yang">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles change to Yihui style -->
+    <!-- link rel="stylesheet" href="/media/css/style.css"  -->
+    <link rel="stylesheet" href="/media/css/highlight.css">
+    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Jinliang Yang</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Notes on learning ANGSD </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>27 May 2015</span>
+    </div>
+    <div class="content">
+      <p>The biggest advantages of <a href="http://popgen.dk/wiki/index.php/ANGSD">ANGSD</a> as they claimed are "<em>Most methods take genotype uncertainty into account instead of basing the analysis on called genotypes. This is especially useful for low and medium depth data</em>". The software was forked to my own <a href="https://github.com/yangjl/angsd">repo</a>.</p>
+
+<h1>Install from Github</h1>
+
+<p>You also need to install <code>CRAM</code> by <code>htslib</code>, although I have no idea what CRAM is, I believe it might be something more fast or a space saving format (like SAM?). I have to say the installation become so easy with github!</p>
+
+<pre><code>git clone https://github.com/samtools/htslib.git  
+git clone git://github.com/ANGSD/angsd.git   
+cd angsd  
+make  
+</code></pre>
+
+<h1>Preparation for BAM input</h1>
+
+<p>The following codes all following ANGSD's tutorial.</p>
+
+<pre><code>### download data
+wget http://popgen.dk/software/download/angsd/bams.tar.gz
+tar xf bams.tar.gz
+### indexing them
+for i in bams/*.bam;do samtools index $i;done
+### create a list
+ls bams/*.bam &gt; bam.filelist
+</code></pre>
+
+<h1>SNP and genotype calling</h1>
+
+<p>SNPs are called based on their allele frequencies by <code>-doMaf</code>. Basically, they will call a SNP if a site has a minor allele frequency significantly different from 0. (Note: how about really minor allele?)</p>
+
+<pre><code class="">### MAF for every basepair
+angsd -bam bam.filelist -doMajorMinor 2 -doMaf 8  -doCounts 1 -out out
+
+### SNP calling
+angsd -bam bam.filelist -GL 1 -out outfile -doMaf 2 -SNP_pval 1e-6 -doMajorMinor 1
+
+### Genotype Likelihoods
+angsd -bam bam.filelist -GL 1 -doGlf 2 -doMajorMinor 1 -doMaf 2 -SNP_pval 2e-6 -out genolike -nThreads 10
+
+### Genotype calling in one step
+angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doGeno 5 -doPost 1 -postCutoff 0.95
+</code></pre>
+
+<p>with option <code>-doPlink 1</code>, it will output PLINK format.</p>
+
+<h1>Population Genetics</h1>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#notes-ref">
+    		notes <span>8</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#popgen-ref">popgen <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#python-ref">python <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#software-ref">software <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#github-ref">github <span>5</span></a></li>
+     
+    	<li><a href="/tags.html#notes-ref">notes <span>9</span></a></li>
+     
+    	<li><a href="/tags.html#angsd-ref">angsd <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/notes/2015/05/11/reading-list" title="Reading List">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/codes/2015/05/27/zip" title="Compression related commands">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'yangjl'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer align="center">
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

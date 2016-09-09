@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The art of command line</title>
+    <meta name="description" content="Command line">
+    <meta name="author" content="Jinliang Yang">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles change to Yihui style -->
+    <!-- link rel="stylesheet" href="/media/css/style.css"  -->
+    <link rel="stylesheet" href="/media/css/highlight.css">
+    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Jinliang Yang</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>The art of command line </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>17 June 2015</span>
+    </div>
+    <div class="content">
+      <h1>The Art of Command Line (copied from <a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README.md">jlevy</a>@github)</h1>
+
+<p>Fluency on the command line is a skill often neglected or considered arcane, but it improves your flexibility and productivity as an engineer in both obvious and subtle ways. This is a selection of notes and tips on using the command-line that I've found useful when working on Linux. Some tips are elementary, and some are fairly specific, sophisticated, or obscure. This page is not long, but if you can use and recall all the items here, you know a lot.</p>
+
+<p>Much of this
+<a href="http://www.quora.com/What-are-some-lesser-known-but-useful-Unix-commands">originally</a>
+<a href="http://www.quora.com/What-are-the-most-useful-Swiss-army-knife-one-liners-on-Unix">appeared</a>
+on <a href="http://www.quora.com/What-are-some-time-saving-tips-that-every-Linux-user-should-know">Quora</a>,
+but given the interest there, it seems it's worth using Github, where people more talented than I can readily suggest improvements. If you see an error or something that could be better, please submit an issue or PR!</p>
+
+<p>Scope:</p>
+
+<ul>
+<li>The goals are breadth and brevity. Every tip is essential in some situation or significantly saves time over alternatives.</li>
+<li>This is written for Linux. Many but not all items apply equally to MacOS (or even Cygwin).</li>
+<li>The focus is on interactive Bash, though many tips apply to other shells and to general Bash scripting.</li>
+<li>Descriptions are intentionally minimal, with the expectation you'll use <code>man</code>, <code>apt-get</code>/<code>yum</code>/<code>dnf</code> to install, and Google for more background.</li>
+</ul>
+
+
+<h2>Basics</h2>
+
+<ul>
+<li><p>Learn basic Bash. Actually, type <code>man bash</code> and at least skim the whole thing; it's pretty easy to follow and not that long. Alternate shells can be nice, but Bash is powerful and always available (learning <em>only</em> zsh, fish, etc., while tempting on your own laptop, restricts you in many situations, such as using existing servers).</p></li>
+<li><p>Learn at least one text-based editor well. Ideally Vim (<code>vi</code>), as there's really no competition for random editing in a terminal (even if you use Emacs, a big IDE, or a modern hipster editor most of the time).</p></li>
+<li><p>Learn about redirection of output and input using <code>&gt;</code> and <code>&lt;</code> and pipes using <code>|</code>. Learn about stdout and stderr.</p></li>
+<li><p>Learn about file glob expansion with <code>*</code> (and perhaps <code>?</code> and <code>{</code>...<code>}</code>) and quoting and the difference between double <code>"</code> and single <code>'</code> quotes. (See more on variable expansion below.)</p></li>
+<li><p>Be familiar with Bash job management: <code>&amp;</code>, <strong>ctrl-z</strong>, <strong>ctrl-c</strong>, <code>jobs</code>, <code>fg</code>, <code>bg</code>, <code>kill</code>, etc.</p></li>
+<li><p>Know <code>ssh</code>, and the basics of passwordless authentication, via <code>ssh-agent</code>, <code>ssh-add</code>, etc.</p></li>
+<li><p>Basic file management: <code>ls</code> and <code>ls -l</code> (in particular, learn what every column in <code>ls -l</code> means), <code>less</code>, <code>head</code>, <code>tail</code> and <code>tail -f</code> (or even better, <code>less +F</code>), <code>ln</code> and <code>ln -s</code> (learn the differences and advantages of hard versus soft links), <code>chown</code>, <code>chmod</code>, <code>du</code> (for a quick summary of disk usage: <code>du -sk *</code>), <code>df</code>, <code>mount</code>.</p></li>
+<li><p>Basic network management: <code>ip</code> or <code>ifconfig</code>, <code>dig</code>.</p></li>
+<li><p>Know regular expressions well, and the various flags to <code>grep</code>/<code>egrep</code>. The <code>-i</code>, <code>-o</code>, <code>-A</code>, and <code>-B</code> options are worth knowing.</p></li>
+<li><p>Learn to use <code>apt-get</code>, <code>yum</code>, or <code>dnf</code> (depending on distro) to find and install packages. And make sure you have <code>pip</code> to install Python-based command-line tools (a few below are easiest to install via <code>pip</code>).</p></li>
+</ul>
+
+
+<h2>Everyday use</h2>
+
+<ul>
+<li><p>In Bash, use <strong>ctrl-r</strong> to search through command history.</p></li>
+<li><p>In Bash, use <strong>ctrl-w</strong> to delete the last word, and <strong>ctrl-u</strong> to delete the whole line. Use <strong>alt-b</strong> and <strong>alt-f</strong> to move by word, and <strong>ctrl-k</strong> to kill to the end of the line. See <code>man readline</code> for all the default keybindings in Bash. There are a lot. For example <strong>alt-.</strong> cycles through previous arguments, and <strong>alt-</strong>* expands a glob.</p></li>
+<li><p>To go back to the previous working directory: <code>cd -</code></p></li>
+<li><p>If you are halfway through typing a command but change your mind, hit <strong>alt-#</strong> to add a <code>#</code> at the beginning and enter it as a comment (or use <strong>ctrl-a</strong>, <strong>#</strong>, <strong>enter</strong>). You can then return to it later via command history.</p></li>
+<li><p>Use <code>xargs</code> (or <code>parallel</code>). It's very powerful. Note you can control how many items execute per line (<code>-L</code>) as well as parallelism (<code>-P</code>). If you're not sure if it'll do the right thing, use <code>xargs echo</code> first. Also, <code>-I{}</code> is handy.   Examples:</p></li>
+</ul>
+
+
+<pre><code class="">      find . -name '*.py' | xargs grep some_function 
+      cat hosts | xargs -I{} ssh root@{} hostname 
+</code></pre>
+
+<ul>
+<li><p><code>pstree -p</code> is a helpful display of the process tree.</p></li>
+<li><p>Use <code>pgrep</code> and <code>pkill</code> to find or signal processes by name (<code>-f</code> is helpful).</p></li>
+<li><p>Know the various signals you can send processes. For example, to suspend a process, use <code>kill -STOP [pid]</code>. For the full list, see <code>man 7 signal</code></p></li>
+<li><p>Use <code>nohup</code> or <code>disown</code> if you want a background process to keep running forever.</p></li>
+<li><p>Check what processes are listening via <code>netstat -lntp</code>.</p></li>
+<li><p>See also <code>lsof</code> for open sockets and files.</p></li>
+<li><p>In Bash scripts, use <code>set -x</code> for debugging output. Use strict modes whenever possible. Use <code>set -e</code> to abort on errors. Use <code>set -o pipefail</code> as well, to be strict about errors (though this topic is a bit subtle). For more involved scripts, also use <code>trap</code>.</p></li>
+<li><p>In Bash scripts, subshells (written with parentheses) are convenient ways to group commands. A common example is to temporarily move to a different working directory, e.g.</p></li>
+</ul>
+
+
+<pre><code>      # do something in current dir
+      (cd /some/other/dir; other-command)
+      # continue in original dir
+</code></pre>
+
+<ul>
+<li><p>In Bash, note there are lots of kinds of variable expansion. Checking a variable exists: <code>${name:?error message}</code>. For example, if a Bash script requires a single argument, just write <code>input_file=${1:?usage: $0 input_file}</code>. Arithmetic expansion: <code>i=$(( (i + 1) % 5 ))</code>. Sequences: <code>{1..10}</code>. Trimming of strings: <code>${var%suffix}</code> and <code>${var#prefix}</code>. For example if <code>var=foo.pdf</code>, then <code>echo ${var%.pdf}.txt</code> prints <code>foo.txt</code>.</p></li>
+<li><p>The output of a command can be treated like a file via <code>&lt;(some command)</code>. For example, compare local <code>/etc/hosts</code> with a remote one:</p></li>
+</ul>
+
+
+<pre><code>      diff /etc/hosts &lt;(ssh somehost cat /etc/hosts)
+</code></pre>
+
+<ul>
+<li><p>Know about "here documents" in Bash, as in <code>cat &lt;&lt;EOF ...</code>.</p></li>
+<li><p>In Bash, redirect both standard output and standard error via: <code>some-command &gt;logfile 2&gt;&amp;1</code>. Often, to ensure a command does not leave an open file handle to standard input, tying it to the terminal you are in, it is also good practice to add <code>&lt;/dev/null</code>.</p></li>
+<li><p>Use <code>man ascii</code> for a good ASCII table, with hex and decimal values. For general encoding info, <code>man unicode</code>, <code>man utf-8</code>, and <code>man latin1</code> are helpful.</p></li>
+<li><p>Use <code>screen</code> or <code>tmux</code> to multiplex the screen, especially useful on remote ssh sessions and to detach and re-attach to a session. A more minimal alternative for session persistence only is <code>dtach</code>.</p></li>
+<li><p>In ssh, knowing how to port tunnel with <code>-L</code> or <code>-D</code> (and occasionally <code>-R</code>) is useful, e.g. to access web sites from a remote server.</p></li>
+<li><p>It can be useful to make a few optimizations to your ssh configuration; for example, this <code>~/.ssh/config</code> contains settings to avoid dropped connections in certain network environments, use compression (which is helpful with scp over low-bandwidth connections), and multiplex channels to the same server with a local control file:</p></li>
+</ul>
+
+
+<pre><code>      TCPKeepAlive=yes
+      ServerAliveInterval=15
+      ServerAliveCountMax=6
+      Compression=yes
+      ControlMaster auto
+      ControlPath /tmp/%r@%h:%p
+      ControlPersist yes
+</code></pre>
+
+<ul>
+<li><p>A few other options relevant to ssh are security sensitive and should be enabled with care, e.g. per subnet or host or in trusted networks: <code>StrictHostKeyChecking=no</code>, <code>ForwardAgent=yes</code></p></li>
+<li><p>To get the permissions on a file in octal form, which is useful for system configuration but not available in <code>ls</code> and easy to bungle, use something like
+<code>sh
+    stat -c '%A %a %n' /etc/timezone
+</code></p></li>
+<li><p>For interactive selection of values from the output of another command, use <a href="https://github.com/mooz/percol"><code>percol</code></a>.</p></li>
+<li><p>For interaction with files based on the output of another command (like <code>git</code>), use <code>fpp</code> (<a href="https://github.com/facebook/PathPicker">PathPicker</a>).</p></li>
+<li><p>For a simple web server for all files in the current directory (and subdirs), available to anyone on your network, use:
+<code>python -m SimpleHTTPServer 7777</code> (for port 7777 and Python 2).</p></li>
+</ul>
+
+
+<h2>Processing files and data</h2>
+
+<ul>
+<li><p>To locate a file by name in the current directory, <code>find . -iname '*something*'</code> (or similar). To find a file anywhere by name, use <code>locate something</code> (but bear in mind <code>updatedb</code> may not have indexed recently created files).</p></li>
+<li><p>For general searching through source or data files (more advanced than <code>grep -r</code>), use <a href="https://github.com/ggreer/the_silver_searcher"><code>ag</code></a>.</p></li>
+<li><p>To convert HTML to text: <code>lynx -dump -stdin</code></p></li>
+<li><p>For Markdown, HTML, and all kinds of document conversion, try <a href="http://pandoc.org/"><code>pandoc</code></a>.</p></li>
+<li><p>If you must handle XML, <code>xmlstarlet</code> is old but good.</p></li>
+<li><p>For JSON, use <code>jq</code>.</p></li>
+<li><p>For Excel or CSV files, <a href="https://github.com/onyxfish/csvkit">csvkit</a> provides <code>in2csv</code>, <code>csvcut</code>, <code>csvjoin</code>, <code>csvgrep</code>, etc.</p></li>
+<li><p>For Amazon S3, <a href="https://github.com/s3tools/s3cmd"><code>s3cmd</code></a> is convenient and <a href="https://github.com/bloomreach/s4cmd"><code>s4cmd</code></a> is faster. Amazon's <a href="https://github.com/aws/aws-cli"><code>aws</code></a> is essential for other AWS-related tasks.</p></li>
+<li><p>Know about <code>sort</code> and <code>uniq</code>, including uniq's <code>-u</code> and <code>-d</code> options -- see one-liners below.</p></li>
+<li><p>Know about <code>cut</code>, <code>paste</code>, and <code>join</code> to manipulate text files. Many people use <code>cut</code> but forget about <code>join</code>.</p></li>
+<li><p>Know that locale affects a lot of command line tools in subtle ways, including sorting order (collation) and performance. Most Linux installations will set <code>LANG</code> or other locale variables to a local setting like US English. But be aware sorting will change if you change locale. And know i18n routines can make sort or other commands run <em>many times</em> slower. In some situations (such as the set operations or uniqueness operations below) you can safely ignore slow i18n routines entirely and use traditional byte-based sort order, using <code>export LC_ALL=C</code>.</p></li>
+<li><p>Know basic <code>awk</code> and <code>sed</code> for simple data munging. For example, summing all numbers in the third column of a text file: <code>awk '{ x += $3 } END { print x }'</code>. This is probably 3X faster and 3X shorter than equivalent Python.</p></li>
+<li><p>To replace all occurrences of a string in place, in one or more files:</p></li>
+</ul>
+
+
+<pre><code>      perl -pi.bak -e 's/old-string/new-string/g' my-files-*.txt
+</code></pre>
+
+<ul>
+<li>To rename many files at once according to a pattern, use <code>rename</code>. For complex renames, <a href="https://github.com/jlevy/repren"><code>repren</code></a> may help.</li>
+</ul>
+
+
+<pre><code>      # Recover backup files foo.bak -&gt; foo:
+      rename 's/\.bak$//' *.bak
+      # Full rename of filenames, directories, and contents foo -&gt; bar:
+      repren --full --preserve-case --from foo --to bar .
+</code></pre>
+
+<ul>
+<li><p>Use <code>shuf</code> to shuffle or select random lines from a file.</p></li>
+<li><p>Know <code>sort</code>'s options. Know how keys work (<code>-t</code> and <code>-k</code>). In particular, watch out that you need to write <code>-k1,1</code> to sort by only the first field; <code>-k1</code> means sort according to the whole line.</p></li>
+<li><p>Stable sort (<code>sort -s</code>) can be useful. For example, to sort first by field 2, then secondarily by field 1, you can use <code>sort -k1,1 | sort -s -k2,2</code></p></li>
+<li><p>If you ever need to write a tab literal in a command line in Bash (e.g. for the -t argument to sort), press <strong>ctrl-v</strong> <strong>[Tab]</strong> or write <code>$'\t'</code> (the latter is better as you can copy/paste it).</p></li>
+<li><p>For binary files, use <code>hd</code> for simple hex dumps and <code>bvi</code> for binary editing.</p></li>
+<li><p>Also for binary files, <code>strings</code> (plus <code>grep</code>, etc.) lets you find bits of text.</p></li>
+<li><p>To convert text encodings, try <code>iconv</code>. Or <code>uconv</code> for more advanced use; it supports some advanced Unicode things. For example, this command lowercases and removes all accents (by expanding and dropping them):</p></li>
+</ul>
+
+
+<pre><code>      uconv -f utf-8 -t utf-8 -x '::Any-Lower; ::Any-NFD; [:Nonspacing Mark:] &gt;; ::Any-NFC; ' &lt; input.txt &gt; output.txt
+</code></pre>
+
+<ul>
+<li><p>To split files into pieces, see <code>split</code> (to split by size) and <code>csplit</code> (to split by a pattern).</p></li>
+<li><p>Use <code>zless</code>, <code>zmore</code>, <code>zcat</code>, and <code>zgrep</code> to operate on compressed files.</p></li>
+</ul>
+
+
+<h2>System debugging</h2>
+
+<ul>
+<li><p>For web debugging, <code>curl</code> and <code>curl -I</code> are handy, or their <code>wget</code> equivalents, or the more modern <a href="https://github.com/jakubroztocil/httpie"><code>httpie</code></a>.</p></li>
+<li><p>To know disk/cpu/network status, use <code>iostat</code>, <code>netstat</code>, <code>top</code> (or the better <code>htop</code>), and (especially) <code>dstat</code>. Good for getting a quick idea of what's happening on a system.</p></li>
+<li><p>For a more in-depth system overview, use <a href="https://github.com/nicolargo/glances"><code>glances</code></a>. It presents you with several system level statistics in one terminal window. Very helpful for quickly checking on various subsystems.</p></li>
+<li><p>To know memory status, run and understand the output of <code>free</code> and <code>vmstat</code>. In particular, be aware the "cached" value is memory held by the Linux kernel as file cache, so effectively counts toward the "free" value.</p></li>
+<li><p>Java system debugging is a different kettle of fish, but a simple trick on Oracle's and some other JVMs is that you can run <code>kill -3 &lt;pid&gt;</code> and a full stack trace and heap summary (including generational garbage collection details, which can be highly informative) will be dumped to stderr/logs.</p></li>
+<li><p>Use <code>mtr</code> as a better traceroute, to identify network issues.</p></li>
+<li><p>For looking at why a disk is full, <code>ncdu</code> saves time over the usual commands like <code>du -sh *</code>.</p></li>
+<li><p>To find which socket or process is using bandwidth, try <code>iftop</code> or <code>nethogs</code>.</p></li>
+<li><p>The <code>ab</code> tool (comes with Apache) is helpful for quick-and-dirty checking of web server performance. For more complex load testing, try <code>siege</code>.</p></li>
+<li><p>For more serious network debugging, <code>wireshark</code>, <code>tshark</code>, or <code>ngrep</code>.</p></li>
+<li><p>Know about <code>strace</code> and <code>ltrace</code>. These can be helpful if a program is failing, hanging, or crashing, and you don't know why, or if you want to get a general idea of performance. Note the profiling option (<code>-c</code>), and the ability to attach to a running process (<code>-p</code>).</p></li>
+<li><p>Know about <code>ldd</code> to check shared libraries etc.</p></li>
+<li><p>Know how to connect to a running process with <code>gdb</code> and get its stack traces.</p></li>
+<li><p>Use <code>/proc</code>. It's amazingly helpful sometimes when debugging live problems. Examples: <code>/proc/cpuinfo</code>, <code>/proc/xxx/cwd</code>, <code>/proc/xxx/exe</code>, <code>/proc/xxx/fd/</code>, <code>/proc/xxx/smaps</code>.</p></li>
+<li><p>When debugging why something went wrong in the past, <code>sar</code> can be very helpful. It shows historic statistics on CPU, memory, network, etc.</p></li>
+<li><p>For deeper systems and performance analyses, look at <code>stap</code> (<a href="https://sourceware.org/systemtap/wiki">SystemTap</a>), <a href="http://en.wikipedia.org/wiki/Perf_(Linux"><code>perf</code></a>), and <a href="https://github.com/draios/sysdig"><code>sysdig</code></a>.</p></li>
+<li><p>Confirm what Linux distribution you're using (works on most distros): <code>lsb_release -a</code></p></li>
+<li><p>Use <code>dmesg</code> whenever something's acting really funny (it could be hardware or driver issues).</p></li>
+</ul>
+
+
+<h2>One-liners</h2>
+
+<p>A few examples of piecing together commands:</p>
+
+<ul>
+<li>It is remarkably helpful sometimes that you can do set intersection, union, and difference of text files via <code>sort</code>/<code>uniq</code>. Suppose <code>a</code> and <code>b</code> are text files that are already uniqued. This is fast, and works on files of arbitrary size, up to many gigabytes. (Sort is not limited by memory, though you may need to use the <code>-T</code> option if <code>/tmp</code> is on a small root partition.) See also the note about <code>LC_ALL</code> above.</li>
+</ul>
+
+
+<pre><code>      cat a b | sort | uniq &gt; c   # c is a union b
+      cat a b | sort | uniq -d &gt; c   # c is a intersect b
+      cat a b b | sort | uniq -u &gt; c   # c is set difference a - b
+</code></pre>
+
+<ul>
+<li>Summing all numbers in the third column of a text file (this is probably 3X faster and 3X less code than equivalent Python):</li>
+</ul>
+
+
+<pre><code>      awk '{ x += $3 } END { print x }' myfile
+</code></pre>
+
+<ul>
+<li>If want to see sizes/dates on a tree of files, this is like a recursive <code>ls -l</code> but is easier to read than <code>ls -lR</code>:</li>
+</ul>
+
+
+<pre><code>      find . -type f -ls
+</code></pre>
+
+<ul>
+<li>Use <code>xargs</code> or <code>parallel</code> whenever you can. Note you can control how many items execute per line (<code>-L</code>) as well as parallelism (<code>-P</code>). If you're not sure if it'll do the right thing, use xargs echo first. Also, <code>-I{}</code> is handy. Examples:</li>
+</ul>
+
+
+<pre><code>      find . -name '*.py' | xargs grep some_function
+      cat hosts | xargs -I{} ssh root@{} hostname
+</code></pre>
+
+<ul>
+<li>Say you have a text file, like a web server log, and a certain value that appears on some lines, such as an <code>acct_id</code> parameter that is present in the URL. If you want a tally of how many requests for each <code>acct_id</code>:</li>
+</ul>
+
+
+<pre><code>      cat access.log | egrep -o 'acct_id=[0-9]+' | cut -d= -f2 | sort | uniq -c | sort -rn
+</code></pre>
+
+<ul>
+<li>Run this function to get a random tip from this document (parses Markdown and extracts an item):</li>
+</ul>
+
+
+<pre><code>      function taocl() {
+        curl -s https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md |
+          pandoc -f markdown -t html |
+          xmlstarlet fo --html --dropdtd |
+          xmlstarlet sel -t -v "(html/body/ul/li[count(p)&gt;0])[$RANDOM mod last()+1]" |
+          xmlstarlet unesc | fmt -80
+      }
+</code></pre>
+
+<h2>Obscure but useful</h2>
+
+<ul>
+<li><p><code>expr</code>: perform arithmetic or boolean operations or evaluate regular expressions</p></li>
+<li><p><code>m4</code>: simple macro processor</p></li>
+<li><p><code>screen</code>: powerful terminal multiplexing and session persistence</p></li>
+<li><p><code>yes</code>: print a string a lot</p></li>
+<li><p><code>cal</code>: nice calendar</p></li>
+<li><p><code>env</code>: run a command (useful in scripts)</p></li>
+<li><p><code>look</code>: find English words (or lines in a file) beginning with a string</p></li>
+<li><p><code>cut</code>and <code>paste</code> and <code>join</code>: data manipulation</p></li>
+<li><p><code>fmt</code>: format text paragraphs</p></li>
+<li><p><code>pr</code>: format text into pages/columns</p></li>
+<li><p><code>fold</code>: wrap lines of text</p></li>
+<li><p><code>column</code>: format text into columns or tables</p></li>
+<li><p><code>expand</code> and <code>unexpand</code>: convert between tabs and spaces</p></li>
+<li><p><code>nl</code>: add line numbers</p></li>
+<li><p><code>seq</code>: print numbers</p></li>
+<li><p><code>bc</code>: calculator</p></li>
+<li><p><code>factor</code>: factor integers</p></li>
+<li><p><code>gpg</code>: encrypt and sign files</p></li>
+<li><p><code>toe</code>: table of terminfo entries</p></li>
+<li><p><code>nc</code>: network debugging and data transfer</p></li>
+<li><p><code>ngrep</code>: grep for the network layer</p></li>
+<li><p><code>dd</code>: moving data between files or devices</p></li>
+<li><p><code>file</code>: identify type of a file</p></li>
+<li><p><code>stat</code>: file info</p></li>
+<li><p><code>tac</code>: print files in reverse</p></li>
+<li><p><code>shuf</code>: random selection of lines from a file</p></li>
+<li><p><code>comm</code>: compare sorted files line by line</p></li>
+<li><p><code>hd</code> and <code>bvi</code>: dump or edit binary files</p></li>
+<li><p><code>strings</code>: extract text from binary files</p></li>
+<li><p><code>tr</code>: character translation or manipulation</p></li>
+<li><p><code>iconv</code>or uconv: conversion for text encodings</p></li>
+<li><p><code>split</code>and <code>csplit</code>: splitting files</p></li>
+<li><p><code>7z</code>: high-ratio file compression</p></li>
+<li><p><code>ldd</code>: dynamic library info</p></li>
+<li><p><code>nm</code>: symbols from object files</p></li>
+<li><p><code>ab</code>: benchmarking web servers</p></li>
+<li><p><code>strace</code>: system call debugging</p></li>
+<li><p><code>mtr</code>: better traceroute for network debugging</p></li>
+<li><p><code>cssh</code>: visual concurrent shell</p></li>
+<li><p><code>wireshark</code> and <code>tshark</code>: packet capture and network debugging</p></li>
+<li><p><code>host</code> and <code>dig</code>: DNS lookups</p></li>
+<li><p><code>lsof</code>: process file descriptor and socket info</p></li>
+<li><p><code>dstat</code>: useful system stats</p></li>
+<li><p><a href="https://github.com/nicolargo/glances"><code>glances</code></a>: high level, multi-subsystem overview</p></li>
+<li><p><code>iostat</code>: CPU and disk usage stats</p></li>
+<li><p><code>htop</code>: improved version of top</p></li>
+<li><p><code>last</code>: login history</p></li>
+<li><p><code>w</code>: who's logged on</p></li>
+<li><p><code>id</code>: user/group identity info</p></li>
+<li><p><code>sar</code>: historic system stats</p></li>
+<li><p><code>iftop</code> or <code>nethogs</code>: network utilization by socket or process</p></li>
+<li><p><code>ss</code>: socket statistics</p></li>
+<li><p><code>dmesg</code>: boot and system error messages</p></li>
+<li><p><code>hdparm</code>: SATA/ATA disk manipulation/performance</p></li>
+<li><p><code>lsb_release</code>: Linux distribution info</p></li>
+<li><p><code>lshw</code>: hardware information</p></li>
+<li><p><code>fortune</code>, <code>ddate</code>, and <code>sl</code>: um, well, it depends on whether you consider steam locomotives and Zippy quotations "useful"</p></li>
+</ul>
+
+
+<h2>More resources</h2>
+
+<ul>
+<li><a href="https://github.com/alebcay/awesome-shell">awesome-shell</a>: A curated list of shell tools and resources.</li>
+<li><a href="http://redsymbol.net/articles/unofficial-bash-strict-mode/">Strict mode</a> for writing better shell scripts.</li>
+</ul>
+
+
+<h2>Disclaimer</h2>
+
+<p>With the exception of very small tasks, code is written so others can read it. With power comes responsibility. The fact you <em>can</em> do something in Bash doesn't necessarily mean you should! ;)</p>
+
+<div class="share-page">
+<h2 style="background:#faebd7;">
+    Share this on &rarr; 
+    <a href="https://twitter.com/intent/tweet?text=The art of command line&url=http://yangjl.com/notes/2015/06/17/command-line&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://yangjl.com/notes/2015/06/17/command-line" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://yangjl.com/notes/2015/06/17/command-line" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</h2> 
+<style type="text/css">
+    .share-page {
+        text-align: center;
+        background: $secondary-color;
+        color: $light-color;
+        padding: 8px 15px;
+        border-radius: 5px;
+        margin: 1.5 * $spacing-unit 0;
+
+        h2 {
+            font-weight: 700;
+            color: #458b74;
+            margin-left: 10px;
+
+            &:hover {
+                border-bottom: 1px dashed #458b74;
+            }
+        }
+    }
+</style>    
+</div>
+
+
+
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#notes-ref">
+    		notes <span>8</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#shell-ref">shell <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#codes-ref">codes <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#notes-ref">notes <span>9</span></a></li>
+     
+    	<li><a href="/tags.html#github-ref">github <span>5</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/tech%20report/2015/06/03/rna-seq" title="RNA-seq quantification comparison: K-mer vs. alignment approaches">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/journal%20club/2015/10/05/rehab" title="Comments on a RAHAB paper">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'yangjl'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer align="center">
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

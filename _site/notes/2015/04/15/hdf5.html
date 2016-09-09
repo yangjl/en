@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TASSEL GBS HDF5 format</title>
+    <meta name="description" content="GBS">
+    <meta name="author" content="Jinliang Yang">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles change to Yihui style -->
+    <!-- link rel="stylesheet" href="/media/css/style.css"  -->
+    <link rel="stylesheet" href="/media/css/highlight.css">
+    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes//bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Jinliang Yang</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>TASSEL GBS HDF5 format </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>15 April 2015</span>
+    </div>
+    <div class="content">
+      <h3>HDF5 Overview</h3>
+
+<p>HDF5 data file has hierarchical organization consisting of the groups and dataset. Groups can contain other groups and datasets, datasets contain complex multi-dimensional data. The organization looks similar to the regular UNIX file system, groups are analogous to directories, and datasets contain arbitrary data like regular files. Like directories, groups name the objects contained in them. This allows easy navigation from the "top" of the file to any object in that file, something like /groupA/groupB/dataset1.</p>
+
+<p>Datasets in HDF5 file have defined element type and layout. Layout determines the dimensionality of the data and the size of each dimension (shape of the dataset). Special case of a layout called scalar which means that dataset contains exactly one element of the given type. More common layouts are multidimensional layouts. Element type describes the structure of the basic element of these multidimensional arrays or scalars. Type can be atomic, compound, or array. Atomic types include usual numeric types such as integer, floating, etc. Compound type is a collection of atomic types or other compound types, very much like structures in programming languages. Array type for elements means that each dataset element is itself an array. One has to remember that all elements of a dataset have the same type and structure, e.g. if element type is an array then all elements have to have exactly the same dimensions.</p>
+
+<p>Groups and datasets in HDF5 could have a number of attributes attached to them which can be used to store some meta-information about the group or dataset as a whole. Each attribute has a name and associated value which usually hase some basic type - integer, float, string, etc. Attributes could be used for example to store begin/end time of the run or the run number.</p>
+
+<p><a href="https://confluence.slac.stanford.edu/display/PSDM/How+to+access+HDF5+data+from+Python">here</a></p>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#notes-ref">
+    		notes <span>8</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#notes-ref">notes <span>9</span></a></li>
+     
+    	<li><a href="/tags.html#GBS-ref">GBS <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#NGS-ref">NGS <span>7</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/notes/2015/04/09/aspera" title="Retrieving large SRA files from NCBI using Aspera">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/notes/2015/05/10/latex" title="LaTex citation undefined">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'yangjl'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer align="center">
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:26:17</span></small></p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+
