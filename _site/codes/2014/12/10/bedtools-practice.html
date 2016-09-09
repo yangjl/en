@@ -2,6 +2,65 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Jinliang Yang | 杨金良</title>
+  <meta name="author" content="Jinliang Yang | 杨金良"/>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/media/home.css">
+  <style type="text/css">
+  html, body {
+    background-color: #F8F8F8;
+  }
+  .container > footer p , .postheader > a{
+    text-align: center;
+  }
+  .date {
+    text-align: center;
+    height: 30px;
+    color:#bfbfbf;
+    margin-bottom: 10px;
+  }
+  /* Specify class=linenums on a pre to get line numbering */
+  ol.linenums {
+    margin: 0 0 0 33px; /* IE indents via margin-left */
+  }
+  ol.linenums li {
+    padding-left: 12px;
+    color: #bebec5;
+    line-height: 18px;
+    text-shadow: 0 1px 0 #fff;
+  }
+  </style>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1988641-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- weibo -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <div class="container">
+  <h1 class="sitename">Jinliang Yang</h1>
+  <ul class="nav pills">
+  <li><a href="/">Home</a></li>
+  <li><a href="/cn/">中文</a></li>
+  <li><a href="/en/">English</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/vitae/">VITAE</a></li>
+</ul>
+
+
+<!-- Put this just before the closing body tag -->
+
   <head>
     <meta charset="utf-8">
     <title>Bedtools Usage Notes</title>
@@ -143,9 +202,10 @@
   <li>BED3: A BED file where each feature is described by <em>chrom</em>, <em>start</em>, and <em>end</em>. </li>
 </ol>
 
-<pre><code>For example: chr1 110 120  
+<div class="highlighter-rouge"><pre class="highlight"><code>For example: chr1 110 120  
 Note: start is zero-based, where the first base in a chr is numbered 0. And the end is one-based. For example, a SNP at 10 should be coded as start=9, end=10.
 </code></pre>
+</div>
 
 <ol>
   <li>BED4: <em>chrom</em>, <em>start</em>, <em>end</em> and <em>name</em>.</li>
@@ -156,8 +216,9 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
 <hr />
 <p>## Find SNPs in window, report SNPs and the windows they belong to.</p>
 
-<pre><code>bedtools intersect -a window.bed -b SNP.bed -wb
+<div class="highlighter-rouge"><pre class="highlight"><code>bedtools intersect -a window.bed -b SNP.bed -wb
 </code></pre>
+</div>
 <p>More details see here: <a href="http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html"><strong>intersect</strong></a>  <br />
 * <strong>-a:</strong> window of bed format<br />
 * <strong>-b:</strong> SNPs of bed format<br />
@@ -250,7 +311,7 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 13:52:34</span></small></p>
       </footer>
 
     </div>

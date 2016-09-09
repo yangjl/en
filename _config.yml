@@ -4,12 +4,13 @@ description: "My blog"
 
 url: "http://yangjl.com"
 
-paginate: 10
+
 
 # markdown: rdiscount
 permalink: pretty
-highlighter: pygments
+highlighter: rouge
 gems: [jekyll-paginate]
+paginate: 10
 
 ##################################################
 # This is the default format.

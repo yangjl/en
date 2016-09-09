@@ -2,6 +2,65 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Jinliang Yang | 杨金良</title>
+  <meta name="author" content="Jinliang Yang | 杨金良"/>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/media/home.css">
+  <style type="text/css">
+  html, body {
+    background-color: #F8F8F8;
+  }
+  .container > footer p , .postheader > a{
+    text-align: center;
+  }
+  .date {
+    text-align: center;
+    height: 30px;
+    color:#bfbfbf;
+    margin-bottom: 10px;
+  }
+  /* Specify class=linenums on a pre to get line numbering */
+  ol.linenums {
+    margin: 0 0 0 33px; /* IE indents via margin-left */
+  }
+  ol.linenums li {
+    padding-left: 12px;
+    color: #bebec5;
+    line-height: 18px;
+    text-shadow: 0 1px 0 #fff;
+  }
+  </style>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1988641-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- weibo -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <div class="container">
+  <h1 class="sitename">Jinliang Yang</h1>
+  <ul class="nav pills">
+  <li><a href="/">Home</a></li>
+  <li><a href="/cn/">中文</a></li>
+  <li><a href="/en/">English</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/vitae/">VITAE</a></li>
+</ul>
+
+
+<!-- Put this just before the closing body tag -->
+
   <head>
     <meta charset="utf-8">
     <title>Notes on learning ANGSD</title>
@@ -136,19 +195,20 @@
 <p>The biggest advantages of <a href="http://popgen.dk/wiki/index.php/ANGSD">ANGSD</a> as they claimed are “<em>Most methods take genotype uncertainty into account instead of basing the analysis on called genotypes. This is especially useful for low and medium depth data</em>”. The software was forked to my own <a href="https://github.com/yangjl/angsd">repo</a>.</p>
 
 <h1 id="install-from-github">Install from Github</h1>
-<p>You also need to install <code>CRAM</code> by <code>htslib</code>, although I have no idea what CRAM is, I believe it might be something more fast or a space saving format (like SAM?). I have to say the installation become so easy with github!</p>
+<p>You also need to install <code class="highlighter-rouge">CRAM</code> by <code class="highlighter-rouge">htslib</code>, although I have no idea what CRAM is, I believe it might be something more fast or a space saving format (like SAM?). I have to say the installation become so easy with github!</p>
 
-<pre><code>git clone https://github.com/samtools/htslib.git  
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/samtools/htslib.git  
 git clone git://github.com/ANGSD/angsd.git   
 cd angsd  
 make  
 </code></pre>
+</div>
 
 <h1 id="preparation-for-bam-input">Preparation for BAM input</h1>
 
 <p>The following codes all following ANGSD’s tutorial. </p>
 
-<pre><code>### download data
+<div class="highlighter-rouge"><pre class="highlight"><code>### download data
 wget http://popgen.dk/software/download/angsd/bams.tar.gz
 tar xf bams.tar.gz
 ### indexing them
@@ -156,12 +216,13 @@ for i in bams/*.bam;do samtools index $i;done
 ### create a list
 ls bams/*.bam &gt; bam.filelist
 </code></pre>
+</div>
 
 <h1 id="snp-and-genotype-calling">SNP and genotype calling</h1>
 
-<p>SNPs are called based on their allele frequencies by <code>-doMaf</code>. Basically, they will call a SNP if a site has a minor allele frequency significantly different from 0. (Note: how about really minor allele?)</p>
+<p>SNPs are called based on their allele frequencies by <code class="highlighter-rouge">-doMaf</code>. Basically, they will call a SNP if a site has a minor allele frequency significantly different from 0. (Note: how about really minor allele?)</p>
 
-<pre><code>### MAF for every basepair
+<div class="highlighter-rouge"><pre class="highlight"><code>### MAF for every basepair
 angsd -bam bam.filelist -doMajorMinor 2 -doMaf 8  -doCounts 1 -out out
  
 ### SNP calling
@@ -173,7 +234,8 @@ angsd -bam bam.filelist -GL 1 -doGlf 2 -doMajorMinor 1 -doMaf 2 -SNP_pval 2e-6 -
 ### Genotype calling in one step
 angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doGeno 5 -doPost 1 -postCutoff 0.95
 </code></pre>
-<p>with option <code>-doPlink 1</code>, it will output PLINK format. </p>
+</div>
+<p>with option <code class="highlighter-rouge">-doPlink 1</code>, it will output PLINK format. </p>
 
 <h1 id="population-genetics">Population Genetics</h1>
 
@@ -267,7 +329,7 @@ angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pv
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 13:52:34</span></small></p>
       </footer>
 
     </div>

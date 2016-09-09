@@ -2,6 +2,65 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Jinliang Yang | 杨金良</title>
+  <meta name="author" content="Jinliang Yang | 杨金良"/>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/media/home.css">
+  <style type="text/css">
+  html, body {
+    background-color: #F8F8F8;
+  }
+  .container > footer p , .postheader > a{
+    text-align: center;
+  }
+  .date {
+    text-align: center;
+    height: 30px;
+    color:#bfbfbf;
+    margin-bottom: 10px;
+  }
+  /* Specify class=linenums on a pre to get line numbering */
+  ol.linenums {
+    margin: 0 0 0 33px; /* IE indents via margin-left */
+  }
+  ol.linenums li {
+    padding-left: 12px;
+    color: #bebec5;
+    line-height: 18px;
+    text-shadow: 0 1px 0 #fff;
+  }
+  </style>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1988641-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- weibo -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <div class="container">
+  <h1 class="sitename">Jinliang Yang</h1>
+  <ul class="nav pills">
+  <li><a href="/">Home</a></li>
+  <li><a href="/cn/">中文</a></li>
+  <li><a href="/en/">English</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/vitae/">VITAE</a></li>
+</ul>
+
+
+<!-- Put this just before the closing body tag -->
+
   <head>
     <meta charset="utf-8">
     <title>The art of command line</title>
@@ -149,41 +208,41 @@ but given the interest there, it seems it’s worth using Github, where people m
   <li>The goals are breadth and brevity. Every tip is essential in some situation or significantly saves time over alternatives.</li>
   <li>This is written for Linux. Many but not all items apply equally to MacOS (or even Cygwin).</li>
   <li>The focus is on interactive Bash, though many tips apply to other shells and to general Bash scripting.</li>
-  <li>Descriptions are intentionally minimal, with the expectation you’ll use <code>man</code>, <code>apt-get</code>/<code>yum</code>/<code>dnf</code> to install, and Google for more background.</li>
+  <li>Descriptions are intentionally minimal, with the expectation you’ll use <code class="highlighter-rouge">man</code>, <code class="highlighter-rouge">apt-get</code>/<code class="highlighter-rouge">yum</code>/<code class="highlighter-rouge">dnf</code> to install, and Google for more background.</li>
 </ul>
 
 <h2 id="basics">Basics</h2>
 
 <ul>
   <li>
-    <p>Learn basic Bash. Actually, type <code>man bash</code> and at least skim the whole thing; it’s pretty easy to follow and not that long. Alternate shells can be nice, but Bash is powerful and always available (learning <em>only</em> zsh, fish, etc., while tempting on your own laptop, restricts you in many situations, such as using existing servers).</p>
+    <p>Learn basic Bash. Actually, type <code class="highlighter-rouge">man bash</code> and at least skim the whole thing; it’s pretty easy to follow and not that long. Alternate shells can be nice, but Bash is powerful and always available (learning <em>only</em> zsh, fish, etc., while tempting on your own laptop, restricts you in many situations, such as using existing servers).</p>
   </li>
   <li>
-    <p>Learn at least one text-based editor well. Ideally Vim (<code>vi</code>), as there’s really no competition for random editing in a terminal (even if you use Emacs, a big IDE, or a modern hipster editor most of the time).</p>
+    <p>Learn at least one text-based editor well. Ideally Vim (<code class="highlighter-rouge">vi</code>), as there’s really no competition for random editing in a terminal (even if you use Emacs, a big IDE, or a modern hipster editor most of the time).</p>
   </li>
   <li>
-    <p>Learn about redirection of output and input using <code>&gt;</code> and <code>&lt;</code> and pipes using <code>|</code>. Learn about stdout and stderr.</p>
+    <p>Learn about redirection of output and input using <code class="highlighter-rouge">&gt;</code> and <code class="highlighter-rouge">&lt;</code> and pipes using <code class="highlighter-rouge">|</code>. Learn about stdout and stderr.</p>
   </li>
   <li>
-    <p>Learn about file glob expansion with <code>*</code> (and perhaps <code>?</code> and <code>{</code>…<code>}</code>) and quoting and the difference between double <code>"</code> and single <code>'</code> quotes. (See more on variable expansion below.)</p>
+    <p>Learn about file glob expansion with <code class="highlighter-rouge">*</code> (and perhaps <code class="highlighter-rouge">?</code> and <code class="highlighter-rouge"><span class="p">{</span></code>…<code class="highlighter-rouge">}</code>) and quoting and the difference between double <code class="highlighter-rouge">"</code> and single <code class="highlighter-rouge">'</code> quotes. (See more on variable expansion below.)</p>
   </li>
   <li>
-    <p>Be familiar with Bash job management: <code>&amp;</code>, <strong>ctrl-z</strong>, <strong>ctrl-c</strong>, <code>jobs</code>, <code>fg</code>, <code>bg</code>, <code>kill</code>, etc.</p>
+    <p>Be familiar with Bash job management: <code class="highlighter-rouge">&amp;</code>, <strong>ctrl-z</strong>, <strong>ctrl-c</strong>, <code class="highlighter-rouge">jobs</code>, <code class="highlighter-rouge">fg</code>, <code class="highlighter-rouge">bg</code>, <code class="highlighter-rouge">kill</code>, etc.</p>
   </li>
   <li>
-    <p>Know <code>ssh</code>, and the basics of passwordless authentication, via <code>ssh-agent</code>, <code>ssh-add</code>, etc.</p>
+    <p>Know <code class="highlighter-rouge">ssh</code>, and the basics of passwordless authentication, via <code class="highlighter-rouge">ssh-agent</code>, <code class="highlighter-rouge">ssh-add</code>, etc.</p>
   </li>
   <li>
-    <p>Basic file management: <code>ls</code> and <code>ls -l</code> (in particular, learn what every column in <code>ls -l</code> means), <code>less</code>, <code>head</code>, <code>tail</code> and <code>tail -f</code> (or even better, <code>less +F</code>), <code>ln</code> and <code>ln -s</code> (learn the differences and advantages of hard versus soft links), <code>chown</code>, <code>chmod</code>, <code>du</code> (for a quick summary of disk usage: <code>du -sk *</code>), <code>df</code>, <code>mount</code>.</p>
+    <p>Basic file management: <code class="highlighter-rouge">ls</code> and <code class="highlighter-rouge">ls -l</code> (in particular, learn what every column in <code class="highlighter-rouge">ls -l</code> means), <code class="highlighter-rouge">less</code>, <code class="highlighter-rouge">head</code>, <code class="highlighter-rouge">tail</code> and <code class="highlighter-rouge">tail -f</code> (or even better, <code class="highlighter-rouge">less +F</code>), <code class="highlighter-rouge">ln</code> and <code class="highlighter-rouge">ln -s</code> (learn the differences and advantages of hard versus soft links), <code class="highlighter-rouge">chown</code>, <code class="highlighter-rouge">chmod</code>, <code class="highlighter-rouge">du</code> (for a quick summary of disk usage: <code class="highlighter-rouge">du -sk *</code>), <code class="highlighter-rouge">df</code>, <code class="highlighter-rouge">mount</code>.</p>
   </li>
   <li>
-    <p>Basic network management: <code>ip</code> or <code>ifconfig</code>, <code>dig</code>.</p>
+    <p>Basic network management: <code class="highlighter-rouge">ip</code> or <code class="highlighter-rouge">ifconfig</code>, <code class="highlighter-rouge">dig</code>.</p>
   </li>
   <li>
-    <p>Know regular expressions well, and the various flags to <code>grep</code>/<code>egrep</code>. The <code>-i</code>, <code>-o</code>, <code>-A</code>, and <code>-B</code> options are worth knowing.</p>
+    <p>Know regular expressions well, and the various flags to <code class="highlighter-rouge">grep</code>/<code class="highlighter-rouge">egrep</code>. The <code class="highlighter-rouge">-i</code>, <code class="highlighter-rouge">-o</code>, <code class="highlighter-rouge">-A</code>, and <code class="highlighter-rouge">-B</code> options are worth knowing.</p>
   </li>
   <li>
-    <p>Learn to use <code>apt-get</code>, <code>yum</code>, or <code>dnf</code> (depending on distro) to find and install packages. And make sure you have <code>pip</code> to install Python-based command-line tools (a few below are easiest to install via <code>pip</code>).</p>
+    <p>Learn to use <code class="highlighter-rouge">apt-get</code>, <code class="highlighter-rouge">yum</code>, or <code class="highlighter-rouge">dnf</code> (depending on distro) to find and install packages. And make sure you have <code class="highlighter-rouge">pip</code> to install Python-based command-line tools (a few below are easiest to install via <code class="highlighter-rouge">pip</code>).</p>
   </li>
 </ul>
 
@@ -194,89 +253,92 @@ but given the interest there, it seems it’s worth using Github, where people m
     <p>In Bash, use <strong>ctrl-r</strong> to search through command history.</p>
   </li>
   <li>
-    <p>In Bash, use <strong>ctrl-w</strong> to delete the last word, and <strong>ctrl-u</strong> to delete the whole line. Use <strong>alt-b</strong> and <strong>alt-f</strong> to move by word, and <strong>ctrl-k</strong> to kill to the end of the line. See <code>man readline</code> for all the default keybindings in Bash. There are a lot. For example <strong>alt-.</strong> cycles through previous arguments, and <strong>alt-</strong>* expands a glob.</p>
+    <p>In Bash, use <strong>ctrl-w</strong> to delete the last word, and <strong>ctrl-u</strong> to delete the whole line. Use <strong>alt-b</strong> and <strong>alt-f</strong> to move by word, and <strong>ctrl-k</strong> to kill to the end of the line. See <code class="highlighter-rouge">man readline</code> for all the default keybindings in Bash. There are a lot. For example <strong>alt-.</strong> cycles through previous arguments, and <strong>alt-</strong>* expands a glob.</p>
   </li>
   <li>
-    <p>To go back to the previous working directory: <code>cd -</code></p>
+    <p>To go back to the previous working directory: <code class="highlighter-rouge">cd -</code></p>
   </li>
   <li>
-    <p>If you are halfway through typing a command but change your mind, hit <strong>alt-#</strong> to add a <code>#</code> at the beginning and enter it as a comment (or use <strong>ctrl-a</strong>, <strong>#</strong>, <strong>enter</strong>). You can then return to it later via command history.</p>
+    <p>If you are halfway through typing a command but change your mind, hit <strong>alt-#</strong> to add a <code class="highlighter-rouge">#</code> at the beginning and enter it as a comment (or use <strong>ctrl-a</strong>, <strong>#</strong>, <strong>enter</strong>). You can then return to it later via command history.</p>
   </li>
   <li>
-    <p>Use <code>xargs</code> (or <code>parallel</code>). It’s very powerful. Note you can control how many items execute per line (<code>-L</code>) as well as parallelism (<code>-P</code>). If you’re not sure if it’ll do the right thing, use <code>xargs echo</code> first. Also, <code>-I{}</code> is handy.   Examples:</p>
+    <p>Use <code class="highlighter-rouge">xargs</code> (or <code class="highlighter-rouge">parallel</code>). It’s very powerful. Note you can control how many items execute per line (<code class="highlighter-rouge">-L</code>) as well as parallelism (<code class="highlighter-rouge">-P</code>). If you’re not sure if it’ll do the right thing, use <code class="highlighter-rouge">xargs echo</code> first. Also, <code class="highlighter-rouge">-I{}</code> is handy.   Examples:</p>
   </li>
 </ul>
 
-<pre><code>      find . -name '*.py' | xargs grep some_function 
+<div class="highlighter-rouge"><pre class="highlight"><code>      find . -name '*.py' | xargs grep some_function 
       cat hosts | xargs -I{} ssh root@{} hostname 
 </code></pre>
+</div>
 
 <ul>
   <li>
-    <p><code>pstree -p</code> is a helpful display of the process tree.</p>
+    <p><code class="highlighter-rouge">pstree -p</code> is a helpful display of the process tree.</p>
   </li>
   <li>
-    <p>Use <code>pgrep</code> and <code>pkill</code> to find or signal processes by name (<code>-f</code> is helpful).</p>
+    <p>Use <code class="highlighter-rouge">pgrep</code> and <code class="highlighter-rouge">pkill</code> to find or signal processes by name (<code class="highlighter-rouge">-f</code> is helpful).</p>
   </li>
   <li>
-    <p>Know the various signals you can send processes. For example, to suspend a process, use <code>kill -STOP [pid]</code>. For the full list, see <code>man 7 signal</code></p>
+    <p>Know the various signals you can send processes. For example, to suspend a process, use <code class="highlighter-rouge">kill -STOP [pid]</code>. For the full list, see <code class="highlighter-rouge">man 7 signal</code></p>
   </li>
   <li>
-    <p>Use <code>nohup</code> or <code>disown</code> if you want a background process to keep running forever.</p>
+    <p>Use <code class="highlighter-rouge">nohup</code> or <code class="highlighter-rouge">disown</code> if you want a background process to keep running forever.</p>
   </li>
   <li>
-    <p>Check what processes are listening via <code>netstat -lntp</code>.</p>
+    <p>Check what processes are listening via <code class="highlighter-rouge">netstat -lntp</code>.</p>
   </li>
   <li>
-    <p>See also <code>lsof</code> for open sockets and files.</p>
+    <p>See also <code class="highlighter-rouge">lsof</code> for open sockets and files.</p>
   </li>
   <li>
-    <p>In Bash scripts, use <code>set -x</code> for debugging output. Use strict modes whenever possible. Use <code>set -e</code> to abort on errors. Use <code>set -o pipefail</code> as well, to be strict about errors (though this topic is a bit subtle). For more involved scripts, also use <code>trap</code>.</p>
+    <p>In Bash scripts, use <code class="highlighter-rouge">set -x</code> for debugging output. Use strict modes whenever possible. Use <code class="highlighter-rouge">set -e</code> to abort on errors. Use <code class="highlighter-rouge">set -o pipefail</code> as well, to be strict about errors (though this topic is a bit subtle). For more involved scripts, also use <code class="highlighter-rouge">trap</code>.</p>
   </li>
   <li>
     <p>In Bash scripts, subshells (written with parentheses) are convenient ways to group commands. A common example is to temporarily move to a different working directory, e.g.</p>
   </li>
 </ul>
 
-<pre><code>      # do something in current dir
+<div class="highlighter-rouge"><pre class="highlight"><code>      # do something in current dir
       (cd /some/other/dir; other-command)
       # continue in original dir
 </code></pre>
+</div>
 
 <ul>
   <li>
-    <p>In Bash, note there are lots of kinds of variable expansion. Checking a variable exists: <code>${name:?error message}</code>. For example, if a Bash script requires a single argument, just write <code>input_file=${1:?usage: $0 input_file}</code>. Arithmetic expansion: <code>i=$(( (i + 1) % 5 ))</code>. Sequences: <code>{1..10}</code>. Trimming of strings: <code>${var%suffix}</code> and <code>${var#prefix}</code>. For example if <code>var=foo.pdf</code>, then <code>echo ${var%.pdf}.txt</code> prints <code>foo.txt</code>.</p>
+    <p>In Bash, note there are lots of kinds of variable expansion. Checking a variable exists: <code class="highlighter-rouge">${name:?error message}</code>. For example, if a Bash script requires a single argument, just write <code class="highlighter-rouge">input_file=${1:?usage: $0 input_file}</code>. Arithmetic expansion: <code class="highlighter-rouge">i=$(( (i + 1) % 5 ))</code>. Sequences: <code class="highlighter-rouge"><span class="p">{</span><span class="err">1..10</span><span class="p">}</span></code>. Trimming of strings: <code class="highlighter-rouge">${var%suffix}</code> and <code class="highlighter-rouge">${var#prefix}</code>. For example if <code class="highlighter-rouge">var=foo.pdf</code>, then <code class="highlighter-rouge">echo ${var%.pdf}.txt</code> prints <code class="highlighter-rouge">foo.txt</code>.</p>
   </li>
   <li>
-    <p>The output of a command can be treated like a file via <code>&lt;(some command)</code>. For example, compare local <code>/etc/hosts</code> with a remote one:</p>
+    <p>The output of a command can be treated like a file via <code class="highlighter-rouge">&lt;(some command)</code>. For example, compare local <code class="highlighter-rouge">/etc/hosts</code> with a remote one:</p>
   </li>
 </ul>
 
-<pre><code>      diff /etc/hosts &lt;(ssh somehost cat /etc/hosts)
+<div class="highlighter-rouge"><pre class="highlight"><code>      diff /etc/hosts &lt;(ssh somehost cat /etc/hosts)
 </code></pre>
+</div>
 
 <ul>
   <li>
-    <p>Know about “here documents” in Bash, as in <code>cat &lt;&lt;EOF ...</code>.</p>
+    <p>Know about “here documents” in Bash, as in <code class="highlighter-rouge">cat &lt;&lt;EOF ...</code>.</p>
   </li>
   <li>
-    <p>In Bash, redirect both standard output and standard error via: <code>some-command &gt;logfile 2&gt;&amp;1</code>. Often, to ensure a command does not leave an open file handle to standard input, tying it to the terminal you are in, it is also good practice to add <code>&lt;/dev/null</code>.</p>
+    <p>In Bash, redirect both standard output and standard error via: <code class="highlighter-rouge">some-command &gt;logfile 2&gt;&amp;1</code>. Often, to ensure a command does not leave an open file handle to standard input, tying it to the terminal you are in, it is also good practice to add <code class="highlighter-rouge">&lt;/dev/null</code>.</p>
   </li>
   <li>
-    <p>Use <code>man ascii</code> for a good ASCII table, with hex and decimal values. For general encoding info, <code>man unicode</code>, <code>man utf-8</code>, and <code>man latin1</code> are helpful.</p>
+    <p>Use <code class="highlighter-rouge">man ascii</code> for a good ASCII table, with hex and decimal values. For general encoding info, <code class="highlighter-rouge">man unicode</code>, <code class="highlighter-rouge">man utf-8</code>, and <code class="highlighter-rouge">man latin1</code> are helpful.</p>
   </li>
   <li>
-    <p>Use <code>screen</code> or <code>tmux</code> to multiplex the screen, especially useful on remote ssh sessions and to detach and re-attach to a session. A more minimal alternative for session persistence only is <code>dtach</code>.</p>
+    <p>Use <code class="highlighter-rouge">screen</code> or <code class="highlighter-rouge">tmux</code> to multiplex the screen, especially useful on remote ssh sessions and to detach and re-attach to a session. A more minimal alternative for session persistence only is <code class="highlighter-rouge">dtach</code>.</p>
   </li>
   <li>
-    <p>In ssh, knowing how to port tunnel with <code>-L</code> or <code>-D</code> (and occasionally <code>-R</code>) is useful, e.g. to access web sites from a remote server.</p>
+    <p>In ssh, knowing how to port tunnel with <code class="highlighter-rouge">-L</code> or <code class="highlighter-rouge">-D</code> (and occasionally <code class="highlighter-rouge">-R</code>) is useful, e.g. to access web sites from a remote server.</p>
   </li>
   <li>
-    <p>It can be useful to make a few optimizations to your ssh configuration; for example, this <code>~/.ssh/config</code> contains settings to avoid dropped connections in certain network environments, use compression (which is helpful with scp over low-bandwidth connections), and multiplex channels to the same server with a local control file:</p>
+    <p>It can be useful to make a few optimizations to your ssh configuration; for example, this <code class="highlighter-rouge">~/.ssh/config</code> contains settings to avoid dropped connections in certain network environments, use compression (which is helpful with scp over low-bandwidth connections), and multiplex channels to the same server with a local control file:</p>
   </li>
 </ul>
 
-<pre><code>      TCPKeepAlive=yes
+<div class="highlighter-rouge"><pre class="highlight"><code>      TCPKeepAlive=yes
       ServerAliveInterval=15
       ServerAliveCountMax=6
       Compression=yes
@@ -284,26 +346,27 @@ but given the interest there, it seems it’s worth using Github, where people m
       ControlPath /tmp/%r@%h:%p
       ControlPersist yes
 </code></pre>
+</div>
 
 <ul>
   <li>
-    <p>A few other options relevant to ssh are security sensitive and should be enabled with care, e.g. per subnet or host or in trusted networks: <code>StrictHostKeyChecking=no</code>, <code>ForwardAgent=yes</code></p>
+    <p>A few other options relevant to ssh are security sensitive and should be enabled with care, e.g. per subnet or host or in trusted networks: <code class="highlighter-rouge">StrictHostKeyChecking=no</code>, <code class="highlighter-rouge">ForwardAgent=yes</code></p>
   </li>
   <li>
-    <p>To get the permissions on a file in octal form, which is useful for system configuration but not available in <code>ls</code> and easy to bungle, use something like
-<code>sh
+    <p>To get the permissions on a file in octal form, which is useful for system configuration but not available in <code class="highlighter-rouge">ls</code> and easy to bungle, use something like
+<code class="highlighter-rouge">sh
     stat -c '%A %a %n' /etc/timezone
 </code></p>
   </li>
   <li>
-    <p>For interactive selection of values from the output of another command, use <a href="https://github.com/mooz/percol"><code>percol</code></a>.</p>
+    <p>For interactive selection of values from the output of another command, use <a href="https://github.com/mooz/percol"><code class="highlighter-rouge">percol</code></a>.</p>
   </li>
   <li>
-    <p>For interaction with files based on the output of another command (like <code>git</code>), use <code>fpp</code> (<a href="https://github.com/facebook/PathPicker">PathPicker</a>).</p>
+    <p>For interaction with files based on the output of another command (like <code class="highlighter-rouge">git</code>), use <code class="highlighter-rouge">fpp</code> (<a href="https://github.com/facebook/PathPicker">PathPicker</a>).</p>
   </li>
   <li>
     <p>For a simple web server for all files in the current directory (and subdirs), available to anyone on your network, use:
-<code>python -m SimpleHTTPServer 7777</code> (for port 7777 and Python 2).</p>
+<code class="highlighter-rouge">python -m SimpleHTTPServer 7777</code> (for port 7777 and Python 2).</p>
   </li>
 </ul>
 
@@ -311,92 +374,95 @@ but given the interest there, it seems it’s worth using Github, where people m
 
 <ul>
   <li>
-    <p>To locate a file by name in the current directory, <code>find . -iname '*something*'</code> (or similar). To find a file anywhere by name, use <code>locate something</code> (but bear in mind <code>updatedb</code> may not have indexed recently created files).</p>
+    <p>To locate a file by name in the current directory, <code class="highlighter-rouge">find . -iname '*something*'</code> (or similar). To find a file anywhere by name, use <code class="highlighter-rouge">locate something</code> (but bear in mind <code class="highlighter-rouge">updatedb</code> may not have indexed recently created files).</p>
   </li>
   <li>
-    <p>For general searching through source or data files (more advanced than <code>grep -r</code>), use <a href="https://github.com/ggreer/the_silver_searcher"><code>ag</code></a>.</p>
+    <p>For general searching through source or data files (more advanced than <code class="highlighter-rouge">grep -r</code>), use <a href="https://github.com/ggreer/the_silver_searcher"><code class="highlighter-rouge">ag</code></a>.</p>
   </li>
   <li>
-    <p>To convert HTML to text: <code>lynx -dump -stdin</code></p>
+    <p>To convert HTML to text: <code class="highlighter-rouge">lynx -dump -stdin</code></p>
   </li>
   <li>
-    <p>For Markdown, HTML, and all kinds of document conversion, try <a href="http://pandoc.org/"><code>pandoc</code></a>.</p>
+    <p>For Markdown, HTML, and all kinds of document conversion, try <a href="http://pandoc.org/"><code class="highlighter-rouge">pandoc</code></a>.</p>
   </li>
   <li>
-    <p>If you must handle XML, <code>xmlstarlet</code> is old but good.</p>
+    <p>If you must handle XML, <code class="highlighter-rouge">xmlstarlet</code> is old but good.</p>
   </li>
   <li>
-    <p>For JSON, use <code>jq</code>.</p>
+    <p>For JSON, use <code class="highlighter-rouge">jq</code>.</p>
   </li>
   <li>
-    <p>For Excel or CSV files, <a href="https://github.com/onyxfish/csvkit">csvkit</a> provides <code>in2csv</code>, <code>csvcut</code>, <code>csvjoin</code>, <code>csvgrep</code>, etc.</p>
+    <p>For Excel or CSV files, <a href="https://github.com/onyxfish/csvkit">csvkit</a> provides <code class="highlighter-rouge">in2csv</code>, <code class="highlighter-rouge">csvcut</code>, <code class="highlighter-rouge">csvjoin</code>, <code class="highlighter-rouge">csvgrep</code>, etc.</p>
   </li>
   <li>
-    <p>For Amazon S3, <a href="https://github.com/s3tools/s3cmd"><code>s3cmd</code></a> is convenient and <a href="https://github.com/bloomreach/s4cmd"><code>s4cmd</code></a> is faster. Amazon’s <a href="https://github.com/aws/aws-cli"><code>aws</code></a> is essential for other AWS-related tasks.</p>
+    <p>For Amazon S3, <a href="https://github.com/s3tools/s3cmd"><code class="highlighter-rouge">s3cmd</code></a> is convenient and <a href="https://github.com/bloomreach/s4cmd"><code class="highlighter-rouge">s4cmd</code></a> is faster. Amazon’s <a href="https://github.com/aws/aws-cli"><code class="highlighter-rouge">aws</code></a> is essential for other AWS-related tasks.</p>
   </li>
   <li>
-    <p>Know about <code>sort</code> and <code>uniq</code>, including uniq’s <code>-u</code> and <code>-d</code> options – see one-liners below.</p>
+    <p>Know about <code class="highlighter-rouge">sort</code> and <code class="highlighter-rouge">uniq</code>, including uniq’s <code class="highlighter-rouge">-u</code> and <code class="highlighter-rouge">-d</code> options – see one-liners below.</p>
   </li>
   <li>
-    <p>Know about <code>cut</code>, <code>paste</code>, and <code>join</code> to manipulate text files. Many people use <code>cut</code> but forget about <code>join</code>.</p>
+    <p>Know about <code class="highlighter-rouge">cut</code>, <code class="highlighter-rouge">paste</code>, and <code class="highlighter-rouge">join</code> to manipulate text files. Many people use <code class="highlighter-rouge">cut</code> but forget about <code class="highlighter-rouge">join</code>.</p>
   </li>
   <li>
-    <p>Know that locale affects a lot of command line tools in subtle ways, including sorting order (collation) and performance. Most Linux installations will set <code>LANG</code> or other locale variables to a local setting like US English. But be aware sorting will change if you change locale. And know i18n routines can make sort or other commands run <em>many times</em> slower. In some situations (such as the set operations or uniqueness operations below) you can safely ignore slow i18n routines entirely and use traditional byte-based sort order, using <code>export LC_ALL=C</code>.</p>
+    <p>Know that locale affects a lot of command line tools in subtle ways, including sorting order (collation) and performance. Most Linux installations will set <code class="highlighter-rouge">LANG</code> or other locale variables to a local setting like US English. But be aware sorting will change if you change locale. And know i18n routines can make sort or other commands run <em>many times</em> slower. In some situations (such as the set operations or uniqueness operations below) you can safely ignore slow i18n routines entirely and use traditional byte-based sort order, using <code class="highlighter-rouge">export LC_ALL=C</code>.</p>
   </li>
   <li>
-    <p>Know basic <code>awk</code> and <code>sed</code> for simple data munging. For example, summing all numbers in the third column of a text file: <code>awk '{ x += $3 } END { print x }'</code>. This is probably 3X faster and 3X shorter than equivalent Python.</p>
+    <p>Know basic <code class="highlighter-rouge">awk</code> and <code class="highlighter-rouge">sed</code> for simple data munging. For example, summing all numbers in the third column of a text file: <code class="highlighter-rouge">awk '{ x += $3 } END { print x }'</code>. This is probably 3X faster and 3X shorter than equivalent Python.</p>
   </li>
   <li>
     <p>To replace all occurrences of a string in place, in one or more files:</p>
   </li>
 </ul>
 
-<pre><code>      perl -pi.bak -e 's/old-string/new-string/g' my-files-*.txt
+<div class="highlighter-rouge"><pre class="highlight"><code>      perl -pi.bak -e 's/old-string/new-string/g' my-files-*.txt
 </code></pre>
+</div>
 
 <ul>
-  <li>To rename many files at once according to a pattern, use <code>rename</code>. For complex renames, <a href="https://github.com/jlevy/repren"><code>repren</code></a> may help.</li>
+  <li>To rename many files at once according to a pattern, use <code class="highlighter-rouge">rename</code>. For complex renames, <a href="https://github.com/jlevy/repren"><code class="highlighter-rouge">repren</code></a> may help.</li>
 </ul>
 
-<pre><code>      # Recover backup files foo.bak -&gt; foo:
+<div class="highlighter-rouge"><pre class="highlight"><code>      # Recover backup files foo.bak -&gt; foo:
       rename 's/\.bak$//' *.bak
       # Full rename of filenames, directories, and contents foo -&gt; bar:
       repren --full --preserve-case --from foo --to bar .
 </code></pre>
+</div>
 
 <ul>
   <li>
-    <p>Use <code>shuf</code> to shuffle or select random lines from a file.</p>
+    <p>Use <code class="highlighter-rouge">shuf</code> to shuffle or select random lines from a file.</p>
   </li>
   <li>
-    <p>Know <code>sort</code>’s options. Know how keys work (<code>-t</code> and <code>-k</code>). In particular, watch out that you need to write <code>-k1,1</code> to sort by only the first field; <code>-k1</code> means sort according to the whole line.</p>
+    <p>Know <code class="highlighter-rouge">sort</code>’s options. Know how keys work (<code class="highlighter-rouge">-t</code> and <code class="highlighter-rouge">-k</code>). In particular, watch out that you need to write <code class="highlighter-rouge">-k1,1</code> to sort by only the first field; <code class="highlighter-rouge">-k1</code> means sort according to the whole line.</p>
   </li>
   <li>
-    <p>Stable sort (<code>sort -s</code>) can be useful. For example, to sort first by field 2, then secondarily by field 1, you can use <code>sort -k1,1 | sort -s -k2,2</code></p>
+    <p>Stable sort (<code class="highlighter-rouge">sort -s</code>) can be useful. For example, to sort first by field 2, then secondarily by field 1, you can use <code class="highlighter-rouge">sort -k1,1 | sort -s -k2,2</code></p>
   </li>
   <li>
-    <p>If you ever need to write a tab literal in a command line in Bash (e.g. for the -t argument to sort), press <strong>ctrl-v</strong> <strong>[Tab]</strong> or write <code>$'\t'</code> (the latter is better as you can copy/paste it).</p>
+    <p>If you ever need to write a tab literal in a command line in Bash (e.g. for the -t argument to sort), press <strong>ctrl-v</strong> <strong>[Tab]</strong> or write <code class="highlighter-rouge">$'\t'</code> (the latter is better as you can copy/paste it).</p>
   </li>
   <li>
-    <p>For binary files, use <code>hd</code> for simple hex dumps and <code>bvi</code> for binary editing.</p>
+    <p>For binary files, use <code class="highlighter-rouge">hd</code> for simple hex dumps and <code class="highlighter-rouge">bvi</code> for binary editing.</p>
   </li>
   <li>
-    <p>Also for binary files, <code>strings</code> (plus <code>grep</code>, etc.) lets you find bits of text.</p>
+    <p>Also for binary files, <code class="highlighter-rouge">strings</code> (plus <code class="highlighter-rouge">grep</code>, etc.) lets you find bits of text.</p>
   </li>
   <li>
-    <p>To convert text encodings, try <code>iconv</code>. Or <code>uconv</code> for more advanced use; it supports some advanced Unicode things. For example, this command lowercases and removes all accents (by expanding and dropping them):</p>
+    <p>To convert text encodings, try <code class="highlighter-rouge">iconv</code>. Or <code class="highlighter-rouge">uconv</code> for more advanced use; it supports some advanced Unicode things. For example, this command lowercases and removes all accents (by expanding and dropping them):</p>
   </li>
 </ul>
 
-<pre><code>      uconv -f utf-8 -t utf-8 -x '::Any-Lower; ::Any-NFD; [:Nonspacing Mark:] &gt;; ::Any-NFC; ' &lt; input.txt &gt; output.txt
+<div class="highlighter-rouge"><pre class="highlight"><code>      uconv -f utf-8 -t utf-8 -x '::Any-Lower; ::Any-NFD; [:Nonspacing Mark:] &gt;; ::Any-NFC; ' &lt; input.txt &gt; output.txt
 </code></pre>
+</div>
 
 <ul>
   <li>
-    <p>To split files into pieces, see <code>split</code> (to split by size) and <code>csplit</code> (to split by a pattern).</p>
+    <p>To split files into pieces, see <code class="highlighter-rouge">split</code> (to split by size) and <code class="highlighter-rouge">csplit</code> (to split by a pattern).</p>
   </li>
   <li>
-    <p>Use <code>zless</code>, <code>zmore</code>, <code>zcat</code>, and <code>zgrep</code> to operate on compressed files.</p>
+    <p>Use <code class="highlighter-rouge">zless</code>, <code class="highlighter-rouge">zmore</code>, <code class="highlighter-rouge">zcat</code>, and <code class="highlighter-rouge">zgrep</code> to operate on compressed files.</p>
   </li>
 </ul>
 
@@ -404,58 +470,58 @@ but given the interest there, it seems it’s worth using Github, where people m
 
 <ul>
   <li>
-    <p>For web debugging, <code>curl</code> and <code>curl -I</code> are handy, or their <code>wget</code> equivalents, or the more modern <a href="https://github.com/jakubroztocil/httpie"><code>httpie</code></a>.</p>
+    <p>For web debugging, <code class="highlighter-rouge">curl</code> and <code class="highlighter-rouge">curl -I</code> are handy, or their <code class="highlighter-rouge">wget</code> equivalents, or the more modern <a href="https://github.com/jakubroztocil/httpie"><code class="highlighter-rouge">httpie</code></a>.</p>
   </li>
   <li>
-    <p>To know disk/cpu/network status, use <code>iostat</code>, <code>netstat</code>, <code>top</code> (or the better <code>htop</code>), and (especially) <code>dstat</code>. Good for getting a quick idea of what’s happening on a system.</p>
+    <p>To know disk/cpu/network status, use <code class="highlighter-rouge">iostat</code>, <code class="highlighter-rouge">netstat</code>, <code class="highlighter-rouge">top</code> (or the better <code class="highlighter-rouge">htop</code>), and (especially) <code class="highlighter-rouge">dstat</code>. Good for getting a quick idea of what’s happening on a system.</p>
   </li>
   <li>
-    <p>For a more in-depth system overview, use <a href="https://github.com/nicolargo/glances"><code>glances</code></a>. It presents you with several system level statistics in one terminal window. Very helpful for quickly checking on various subsystems.</p>
+    <p>For a more in-depth system overview, use <a href="https://github.com/nicolargo/glances"><code class="highlighter-rouge">glances</code></a>. It presents you with several system level statistics in one terminal window. Very helpful for quickly checking on various subsystems.</p>
   </li>
   <li>
-    <p>To know memory status, run and understand the output of <code>free</code> and <code>vmstat</code>. In particular, be aware the “cached” value is memory held by the Linux kernel as file cache, so effectively counts toward the “free” value.</p>
+    <p>To know memory status, run and understand the output of <code class="highlighter-rouge">free</code> and <code class="highlighter-rouge">vmstat</code>. In particular, be aware the “cached” value is memory held by the Linux kernel as file cache, so effectively counts toward the “free” value.</p>
   </li>
   <li>
-    <p>Java system debugging is a different kettle of fish, but a simple trick on Oracle’s and some other JVMs is that you can run <code>kill -3 &lt;pid&gt;</code> and a full stack trace and heap summary (including generational garbage collection details, which can be highly informative) will be dumped to stderr/logs.</p>
+    <p>Java system debugging is a different kettle of fish, but a simple trick on Oracle’s and some other JVMs is that you can run <code class="highlighter-rouge">kill -3 &lt;pid&gt;</code> and a full stack trace and heap summary (including generational garbage collection details, which can be highly informative) will be dumped to stderr/logs.</p>
   </li>
   <li>
-    <p>Use <code>mtr</code> as a better traceroute, to identify network issues.</p>
+    <p>Use <code class="highlighter-rouge">mtr</code> as a better traceroute, to identify network issues.</p>
   </li>
   <li>
-    <p>For looking at why a disk is full, <code>ncdu</code> saves time over the usual commands like <code>du -sh *</code>.</p>
+    <p>For looking at why a disk is full, <code class="highlighter-rouge">ncdu</code> saves time over the usual commands like <code class="highlighter-rouge">du -sh *</code>.</p>
   </li>
   <li>
-    <p>To find which socket or process is using bandwidth, try <code>iftop</code> or <code>nethogs</code>.</p>
+    <p>To find which socket or process is using bandwidth, try <code class="highlighter-rouge">iftop</code> or <code class="highlighter-rouge">nethogs</code>.</p>
   </li>
   <li>
-    <p>The <code>ab</code> tool (comes with Apache) is helpful for quick-and-dirty checking of web server performance. For more complex load testing, try <code>siege</code>.</p>
+    <p>The <code class="highlighter-rouge">ab</code> tool (comes with Apache) is helpful for quick-and-dirty checking of web server performance. For more complex load testing, try <code class="highlighter-rouge">siege</code>.</p>
   </li>
   <li>
-    <p>For more serious network debugging, <code>wireshark</code>, <code>tshark</code>, or <code>ngrep</code>.</p>
+    <p>For more serious network debugging, <code class="highlighter-rouge">wireshark</code>, <code class="highlighter-rouge">tshark</code>, or <code class="highlighter-rouge">ngrep</code>.</p>
   </li>
   <li>
-    <p>Know about <code>strace</code> and <code>ltrace</code>. These can be helpful if a program is failing, hanging, or crashing, and you don’t know why, or if you want to get a general idea of performance. Note the profiling option (<code>-c</code>), and the ability to attach to a running process (<code>-p</code>).</p>
+    <p>Know about <code class="highlighter-rouge">strace</code> and <code class="highlighter-rouge">ltrace</code>. These can be helpful if a program is failing, hanging, or crashing, and you don’t know why, or if you want to get a general idea of performance. Note the profiling option (<code class="highlighter-rouge">-c</code>), and the ability to attach to a running process (<code class="highlighter-rouge">-p</code>).</p>
   </li>
   <li>
-    <p>Know about <code>ldd</code> to check shared libraries etc.</p>
+    <p>Know about <code class="highlighter-rouge">ldd</code> to check shared libraries etc.</p>
   </li>
   <li>
-    <p>Know how to connect to a running process with <code>gdb</code> and get its stack traces.</p>
+    <p>Know how to connect to a running process with <code class="highlighter-rouge">gdb</code> and get its stack traces.</p>
   </li>
   <li>
-    <p>Use <code>/proc</code>. It’s amazingly helpful sometimes when debugging live problems. Examples: <code>/proc/cpuinfo</code>, <code>/proc/xxx/cwd</code>, <code>/proc/xxx/exe</code>, <code>/proc/xxx/fd/</code>, <code>/proc/xxx/smaps</code>.</p>
+    <p>Use <code class="highlighter-rouge">/proc</code>. It’s amazingly helpful sometimes when debugging live problems. Examples: <code class="highlighter-rouge">/proc/cpuinfo</code>, <code class="highlighter-rouge">/proc/xxx/cwd</code>, <code class="highlighter-rouge">/proc/xxx/exe</code>, <code class="highlighter-rouge">/proc/xxx/fd/</code>, <code class="highlighter-rouge">/proc/xxx/smaps</code>.</p>
   </li>
   <li>
-    <p>When debugging why something went wrong in the past, <code>sar</code> can be very helpful. It shows historic statistics on CPU, memory, network, etc.</p>
+    <p>When debugging why something went wrong in the past, <code class="highlighter-rouge">sar</code> can be very helpful. It shows historic statistics on CPU, memory, network, etc.</p>
   </li>
   <li>
-    <p>For deeper systems and performance analyses, look at <code>stap</code> (<a href="https://sourceware.org/systemtap/wiki">SystemTap</a>), <a href="http://en.wikipedia.org/wiki/Perf_(Linux)"><code>perf</code></a>, and <a href="https://github.com/draios/sysdig"><code>sysdig</code></a>.</p>
+    <p>For deeper systems and performance analyses, look at <code class="highlighter-rouge">stap</code> (<a href="https://sourceware.org/systemtap/wiki">SystemTap</a>), <a href="http://en.wikipedia.org/wiki/Perf_(Linux)"><code class="highlighter-rouge">perf</code></a>, and <a href="https://github.com/draios/sysdig"><code class="highlighter-rouge">sysdig</code></a>.</p>
   </li>
   <li>
-    <p>Confirm what Linux distribution you’re using (works on most distros): <code>lsb_release -a</code></p>
+    <p>Confirm what Linux distribution you’re using (works on most distros): <code class="highlighter-rouge">lsb_release -a</code></p>
   </li>
   <li>
-    <p>Use <code>dmesg</code> whenever something’s acting really funny (it could be hardware or driver issues).</p>
+    <p>Use <code class="highlighter-rouge">dmesg</code> whenever something’s acting really funny (it could be hardware or driver issues).</p>
   </li>
 </ul>
 
@@ -464,48 +530,53 @@ but given the interest there, it seems it’s worth using Github, where people m
 <p>A few examples of piecing together commands:</p>
 
 <ul>
-  <li>It is remarkably helpful sometimes that you can do set intersection, union, and difference of text files via <code>sort</code>/<code>uniq</code>. Suppose <code>a</code> and <code>b</code> are text files that are already uniqued. This is fast, and works on files of arbitrary size, up to many gigabytes. (Sort is not limited by memory, though you may need to use the <code>-T</code> option if <code>/tmp</code> is on a small root partition.) See also the note about <code>LC_ALL</code> above.</li>
+  <li>It is remarkably helpful sometimes that you can do set intersection, union, and difference of text files via <code class="highlighter-rouge">sort</code>/<code class="highlighter-rouge">uniq</code>. Suppose <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> are text files that are already uniqued. This is fast, and works on files of arbitrary size, up to many gigabytes. (Sort is not limited by memory, though you may need to use the <code class="highlighter-rouge">-T</code> option if <code class="highlighter-rouge">/tmp</code> is on a small root partition.) See also the note about <code class="highlighter-rouge">LC_ALL</code> above.</li>
 </ul>
 
-<pre><code>      cat a b | sort | uniq &gt; c   # c is a union b
+<div class="highlighter-rouge"><pre class="highlight"><code>      cat a b | sort | uniq &gt; c   # c is a union b
       cat a b | sort | uniq -d &gt; c   # c is a intersect b
       cat a b b | sort | uniq -u &gt; c   # c is set difference a - b
 </code></pre>
+</div>
 
 <ul>
   <li>Summing all numbers in the third column of a text file (this is probably 3X faster and 3X less code than equivalent Python):</li>
 </ul>
 
-<pre><code>      awk '{ x += $3 } END { print x }' myfile
+<div class="highlighter-rouge"><pre class="highlight"><code>      awk '{ x += $3 } END { print x }' myfile
 </code></pre>
+</div>
 
 <ul>
-  <li>If want to see sizes/dates on a tree of files, this is like a recursive <code>ls -l</code> but is easier to read than <code>ls -lR</code>:</li>
+  <li>If want to see sizes/dates on a tree of files, this is like a recursive <code class="highlighter-rouge">ls -l</code> but is easier to read than <code class="highlighter-rouge">ls -lR</code>:</li>
 </ul>
 
-<pre><code>      find . -type f -ls
+<div class="highlighter-rouge"><pre class="highlight"><code>      find . -type f -ls
 </code></pre>
+</div>
 
 <ul>
-  <li>Use <code>xargs</code> or <code>parallel</code> whenever you can. Note you can control how many items execute per line (<code>-L</code>) as well as parallelism (<code>-P</code>). If you’re not sure if it’ll do the right thing, use xargs echo first. Also, <code>-I{}</code> is handy. Examples:</li>
+  <li>Use <code class="highlighter-rouge">xargs</code> or <code class="highlighter-rouge">parallel</code> whenever you can. Note you can control how many items execute per line (<code class="highlighter-rouge">-L</code>) as well as parallelism (<code class="highlighter-rouge">-P</code>). If you’re not sure if it’ll do the right thing, use xargs echo first. Also, <code class="highlighter-rouge">-I{}</code> is handy. Examples:</li>
 </ul>
 
-<pre><code>      find . -name '*.py' | xargs grep some_function
+<div class="highlighter-rouge"><pre class="highlight"><code>      find . -name '*.py' | xargs grep some_function
       cat hosts | xargs -I{} ssh root@{} hostname
 </code></pre>
+</div>
 
 <ul>
-  <li>Say you have a text file, like a web server log, and a certain value that appears on some lines, such as an <code>acct_id</code> parameter that is present in the URL. If you want a tally of how many requests for each <code>acct_id</code>:</li>
+  <li>Say you have a text file, like a web server log, and a certain value that appears on some lines, such as an <code class="highlighter-rouge">acct_id</code> parameter that is present in the URL. If you want a tally of how many requests for each <code class="highlighter-rouge">acct_id</code>:</li>
 </ul>
 
-<pre><code>      cat access.log | egrep -o 'acct_id=[0-9]+' | cut -d= -f2 | sort | uniq -c | sort -rn
+<div class="highlighter-rouge"><pre class="highlight"><code>      cat access.log | egrep -o 'acct_id=[0-9]+' | cut -d= -f2 | sort | uniq -c | sort -rn
 </code></pre>
+</div>
 
 <ul>
   <li>Run this function to get a random tip from this document (parses Markdown and extracts an item):</li>
 </ul>
 
-<pre><code>      function taocl() {
+<div class="highlighter-rouge"><pre class="highlight"><code>      function taocl() {
         curl -s https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md |
           pandoc -f markdown -t html |
           xmlstarlet fo --html --dropdtd |
@@ -513,180 +584,181 @@ but given the interest there, it seems it’s worth using Github, where people m
           xmlstarlet unesc | fmt -80
       }
 </code></pre>
+</div>
 
 <h2 id="obscure-but-useful">Obscure but useful</h2>
 
 <ul>
   <li>
-    <p><code>expr</code>: perform arithmetic or boolean operations or evaluate regular expressions</p>
+    <p><code class="highlighter-rouge">expr</code>: perform arithmetic or boolean operations or evaluate regular expressions</p>
   </li>
   <li>
-    <p><code>m4</code>: simple macro processor</p>
+    <p><code class="highlighter-rouge">m4</code>: simple macro processor</p>
   </li>
   <li>
-    <p><code>screen</code>: powerful terminal multiplexing and session persistence</p>
+    <p><code class="highlighter-rouge">screen</code>: powerful terminal multiplexing and session persistence</p>
   </li>
   <li>
-    <p><code>yes</code>: print a string a lot</p>
+    <p><code class="highlighter-rouge">yes</code>: print a string a lot</p>
   </li>
   <li>
-    <p><code>cal</code>: nice calendar</p>
+    <p><code class="highlighter-rouge">cal</code>: nice calendar</p>
   </li>
   <li>
-    <p><code>env</code>: run a command (useful in scripts)</p>
+    <p><code class="highlighter-rouge">env</code>: run a command (useful in scripts)</p>
   </li>
   <li>
-    <p><code>look</code>: find English words (or lines in a file) beginning with a string</p>
+    <p><code class="highlighter-rouge">look</code>: find English words (or lines in a file) beginning with a string</p>
   </li>
   <li>
-    <p><code>cut </code>and <code>paste</code> and <code>join</code>: data manipulation</p>
+    <p><code class="highlighter-rouge">cut </code>and <code class="highlighter-rouge">paste</code> and <code class="highlighter-rouge">join</code>: data manipulation</p>
   </li>
   <li>
-    <p><code>fmt</code>: format text paragraphs</p>
+    <p><code class="highlighter-rouge">fmt</code>: format text paragraphs</p>
   </li>
   <li>
-    <p><code>pr</code>: format text into pages/columns</p>
+    <p><code class="highlighter-rouge">pr</code>: format text into pages/columns</p>
   </li>
   <li>
-    <p><code>fold</code>: wrap lines of text</p>
+    <p><code class="highlighter-rouge">fold</code>: wrap lines of text</p>
   </li>
   <li>
-    <p><code>column</code>: format text into columns or tables</p>
+    <p><code class="highlighter-rouge">column</code>: format text into columns or tables</p>
   </li>
   <li>
-    <p><code>expand</code> and <code>unexpand</code>: convert between tabs and spaces</p>
+    <p><code class="highlighter-rouge">expand</code> and <code class="highlighter-rouge">unexpand</code>: convert between tabs and spaces</p>
   </li>
   <li>
-    <p><code>nl</code>: add line numbers</p>
+    <p><code class="highlighter-rouge">nl</code>: add line numbers</p>
   </li>
   <li>
-    <p><code>seq</code>: print numbers</p>
+    <p><code class="highlighter-rouge">seq</code>: print numbers</p>
   </li>
   <li>
-    <p><code>bc</code>: calculator</p>
+    <p><code class="highlighter-rouge">bc</code>: calculator</p>
   </li>
   <li>
-    <p><code>factor</code>: factor integers</p>
+    <p><code class="highlighter-rouge">factor</code>: factor integers</p>
   </li>
   <li>
-    <p><code>gpg</code>: encrypt and sign files</p>
+    <p><code class="highlighter-rouge">gpg</code>: encrypt and sign files</p>
   </li>
   <li>
-    <p><code>toe</code>: table of terminfo entries</p>
+    <p><code class="highlighter-rouge">toe</code>: table of terminfo entries</p>
   </li>
   <li>
-    <p><code>nc</code>: network debugging and data transfer</p>
+    <p><code class="highlighter-rouge">nc</code>: network debugging and data transfer</p>
   </li>
   <li>
-    <p><code>ngrep</code>: grep for the network layer</p>
+    <p><code class="highlighter-rouge">ngrep</code>: grep for the network layer</p>
   </li>
   <li>
-    <p><code>dd</code>: moving data between files or devices</p>
+    <p><code class="highlighter-rouge">dd</code>: moving data between files or devices</p>
   </li>
   <li>
-    <p><code>file</code>: identify type of a file</p>
+    <p><code class="highlighter-rouge">file</code>: identify type of a file</p>
   </li>
   <li>
-    <p><code>stat</code>: file info</p>
+    <p><code class="highlighter-rouge">stat</code>: file info</p>
   </li>
   <li>
-    <p><code>tac</code>: print files in reverse</p>
+    <p><code class="highlighter-rouge">tac</code>: print files in reverse</p>
   </li>
   <li>
-    <p><code>shuf</code>: random selection of lines from a file</p>
+    <p><code class="highlighter-rouge">shuf</code>: random selection of lines from a file</p>
   </li>
   <li>
-    <p><code>comm</code>: compare sorted files line by line</p>
+    <p><code class="highlighter-rouge">comm</code>: compare sorted files line by line</p>
   </li>
   <li>
-    <p><code>hd</code> and <code>bvi</code>: dump or edit binary files</p>
+    <p><code class="highlighter-rouge">hd</code> and <code class="highlighter-rouge">bvi</code>: dump or edit binary files</p>
   </li>
   <li>
-    <p><code>strings</code>: extract text from binary files</p>
+    <p><code class="highlighter-rouge">strings</code>: extract text from binary files</p>
   </li>
   <li>
-    <p><code>tr</code>: character translation or manipulation</p>
+    <p><code class="highlighter-rouge">tr</code>: character translation or manipulation</p>
   </li>
   <li>
-    <p><code>iconv </code>or uconv: conversion for text encodings</p>
+    <p><code class="highlighter-rouge">iconv </code>or uconv: conversion for text encodings</p>
   </li>
   <li>
-    <p><code>split </code>and <code>csplit</code>: splitting files</p>
+    <p><code class="highlighter-rouge">split </code>and <code class="highlighter-rouge">csplit</code>: splitting files</p>
   </li>
   <li>
-    <p><code>7z</code>: high-ratio file compression</p>
+    <p><code class="highlighter-rouge">7z</code>: high-ratio file compression</p>
   </li>
   <li>
-    <p><code>ldd</code>: dynamic library info</p>
+    <p><code class="highlighter-rouge">ldd</code>: dynamic library info</p>
   </li>
   <li>
-    <p><code>nm</code>: symbols from object files</p>
+    <p><code class="highlighter-rouge">nm</code>: symbols from object files</p>
   </li>
   <li>
-    <p><code>ab</code>: benchmarking web servers</p>
+    <p><code class="highlighter-rouge">ab</code>: benchmarking web servers</p>
   </li>
   <li>
-    <p><code>strace</code>: system call debugging</p>
+    <p><code class="highlighter-rouge">strace</code>: system call debugging</p>
   </li>
   <li>
-    <p><code>mtr</code>: better traceroute for network debugging</p>
+    <p><code class="highlighter-rouge">mtr</code>: better traceroute for network debugging</p>
   </li>
   <li>
-    <p><code>cssh</code>: visual concurrent shell</p>
+    <p><code class="highlighter-rouge">cssh</code>: visual concurrent shell</p>
   </li>
   <li>
-    <p><code>wireshark</code> and <code>tshark</code>: packet capture and network debugging</p>
+    <p><code class="highlighter-rouge">wireshark</code> and <code class="highlighter-rouge">tshark</code>: packet capture and network debugging</p>
   </li>
   <li>
-    <p><code>host</code> and <code>dig</code>: DNS lookups</p>
+    <p><code class="highlighter-rouge">host</code> and <code class="highlighter-rouge">dig</code>: DNS lookups</p>
   </li>
   <li>
-    <p><code>lsof</code>: process file descriptor and socket info</p>
+    <p><code class="highlighter-rouge">lsof</code>: process file descriptor and socket info</p>
   </li>
   <li>
-    <p><code>dstat</code>: useful system stats</p>
+    <p><code class="highlighter-rouge">dstat</code>: useful system stats</p>
   </li>
   <li>
-    <p><a href="https://github.com/nicolargo/glances"><code>glances</code></a>: high level, multi-subsystem overview</p>
+    <p><a href="https://github.com/nicolargo/glances"><code class="highlighter-rouge">glances</code></a>: high level, multi-subsystem overview</p>
   </li>
   <li>
-    <p><code>iostat</code>: CPU and disk usage stats</p>
+    <p><code class="highlighter-rouge">iostat</code>: CPU and disk usage stats</p>
   </li>
   <li>
-    <p><code>htop</code>: improved version of top</p>
+    <p><code class="highlighter-rouge">htop</code>: improved version of top</p>
   </li>
   <li>
-    <p><code>last</code>: login history</p>
+    <p><code class="highlighter-rouge">last</code>: login history</p>
   </li>
   <li>
-    <p><code>w</code>: who’s logged on</p>
+    <p><code class="highlighter-rouge">w</code>: who’s logged on</p>
   </li>
   <li>
-    <p><code>id</code>: user/group identity info</p>
+    <p><code class="highlighter-rouge">id</code>: user/group identity info</p>
   </li>
   <li>
-    <p><code>sar</code>: historic system stats</p>
+    <p><code class="highlighter-rouge">sar</code>: historic system stats</p>
   </li>
   <li>
-    <p><code>iftop</code> or <code>nethogs</code>: network utilization by socket or process</p>
+    <p><code class="highlighter-rouge">iftop</code> or <code class="highlighter-rouge">nethogs</code>: network utilization by socket or process</p>
   </li>
   <li>
-    <p><code>ss</code>: socket statistics</p>
+    <p><code class="highlighter-rouge">ss</code>: socket statistics</p>
   </li>
   <li>
-    <p><code>dmesg</code>: boot and system error messages</p>
+    <p><code class="highlighter-rouge">dmesg</code>: boot and system error messages</p>
   </li>
   <li>
-    <p><code>hdparm</code>: SATA/ATA disk manipulation/performance</p>
+    <p><code class="highlighter-rouge">hdparm</code>: SATA/ATA disk manipulation/performance</p>
   </li>
   <li>
-    <p><code>lsb_release</code>: Linux distribution info</p>
+    <p><code class="highlighter-rouge">lsb_release</code>: Linux distribution info</p>
   </li>
   <li>
-    <p><code>lshw</code>: hardware information</p>
+    <p><code class="highlighter-rouge">lshw</code>: hardware information</p>
   </li>
   <li>
-    <p><code>fortune</code>, <code>ddate</code>, and <code>sl</code>: um, well, it depends on whether you consider steam locomotives and Zippy quotations “useful”</p>
+    <p><code class="highlighter-rouge">fortune</code>, <code class="highlighter-rouge">ddate</code>, and <code class="highlighter-rouge">sl</code>: um, well, it depends on whether you consider steam locomotives and Zippy quotations “useful”</p>
   </li>
 </ul>
 
@@ -817,7 +889,7 @@ but given the interest there, it seems it’s worth using Github, where people m
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 13:52:34</span></small></p>
       </footer>
 
     </div>

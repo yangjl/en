@@ -2,6 +2,65 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Jinliang Yang | 杨金良</title>
+  <meta name="author" content="Jinliang Yang | 杨金良"/>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/media/home.css">
+  <style type="text/css">
+  html, body {
+    background-color: #F8F8F8;
+  }
+  .container > footer p , .postheader > a{
+    text-align: center;
+  }
+  .date {
+    text-align: center;
+    height: 30px;
+    color:#bfbfbf;
+    margin-bottom: 10px;
+  }
+  /* Specify class=linenums on a pre to get line numbering */
+  ol.linenums {
+    margin: 0 0 0 33px; /* IE indents via margin-left */
+  }
+  ol.linenums li {
+    padding-left: 12px;
+    color: #bebec5;
+    line-height: 18px;
+    text-shadow: 0 1px 0 #fff;
+  }
+  </style>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1988641-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- weibo -->
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <div class="container">
+  <h1 class="sitename">Jinliang Yang</h1>
+  <ul class="nav pills">
+  <li><a href="/">Home</a></li>
+  <li><a href="/cn/">中文</a></li>
+  <li><a href="/en/">English</a></li>
+  <li><a href="/about/">About</a></li>
+  <li><a href="/vitae/">VITAE</a></li>
+</ul>
+
+
+<!-- Put this just before the closing body tag -->
+
   <head>
     <meta charset="utf-8">
     <title>Customize Atom as a latex and markdown editor</title>
@@ -133,15 +192,15 @@
     </div>
     <div class="content">
       
-<p><a href="https://atom.io/">Atom</a> is rapidly becoming my 2nd favorite code editor (after <a href="https://www.rstudio.com/">RStudio</a>). Thanks to be an open source project, many add-on <code>themes</code> and <code>packages</code> hosted on <code>github</code> make it very flexible. Here, I added some customized items to make it a text editor for <code>markdown</code>, i.e., to write this blog, and a <code>LaTex</code> editor, i.e., to write my research papers. I am using a Mac with <code>OS X El Capitan v10.11.6</code> and installed Atom <code>v1.10.2</code>.</p>
+<p><a href="https://atom.io/">Atom</a> is rapidly becoming my 2nd favorite code editor (after <a href="https://www.rstudio.com/">RStudio</a>). Thanks to be an open source project, many add-on <code class="highlighter-rouge">themes</code> and <code class="highlighter-rouge">packages</code> hosted on <code class="highlighter-rouge">github</code> make it very flexible. Here, I added some customized items to make it a text editor for <code class="highlighter-rouge">markdown</code>, i.e., to write this blog, and a <code class="highlighter-rouge">LaTex</code> editor, i.e., to write my research papers. I am using a Mac with <code class="highlighter-rouge">OS X El Capitan v10.11.6</code> and installed Atom <code class="highlighter-rouge">v1.10.2</code>.</p>
 
 <h2 id="basic-setting">Basic Setting</h2>
 
 <ol>
-  <li>In <code>Editor Setting</code>, check <code>Soft Wrap</code> and <code>Soft Wrap at preferred line length</code>. By doing this, we can take advantage of multiple panels viewing of the editor.</li>
-  <li>Install some <code>UI Themes</code> and <code>Syntax Themes</code> for your languages. I installed <code>genesis-ui</code> and <code>flatwhite-syntax</code> for <code>markdown</code> and <code>Textmate Forlatex</code> for <code>LaTex</code>. There are many other choices, which is the beauty of this editor.</li>
-  <li>Note to correct a spelling error (there is a build-in spelling check package. we can also add <code>Linter</code> and sub-packages), just click <code>cmd+:</code>.</li>
-  <li>Add <code>File-icons</code>. Pretty beautiful for visualization.</li>
+  <li>In <code class="highlighter-rouge">Editor Setting</code>, check <code class="highlighter-rouge">Soft Wrap</code> and <code class="highlighter-rouge">Soft Wrap at preferred line length</code>. By doing this, we can take advantage of multiple panels viewing of the editor.</li>
+  <li>Install some <code class="highlighter-rouge">UI Themes</code> and <code class="highlighter-rouge">Syntax Themes</code> for your languages. I installed <code class="highlighter-rouge">genesis-ui</code> and <code class="highlighter-rouge">flatwhite-syntax</code> for <code class="highlighter-rouge">markdown</code> and <code class="highlighter-rouge">Textmate Forlatex</code> for <code class="highlighter-rouge">LaTex</code>. There are many other choices, which is the beauty of this editor.</li>
+  <li>Note to correct a spelling error (there is a build-in spelling check package. we can also add <code class="highlighter-rouge">Linter</code> and sub-packages), just click <code class="highlighter-rouge">cmd+:</code>.</li>
+  <li>Add <code class="highlighter-rouge">File-icons</code>. Pretty beautiful for visualization.</li>
 </ol>
 
 <p><img src="http://i.imgur.com/Gk9exmq.png" alt="Imgur" /></p>
@@ -151,22 +210,22 @@
 <p>I like everything to be version controlled. Therefore, some github add-ons would be necessary.</p>
 
 <ol>
-  <li><code>Git-time-machine</code> allows you to travel back in time. It shows visual plot of commits to the current file over time.  </li>
-  <li><code>Merge-conflicts</code> may also worth to try.</li>
+  <li><code class="highlighter-rouge">Git-time-machine</code> allows you to travel back in time. It shows visual plot of commits to the current file over time.  </li>
+  <li><code class="highlighter-rouge">Merge-conflicts</code> may also worth to try.</li>
 </ol>
 
-<h2 id="for-markdown">For <code>markdown</code></h2>
+<h2 id="for-markdown">For <code class="highlighter-rouge">markdown</code></h2>
 
-<p>With a build-in package <code>Markdown Preview</code>, now I can writing and viewing this blog post at the same time. What an awesome experience!</p>
+<p>With a build-in package <code class="highlighter-rouge">Markdown Preview</code>, now I can writing and viewing this blog post at the same time. What an awesome experience!</p>
 
 <p><img src="http://i.imgur.com/TuMkYDU.png" alt="Imgur" /></p>
 
-<h2 id="for-latex">For <code>LaTex</code></h2>
+<h2 id="for-latex">For <code class="highlighter-rouge">LaTex</code></h2>
 
 <ol>
-  <li><code>latextools</code> tends to provide all you needs for <code>LaTex</code> editing. It can compile and view PDF files. And jump to the line.</li>
-  <li><code>linter-chktex</code> provides real-time stylistic checking as you write.</li>
-  <li><code>todo-show</code> finds all the TODOs, FIXMEs, etc. in your projects. Note only search key words in Capitan. It could be a useful tool for <code>Latex</code> commenting and editing.</li>
+  <li><code class="highlighter-rouge">latextools</code> tends to provide all you needs for <code class="highlighter-rouge">LaTex</code> editing. It can compile and view PDF files. And jump to the line.</li>
+  <li><code class="highlighter-rouge">linter-chktex</code> provides real-time stylistic checking as you write.</li>
+  <li><code class="highlighter-rouge">todo-show</code> finds all the TODOs, FIXMEs, etc. in your projects. Note only search key words in Capitan. It could be a useful tool for <code class="highlighter-rouge">Latex</code> commenting and editing.</li>
 </ol>
 
 <p><img src="http://i.imgur.com/XyOVDWX.png" alt="Imgur" /></p>
@@ -289,7 +348,7 @@
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 12:38:42</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 13:52:34</span></small></p>
       </footer>
 
     </div>
