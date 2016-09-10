@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Customize Atom as a latex and markdown editor</title>
+    <meta name="description" content="atom is awesome">
+    <meta name="author" content="Jinliang Yang">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles change to Yihui style -->
+    <!-- link rel="stylesheet" href="/media/css/style.css"  -->
+    <link rel="stylesheet" href="/media/css/highlight.css">
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/bootstrap/css/style.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Jinliang Yang</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+
+  <head>
+      <meta name="viewport" content="width=device-width; initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/media/css/home.css">
+      <style type="text/css">
+      .container > footer p , .postheader > a{
+        text-align: center;
+      }
+      .date {
+        text-align: center;
+        height: 30px;
+        color:#bfbfbf;
+        margin-bottom: 10px;
+      }
+      /* Specify class=linenums on a pre to get line numbering */
+      ol.linenums {
+        margin: 0 0 0 33px; /* IE indents via margin-left */
+      }
+      ol.linenums li {
+        padding-left: 12px;
+        color: #bebec5;
+        line-height: 18px;
+        text-shadow: 0 1px 0 #fff;
+      }
+      </style>
+
+    </head>
+    <body>
+      <div class="container">
+      <ul class="nav pills">
+      <li><a href="/">Home</a></li>
+      <li><a href="/cn/">中文</a></li>
+      <li><a href="/en/">English</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/vitae/">VITAE</a></li>
+      </ul>
+      </div>
+  </body>
+
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+
+<div class="page-header">
+  <h2>Customize Atom as a latex and markdown editor </h2>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>09 September 2016</span>
+    </div>
+    <div class="content">
+      
+<p><a href="https://atom.io/">Atom</a> is rapidly becoming my 2nd favorite code editor (after <a href="https://www.rstudio.com/">RStudio</a>). Thanks to be an open source project, many add-on <code class="highlighter-rouge">themes</code> and <code class="highlighter-rouge">packages</code> hosted on <code class="highlighter-rouge">github</code> make it very flexible. Here, I added some customized items to make it a text editor for <code class="highlighter-rouge">markdown</code>, i.e., to write this blog, and a <code class="highlighter-rouge">LaTex</code> editor, i.e., to write my research papers. I am using a Mac with <code class="highlighter-rouge">OS X El Capitan v10.11.6</code> and installed Atom <code class="highlighter-rouge">v1.10.2</code>.</p>
+
+<h2 id="basic-setting">Basic Setting</h2>
+
+<ol>
+  <li>In <code class="highlighter-rouge">Editor Setting</code>, check <code class="highlighter-rouge">Soft Wrap</code> and <code class="highlighter-rouge">Soft Wrap at preferred line length</code>. By doing this, we can take advantage of multiple panels viewing of the editor.</li>
+  <li>Install some <code class="highlighter-rouge">UI Themes</code> and <code class="highlighter-rouge">Syntax Themes</code> for your languages. I installed <code class="highlighter-rouge">genesis-ui</code> and <code class="highlighter-rouge">flatwhite-syntax</code> for <code class="highlighter-rouge">markdown</code> and <code class="highlighter-rouge">Textmate Forlatex</code> for <code class="highlighter-rouge">LaTex</code>. There are many other choices, which is the beauty of this editor.</li>
+  <li>Note to correct a spelling error (there is a build-in spelling check package. we can also add <code class="highlighter-rouge">Linter</code> and sub-packages), just click <code class="highlighter-rouge">cmd+:</code>.</li>
+  <li>Add <code class="highlighter-rouge">File-icons</code>. Pretty beautiful for visualization.</li>
+</ol>
+
+<p><img src="http://i.imgur.com/Gk9exmq.png" alt="Imgur" /></p>
+
+<h2 id="github">Github</h2>
+
+<p>I like everything to be version controlled. Therefore, some github add-ons would be necessary.</p>
+
+<ol>
+  <li><code class="highlighter-rouge">Git-time-machine</code> allows you to travel back in time. It shows visual plot of commits to the current file over time.  </li>
+  <li><code class="highlighter-rouge">Merge-conflicts</code> may also worth to try.</li>
+</ol>
+
+<h2 id="for-markdown">For <code class="highlighter-rouge">markdown</code></h2>
+
+<p>With a build-in package <code class="highlighter-rouge">Markdown Preview</code>, now I can writing and viewing this blog post at the same time. What an awesome experience!</p>
+
+<p><img src="http://i.imgur.com/TuMkYDU.png" alt="Imgur" /></p>
+
+<h2 id="for-latex">For <code class="highlighter-rouge">LaTex</code></h2>
+
+<ol>
+  <li><code class="highlighter-rouge">latextools</code> tends to provide all you needs for <code class="highlighter-rouge">LaTex</code> editing. It can compile and view PDF files. And jump to the line.</li>
+  <li><code class="highlighter-rouge">linter-chktex</code> provides real-time stylistic checking as you write.</li>
+  <li><code class="highlighter-rouge">todo-show</code> finds all the TODOs, FIXMEs, etc. in your projects. Note only search key words in Capitan. It could be a useful tool for <code class="highlighter-rouge">Latex</code> commenting and editing.</li>
+</ol>
+
+<p><img src="http://i.imgur.com/XyOVDWX.png" alt="Imgur" /></p>
+
+<div class="share-page">
+<h2 style="background:#faebd7;">
+    Share this on &rarr; 
+    <a href="https://twitter.com/intent/tweet?text=Customize Atom as a latex and markdown editor&amp;url=http://yangjl.com/journal%20club/2016/09/09/atom&amp;via=&amp;related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://yangjl.com/journal%20club/2016/09/09/atom" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://yangjl.com/journal%20club/2016/09/09/atom" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</h2> 
+<style type="text/css">
+	.share-page {
+    	text-align: center;
+    	background: $secondary-color;
+    	color: $light-color;
+    	padding: 8px 15px;
+    	border-radius: 5px;
+    	margin: 1.5 * $spacing-unit 0;
+
+    	h2 {
+        	font-weight: 700;
+        	color: #458b74;
+        	margin-left: 10px;
+
+        	&:hover {
+            	border-bottom: 1px dashed #458b74;
+        	}
+    	}
+	}
+</style>	
+</div>
+
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#journal club-ref">
+    		journal club <span>2</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+  
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#md-ref">md <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#latex-ref">latex <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#codes-ref">codes <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#notes-ref">notes <span>9</span></a></li>
+     
+    	<li><a href="/tags.html#software-ref">software <span>2</span></a></li>
+    
+  
+
+
+
+    </ul>
+  
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/journal%20club/2015/10/05/rehab" title="Comments on a RAHAB paper">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'yangjl'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer align="center">
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 17:19:56</span></small></p>
+      </footer>
+
+    </div>
+
+
+</html>

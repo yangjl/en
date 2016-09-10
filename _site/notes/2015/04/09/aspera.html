@@ -4,8 +4,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pages</title>
-    
+    <title>Retrieving large SRA files from NCBI using Aspera</title>
+    <meta name="description" content="Git version control">
     <meta name="author" content="Jinliang Yang">
 
     <!-- Enable responsive viewport -->
@@ -80,7 +80,7 @@
     
       
       	
-      	<li class="active"><a href="/pages" class="active">Pages</a></li>
+      	<li><a href="/pages">Pages</a></li>
       	
       
     
@@ -164,113 +164,118 @@
         
 
 <div class="page-header">
-  <h1>Pages </h1>
+  <h2>Retrieving large SRA files from NCBI using Aspera </h2>
 </div>
 
-<div class="row-fluid">
+<div class="row-fluid post-full">
   <div class="span12">
-    
+    <div class="date">
+      <span>09 April 2015</span>
+    </div>
+    <div class="content">
+      
+<p>NCBI has started using 3rd party commercial software to improve SRA data transferring speeds <strong>Aspera</strong>. The download rate can reach to hundreds MB/s.  </p>
+
+<p>Here is how to use it in Linux:</p>
+
+<h3 id="download-it">1. Download it:</h3>
+<p>There are multiple different stuff there <a href="http://downloads.asperasoft.com/downloads">http://downloads.asperasoft.com/downloads</a>. You should download this one for Linux system: <a href="http://downloads.asperasoft.com/en/downloads/8?list">Aspera connect</a>, high-performance transfer browser plug-in.</p>
+
+<h3 id="install-it">2. Install it:</h3>
+<p>It is super simple for installation.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
+</code></pre>
+</div>
+<p>The command line utility called <strong>ascp</strong>, which is installed in
+<code class="highlighter-rouge">
+$HOME/.aspera/connect
+</code></p>
+
+<h3 id="use-it">3. Use it:</h3>
+<p>You can test it by downloading the <em>1GB</em> file. Note that the public key file should point to <em>.openssh</em> rather than <em>.putty</em>, which was suggested by <a href="http://wiki.bioinformatics.ucdavis.edu/index.php/Aspera_upload/download_to_NCBI">others</a>. </p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
+</code></pre>
+</div>
 
 
-<h2>All Pages</h2>
-<ul>
-
-
-
+    </div>
 
   
-    
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
       
-      	
-      	<li><a href="/about">About</a></li>
-      	
       
+
+
+  
+     
+    	<li><a href="/categories.html#notes-ref">
+    		notes <span>8</span>
+    	</a></li>
     
   
-    
-      
-      	
-      	<li><a href="/archive">Archive</a></li>
-      	
-      
-    
+
+
+    </ul>
   
-    
-      
-      	
-      	<li><a href="/atom.xml">Atom Feed</a></li>
-      	
-      
-    
+
   
-    
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
       
-      	
-      	<li><a href="/categories">Categories</a></li>
-      	
       
-    
+
+
   
-    
-      
-      	
-      	<li><a href="/">Coding Genetic Codes</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li class="active"><a href="/pages" class="active">Pages</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/rss.xml">RSS Feed</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/sitemap.txt">Sitemap</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags">Tags</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/page2/">Coding Genetic Codes</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/page3/">Coding Genetic Codes</a></li>
-      	
-      
+     
+    	<li><a href="/tags.html#notes-ref">notes <span>9</span></a></li>
+     
+    	<li><a href="/tags.html#NCBI-ref">NCBI <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#NGS-ref">NGS <span>7</span></a></li>
     
   
 
 
 
-</ul>
+    </ul>
+  
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/notes/2015/04/08/sync-git" title="Git version control between laptop and linux server">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/notes/2015/04/15/hdf5" title="TASSEL GBS HDF5 format">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'yangjl'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
 
   </div>
 </div>
@@ -279,11 +284,11 @@
       </div>
       <hr>
       <footer align="center">
-<<<<<<< HEAD
+<<<<<<< HEAD:_site/notes/2015/04/09/aspera/index.html
          <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2015 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2015-10-14 21:32:28</span></small></p>
 =======
          <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 17:19:56</span></small></p>
->>>>>>> a37a7baf077ac38156981e22e955aba7c30f31b1
+>>>>>>> a37a7baf077ac38156981e22e955aba7c30f31b1:_site/notes/2015/04/09/aspera.html
       </footer>
 
     </div>

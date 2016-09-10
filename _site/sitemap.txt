@@ -1,14 +1,17 @@
 
-http://yangjl.com/en/about.html
-http://yangjl.com/en/archive.html
+http://yangjl.com/en/about
+http://yangjl.com/en/archive
 http://yangjl.com/en/atom.xml
-http://yangjl.com/en/categories.html
-http://yangjl.com/en/index.html
-http://yangjl.com/en/pages.html
+http://yangjl.com/en/categories
+http://yangjl.com/en/
+http://yangjl.com/en/pages
 http://yangjl.com/en/rss.xml
 http://yangjl.com/en/sitemap.txt
-http://yangjl.com/en/tags.html
+http://yangjl.com/en/tags
+http://yangjl.com/en/page2/
+http://yangjl.com/en/page3/
 
+http://yangjl.com/en/journal%20club/2016/09/09/atom
 http://yangjl.com/en/journal%20club/2015/10/05/rehab
 http://yangjl.com/en/notes/2015/06/17/command-line
 http://yangjl.com/en/tech%20report/2015/06/03/rna-seq
@@ -27,7 +30,7 @@ http://yangjl.com/en/codes/2014/12/12/DataTable
 http://yangjl.com/en/codes/2014/12/11/IRanges
 http://yangjl.com/en/codes/2014/12/10/bedtools-practice
 http://yangjl.com/en/reproducible/2014/11/20/work-flow
-http://yangjl.com/en/reproducible/2014/11/05/reproducible-research+copy
+http://yangjl.com/en/reproducible/2014/11/05/reproducible-research-copy
 http://yangjl.com/en/journal%20club/2014/04/09/Journal-Club-2
 http://yangjl.com/en/bigdata%20of%20maize/2014/03/05/NCBI-SRA
 http://yangjl.com/en/lessons/2011/12/29/jekyll-introduction
