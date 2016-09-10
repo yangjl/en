@@ -123,8 +123,8 @@ line-height:60px;
 }
 
 h3 {
-line-height:45px;
 font-size:18px;
+line-height:45px;
 }
 
 h6 {
@@ -344,7 +344,7 @@ height:auto;
 
 .nav {
 margin-left:0;
-margin-bottom:20px;
+margin-bottom:0;
 list-style:none;
 }
 
@@ -460,7 +460,7 @@ font-size:14px;
 }
 
 h4,h5,h6,li,dt,dd {
-line-height:30px;
+line-height:25px;
 }
 
 h4 small,h5 {
