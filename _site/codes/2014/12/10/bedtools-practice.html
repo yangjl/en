@@ -121,7 +121,7 @@
 
   <head>
       <meta name="viewport" content="width=device-width; initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="/media/css/home.css">
+      <link rel="stylesheet" type="text/css" href="/assets/home.css">
       <style type="text/css">
       .container > footer p , .postheader > a{
         text-align: center;
@@ -177,11 +177,11 @@
 <p><a href="http://bedtools.readthedocs.org/en/latest/index.html"><strong>Bedtools</strong></a> contain several handy utilities for genomic data analysis, especially useful for feature intersection analysis by using the function <strong>intersect</strong>. I like bedtools because of the simple <strong>BED</strong> format and speed of their algorithm. Below listed some of my personal usage examples for your reference.</p>
 
 <hr />
-<p>## BED and other formats</p>
+<h2 id="bed-and-other-formats">BED and other formats</h2>
 
-<h3 id="bed-formathttpbedtoolsreadthedocsorgenlatestcontentgeneral-usagehtml">BED <a href="http://bedtools.readthedocs.org/en/latest/content/general-usage.html">format</a></h3>
+<h3 id="bed-format">BED <a href="http://bedtools.readthedocs.org/en/latest/content/general-usage.html">format</a></h3>
 <ol>
-  <li>BED3: A BED file where each feature is described by <em>chrom</em>, <em>start</em>, and <em>end</em>. </li>
+  <li>BED3: A BED file where each feature is described by <em>chrom</em>, <em>start</em>, and <em>end</em>.</li>
 </ol>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>For example: chr1 110 120  
@@ -193,18 +193,20 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
   <li>BED4: <em>chrom</em>, <em>start</em>, <em>end</em> and <em>name</em>.</li>
 </ol>
 
-<h3 id="other-genomic-data-format-can-be-found-from-ucsc-genome-browser-websitehttpgenomeucscedufaqfaqformatformat1">Other genomic data format can be found from UCSC Genome Browser <a href="http://genome.ucsc.edu/FAQ/FAQformat#format1">website</a></h3>
+<h3 id="other-genomic-data-format-can-be-found-from-ucsc-genome-browser-website">Other genomic data format can be found from UCSC Genome Browser <a href="http://genome.ucsc.edu/FAQ/FAQformat#format1">website</a></h3>
 
 <hr />
-<p>## Find SNPs in window, report SNPs and the windows they belong to.</p>
+<h2 id="find-snps-in-window-report-snps-and-the-windows-they-belong-to">Find SNPs in window, report SNPs and the windows they belong to.</h2>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>bedtools intersect -a window.bed -b SNP.bed -wb
 </code></pre>
 </div>
-<p>More details see here: <a href="http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html"><strong>intersect</strong></a>  <br />
-* <strong>-a:</strong> window of bed format<br />
-* <strong>-b:</strong> SNPs of bed format<br />
-* <strong>-wb:</strong> write the original entry in B for each overlap  </p>
+<p>More details see here: <a href="http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html"><strong>intersect</strong></a></p>
+<ul>
+  <li><strong>-a:</strong> window of bed format</li>
+  <li><strong>-b:</strong> SNPs of bed format</li>
+  <li><strong>-wb:</strong> write the original entry in B for each overlap</li>
+</ul>
 
 
     </div>
@@ -219,7 +221,7 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
   
      
     	<li><a href="/categories.html#codes-ref">
-    		codes <span>7</span>
+    		codes <span>8</span>
     	</a></li>
     
   
@@ -293,11 +295,7 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
       </div>
       <hr>
       <footer align="center">
-<<<<<<< HEAD:_site/codes/2014/12/10/bedtools-practice/index.html
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2015 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2015-10-14 21:32:28</span></small></p>
-=======
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 17:19:56</span></small></p>
->>>>>>> a37a7baf077ac38156981e22e955aba7c30f31b1:_site/codes/2014/12/10/bedtools-practice.html
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-12-17 17:49:45</span></small></p>
       </footer>
 
     </div>

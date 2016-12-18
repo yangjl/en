@@ -121,7 +121,7 @@
 
   <head>
       <meta name="viewport" content="width=device-width; initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="/media/css/home.css">
+      <link rel="stylesheet" type="text/css" href="/assets/home.css">
       <style type="text/css">
       .container > footer p , .postheader > a{
         text-align: center;
@@ -176,11 +176,11 @@
       
 <p>Broadly speaking, reproducible research aims to generate and report data analyses and scientific claims in a reproducible manner. Or simply, by one click, others could re-generate the results you reported and the report itself. From my personal experience of several years of quantitative genetics research, the broad definition of reproducible research is too ambitious. In a real world study, normally we will spend many days, weeks or even years for data tweaking and hammering. In these processes, many versions of intermediate data will be generated, many parameters for model fitting were tried, and many figures were plotted and changed later. It is such a pain to reproduce a research even conducted by yourself, who normally carried out multiple research projects across years. Do not mention to share with others.</p>
 
-<p>Modern data analyses rely on tools. Thanks for the powerful R IDE: <a href="http://www.rstudio.com/"><strong>RStudio</strong></a> and version control tool: <a href="https://github.com/"><strong>GitHub</strong></a>, which largely make this idea of reproducible research feasible. After a workshop in <a href="http://www.rilab.org/"><strong>RILAB</strong></a>, some of my colleagues show their interests in my workflow of project management and documentation, although it is far from completely reproducible. It encouraged me to blog it and share some of the tools that might be helpful for others. Here is the workflow I used.  </p>
+<p>Modern data analyses rely on tools. Thanks for the powerful R IDE: <a href="http://www.rstudio.com/"><strong>RStudio</strong></a> and version control tool: <a href="https://github.com/"><strong>GitHub</strong></a>, which largely make this idea of reproducible research feasible. After a workshop in <a href="http://www.rilab.org/"><strong>RILAB</strong></a>, some of my colleagues show their interests in my workflow of project management and documentation, although it is far from completely reproducible. It encouraged me to blog it and share some of the tools that might be helpful for others. Here is the workflow I used.</p>
 
 <h2 id="setup-project">Setup project</h2>
 <p>The right corner icon of <strong>RStudio</strong> will enable you to manage your <em>New Project</em>.    <br />
-I normally start a project with </p>
+I normally start a project with</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>#install.packages('ProjectTemplate')
 library('ProjectTemplate')
@@ -193,7 +193,7 @@ system("rm -r temp/")
 <ul>
   <li>using <strong>GitHub</strong> to do the version control</li>
   <li>using <strong>packrat</strong> to do the R package dependency management</li>
-  <li>using <strong>ProjectTemplate</strong> to layout working directories  </li>
+  <li>using <strong>ProjectTemplate</strong> to layout working directories</li>
 </ul>
 
     </div>
@@ -280,11 +280,7 @@ system("rm -r temp/")
       </div>
       <hr>
       <footer align="center">
-<<<<<<< HEAD:_site/reproducible/2014/11/20/work-flow/index.html
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2015 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2015-10-14 21:32:28</span></small></p>
-=======
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 17:19:56</span></small></p>
->>>>>>> a37a7baf077ac38156981e22e955aba7c30f31b1:_site/reproducible/2014/11/20/work-flow.html
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-12-17 17:49:45</span></small></p>
       </footer>
 
     </div>

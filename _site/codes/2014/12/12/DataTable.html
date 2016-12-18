@@ -121,7 +121,7 @@
 
   <head>
       <meta name="viewport" content="width=device-width; initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="/media/css/home.css">
+      <link rel="stylesheet" type="text/css" href="/assets/home.css">
       <style type="text/css">
       .container > footer p , .postheader > a{
         text-align: center;
@@ -186,20 +186,20 @@ data &lt;- fread("yourfile.csv", sep=",")
 </div>
 
 <h2 id="subsetting-dt">Subsetting dt</h2>
-<p>### := NULL</p>
+<h3 id="-null">:= NULL</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sub &lt;- data[, c("chr", "pos") := NULL]
 </code></pre>
 </div>
-<p>### use function of <strong>subset</strong>
-<code class="highlighter-rouge">
-sub &lt;- subset(fulldata, select = c("chr", "pos"))
-</code>
-### .SD = “Subset of Data.table”
-Select the 2nd row (SNP) for/of each chromosome!
-<code class="highlighter-rouge">
-dt &lt;- dt[, .SD[2], by=chrom]
-</code></p>
+<h3 id="use-function-of-subset">use function of <strong>subset</strong></h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>sub &lt;- subset(fulldata, select = c("chr", "pos"))
+</code></pre>
+</div>
+<h3 id="sd--subset-of-datatable">.SD = “Subset of Data.table”</h3>
+<p>Select the 2nd row (SNP) for/of each chromosome!</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>dt &lt;- dt[, .SD[2], by=chrom]
+</code></pre>
+</div>
 
 <h2 id="order-data-really-quickly-with-setkey">Order data really quickly with setkey()</h2>
 
@@ -223,7 +223,7 @@ order.dt &lt;- setkey(dt, "chr", "pos")
   
      
     	<li><a href="/categories.html#codes-ref">
-    		codes <span>7</span>
+    		codes <span>8</span>
     	</a></li>
     
   
@@ -297,11 +297,7 @@ order.dt &lt;- setkey(dt, "chr", "pos")
       </div>
       <hr>
       <footer align="center">
-<<<<<<< HEAD:_site/codes/2014/12/12/DataTable/index.html
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2015 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2015-10-14 21:32:28</span></small></p>
-=======
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 17:19:56</span></small></p>
->>>>>>> a37a7baf077ac38156981e22e955aba7c30f31b1:_site/codes/2014/12/12/DataTable.html
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-12-17 17:49:45</span></small></p>
       </footer>
 
     </div>

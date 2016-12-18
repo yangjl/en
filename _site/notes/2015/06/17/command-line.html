@@ -121,7 +121,7 @@
 
   <head>
       <meta name="viewport" content="width=device-width; initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="/media/css/home.css">
+      <link rel="stylesheet" type="text/css" href="/assets/home.css">
       <style type="text/css">
       .container > footer p , .postheader > a{
         text-align: center;
@@ -174,7 +174,7 @@
     </div>
     <div class="content">
       
-<h1 id="the-art-of-command-line-copied-from-jlevyhttpsgithubcomjlevythe-art-of-command-lineblobmasterreadmemdgithub">The Art of Command Line (copied from <a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README.md">jlevy</a>@github)</h1>
+<h1 id="the-art-of-command-line-copied-from-jlevygithub">The Art of Command Line (copied from <a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README.md">jlevy</a>@github)</h1>
 
 <p>Fluency on the command line is a skill often neglected or considered arcane, but it improves your flexibility and productivity as an engineer in both obvious and subtle ways. This is a selection of notes and tips on using the command-line that I’ve found useful when working on Linux. Some tips are elementary, and some are fairly specific, sophisticated, or obscure. This page is not long, but if you can use and recall all the items here, you know a lot.</p>
 
@@ -334,11 +334,10 @@ but given the interest there, it seems it’s worth using Github, where people m
   <li>
     <p>A few other options relevant to ssh are security sensitive and should be enabled with care, e.g. per subnet or host or in trusted networks: <code class="highlighter-rouge">StrictHostKeyChecking=no</code>, <code class="highlighter-rouge">ForwardAgent=yes</code></p>
   </li>
-  <li>
-    <p>To get the permissions on a file in octal form, which is useful for system configuration but not available in <code class="highlighter-rouge">ls</code> and easy to bungle, use something like
-<code class="highlighter-rouge">sh
-    stat -c '%A %a %n' /etc/timezone
-</code></p>
+  <li>To get the permissions on a file in octal form, which is useful for system configuration but not available in <code class="highlighter-rouge">ls</code> and easy to bungle, use something like
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>    stat -c <span class="s1">'%A %a %n'</span> /etc/timezone
+</code></pre>
+    </div>
   </li>
   <li>
     <p>For interactive selection of values from the output of another command, use <a href="https://github.com/mooz/percol"><code class="highlighter-rouge">percol</code></a>.</p>
@@ -346,10 +345,8 @@ but given the interest there, it seems it’s worth using Github, where people m
   <li>
     <p>For interaction with files based on the output of another command (like <code class="highlighter-rouge">git</code>), use <code class="highlighter-rouge">fpp</code> (<a href="https://github.com/facebook/PathPicker">PathPicker</a>).</p>
   </li>
-  <li>
-    <p>For a simple web server for all files in the current directory (and subdirs), available to anyone on your network, use:
-<code class="highlighter-rouge">python -m SimpleHTTPServer 7777</code> (for port 7777 and Python 2).</p>
-  </li>
+  <li>For a simple web server for all files in the current directory (and subdirs), available to anyone on your network, use:
+<code class="highlighter-rouge">python -m SimpleHTTPServer 7777</code> (for port 7777 and Python 2).</li>
 </ul>
 
 <h2 id="processing-files-and-data">Processing files and data</h2>
@@ -758,9 +755,9 @@ but given the interest there, it seems it’s worth using Github, where people m
 <div class="share-page">
 <h2 style="background:#faebd7;">
     Share this on &rarr; 
-    <a href="https://twitter.com/intent/tweet?text=The art of command line&amp;url=http://yangjl.com/notes/2015/06/17/command-line&amp;via=&amp;related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-    <a href="https://facebook.com/sharer.php?u=http://yangjl.com/notes/2015/06/17/command-line" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
-    <a href="https://plus.google.com/share?url=http://yangjl.com/notes/2015/06/17/command-line" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=The art of command line&amp;url=http://localhost:4000/notes/2015/06/17/command-line&amp;via=&amp;related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/notes/2015/06/17/command-line" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/notes/2015/06/17/command-line" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
 </h2> 
 <style type="text/css">
 	.share-page {
@@ -871,7 +868,7 @@ but given the interest there, it seems it’s worth using Github, where people m
       </div>
       <hr>
       <footer align="center">
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 17:19:56</span></small></p>
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-12-17 17:49:45</span></small></p>
       </footer>
 
     </div>

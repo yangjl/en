@@ -121,7 +121,7 @@
 
   <head>
       <meta name="viewport" content="width=device-width; initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="/media/css/home.css">
+      <link rel="stylesheet" type="text/css" href="/assets/home.css">
       <style type="text/css">
       .container > footer p , .postheader > a{
         text-align: center;
@@ -174,7 +174,7 @@
     </div>
     <div class="content">
       
-<h3 id="what-does-if-name--main-do">What does <code class="highlighter-rouge">if __name__ == “__main__” do</code>?</h3>
+<h3 id="what-does-if-__name__--__main__-do">What does <code class="highlighter-rouge">if __name__ == “__main__” do</code>?</h3>
 <p><a href="http://stackoverflow.com/questions/419163/what-does-if-name-main-do">link</a></p>
 
 <p>When the Python interpreter reads a source file, it executes all of the code found in it. Before executing the code, it will define a few special variables. For example, if the python interpreter is running that module (the source file) as the main program, it sets the special <strong>name</strong> variable to have a value “<strong>main</strong>”. If this file is being imported from another module, <strong>name</strong> will be set to the module’s name.
@@ -184,7 +184,7 @@ on the command line. After setting up the special variables, it will execute the
 
 <p>One of the reasons for doing this is that sometimes you write a module (a .py file) where it can be executed directly. Alternatively, it can also be imported and used in another module. By doing the main check, you can have that code only execute when you want to run the module as a program and not have it execute when someone just wants to import your module and call your functions themselves.</p>
 
-<h3 id="what-is-initpy-forhttpstackoverflowcomquestions448271what-is-init-py-for"><a href="http://stackoverflow.com/questions/448271/what-is-init-py-for">What is <code class="highlighter-rouge">__init__.py</code> for?</a></h3>
+<h3 id="what-is-__init__py-for"><a href="http://stackoverflow.com/questions/448271/what-is-init-py-for">What is <code class="highlighter-rouge">__init__.py</code> for?</a></h3>
 
 <p>Files name <strong>init</strong>.py are used to mark directories on disk as Python package directories. If you have the files</p>
 
@@ -193,7 +193,7 @@ mydir/spam/module.py
 </code></pre>
 </div>
 
-<p>And mydir is on your path, you can import the code in module.py as  </p>
+<p>And mydir is on your path, you can import the code in module.py as</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>import spam.module  
 or  
@@ -218,7 +218,7 @@ from spam import module
   
      
     	<li><a href="/categories.html#codes-ref">
-    		codes <span>7</span>
+    		codes <span>8</span>
     	</a></li>
     
   
@@ -290,11 +290,7 @@ from spam import module
       </div>
       <hr>
       <footer align="center">
-<<<<<<< HEAD:_site/codes/2014/12/16/Python-init-name/index.html
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2015 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2015-10-14 21:32:28</span></small></p>
-=======
-         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-09-09 17:19:56</span></small></p>
->>>>>>> a37a7baf077ac38156981e22e955aba7c30f31b1:_site/codes/2014/12/16/Python-init-name.html
+         <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2016 by <a href="http://yangjl.com">Jinliang Yang</a> | <span class="label label-info">2016-12-17 17:49:45</span></small></p>
       </footer>
 
     </div>

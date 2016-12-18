@@ -5,28 +5,25 @@
         <description>Jinliang Yang - Jinliang Yang</description>
         <link>http://yangjl.com/en</link>
         <link>http://yangjl.com/en</link>
-<<<<<<< HEAD
-        <lastBuildDate>2015-10-14T21:32:28-07:00</lastBuildDate>
-        <pubDate>2015-10-14T21:32:28-07:00</pubDate>
-=======
-        <lastBuildDate>2016-09-09T17:19:56-07:00</lastBuildDate>
-        <pubDate>2016-09-09T17:19:56-07:00</pubDate>
->>>>>>> a37a7baf077ac38156981e22e955aba7c30f31b1
+        <lastBuildDate>2016-12-17T17:49:45-08:00</lastBuildDate>
+        <pubDate>2016-12-17T17:49:45-08:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
                 <title>Customize Atom as a latex and markdown editor</title>
                 <description>
-&lt;p&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt; is rapidly becoming my 2nd favorite code editor (after &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt;). Thanks to be an open source project, many add-on &lt;code class=&quot;highlighter-rouge&quot;&gt;themes&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;packages&lt;/code&gt; hosted on &lt;code class=&quot;highlighter-rouge&quot;&gt;github&lt;/code&gt; make it very flexible. Here, I added some customized items to make it a text editor for &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt;, i.e., to write this blog, and a &lt;code class=&quot;highlighter-rouge&quot;&gt;LaTex&lt;/code&gt; editor, i.e., to write my research papers. I am using a Mac with &lt;code class=&quot;highlighter-rouge&quot;&gt;OS X El Capitan v10.11.6&lt;/code&gt; and installed Atom &lt;code class=&quot;highlighter-rouge&quot;&gt;v1.10.2&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt; is rapidly becoming my 2nd favorite code editor (after &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt;). Thanks for being an open source project, many add-on &lt;code class=&quot;highlighter-rouge&quot;&gt;themes&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;packages&lt;/code&gt; hosted on &lt;code class=&quot;highlighter-rouge&quot;&gt;github&lt;/code&gt; make it a very flexible tool. Here, I customized &lt;code class=&quot;highlighter-rouge&quot;&gt;Atom&lt;/code&gt; as a text editor for &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt;, i.e., to write this blog, and a &lt;code class=&quot;highlighter-rouge&quot;&gt;LaTex&lt;/code&gt; editor, i.e., to write my research papers.&lt;/p&gt;
+
+&lt;p&gt;To be clear, in this configuration, I am using a Mac system with &lt;code class=&quot;highlighter-rouge&quot;&gt;OS X El Capitan v10.11.6&lt;/code&gt; and Atom &lt;code class=&quot;highlighter-rouge&quot;&gt;v1.10.2&lt;/code&gt; installed.&lt;/p&gt;
 
 &lt;h2 id=&quot;basic-setting&quot;&gt;Basic Setting&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;Editor Setting&lt;/code&gt;, check &lt;code class=&quot;highlighter-rouge&quot;&gt;Soft Wrap&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Soft Wrap at preferred line length&lt;/code&gt;. By doing this, we can take advantage of multiple panels viewing of the editor.&lt;/li&gt;
   &lt;li&gt;Install some &lt;code class=&quot;highlighter-rouge&quot;&gt;UI Themes&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Syntax Themes&lt;/code&gt; for your languages. I installed &lt;code class=&quot;highlighter-rouge&quot;&gt;genesis-ui&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;flatwhite-syntax&lt;/code&gt; for &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Textmate Forlatex&lt;/code&gt; for &lt;code class=&quot;highlighter-rouge&quot;&gt;LaTex&lt;/code&gt;. There are many other choices, which is the beauty of this editor.&lt;/li&gt;
-  &lt;li&gt;Note to correct a spelling error (there is a build-in spelling check package. we can also add &lt;code class=&quot;highlighter-rouge&quot;&gt;Linter&lt;/code&gt; and sub-packages), just click &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd+:&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;File-icons&lt;/code&gt;. Pretty beautiful for visualization.&lt;/li&gt;
+  &lt;li&gt;There is a build-in spelling check package to correct a spelling error. Click &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd+:&lt;/code&gt; for recommendation. We can also install &lt;code class=&quot;highlighter-rouge&quot;&gt;Linter&lt;/code&gt; and sub-packages.&lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;File-icons&lt;/code&gt;. It is pretty beautiful for visualization (see below).&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Gk9exmq.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
@@ -36,17 +33,17 @@
 &lt;p&gt;I like everything to be version controlled. Therefore, some github add-ons would be necessary.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Git-time-machine&lt;/code&gt; allows you to travel back in time. It shows visual plot of commits to the current file over time.  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Git-time-machine&lt;/code&gt; allows you to travel back in time. It shows visual plot of commits to the current file over time.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Merge-conflicts&lt;/code&gt; may also worth to try.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;for-markdown&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;for-markdown&quot;&gt;For Markdown&lt;/h2&gt;
 
-&lt;p&gt;With a build-in package &lt;code class=&quot;highlighter-rouge&quot;&gt;Markdown Preview&lt;/code&gt;, now I can writing and viewing this blog post at the same time. What an awesome experience!&lt;/p&gt;
+&lt;p&gt;With a build-in package &lt;code class=&quot;highlighter-rouge&quot;&gt;Markdown Preview&lt;/code&gt;, now I can be writing and viewing this blog post at the same time. What an awesome experience!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/TuMkYDU.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;for-latex&quot;&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;LaTex&lt;/code&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;for-latex&quot;&gt;For LaTex&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;latextools&lt;/code&gt; tends to provide all you needs for &lt;code class=&quot;highlighter-rouge&quot;&gt;LaTex&lt;/code&gt; editing. It can compile and view PDF files. And jump to the line.&lt;/li&gt;
@@ -59,9 +56,9 @@
 &lt;div class=&quot;share-page&quot;&gt;
 &lt;h2 style=&quot;background:#faebd7;&quot;&gt;
     Share this on &amp;rarr; 
-    &lt;a href=&quot;https://twitter.com/intent/tweet?text=Customize Atom as a latex and markdown editor&amp;amp;url=http://yangjl.com/journal%20club/2016/09/09/atom&amp;amp;via=&amp;amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
-    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://yangjl.com/journal%20club/2016/09/09/atom&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
-    &lt;a href=&quot;https://plus.google.com/share?url=http://yangjl.com/journal%20club/2016/09/09/atom&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
+    &lt;a href=&quot;https://twitter.com/intent/tweet?text=Customize Atom as a latex and markdown editor&amp;amp;url=http://localhost:4000/codes/2016/09/09/atom&amp;amp;via=&amp;amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
+    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://localhost:4000/codes/2016/09/09/atom&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
+    &lt;a href=&quot;https://plus.google.com/share?url=http://localhost:4000/codes/2016/09/09/atom&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
 &lt;/h2&gt; 
 &lt;style type=&quot;text/css&quot;&gt;
 	.share-page {
@@ -86,8 +83,8 @@
 &lt;/div&gt;
 
 </description>
-                <link>http://yangjl.com/en/journal%20club/2016/09/09/atom</link>
-                <guid>http://yangjl.com/en/journal%20club/2016/09/09/atom</guid>
+                <link>http://yangjl.com/en/codes/2016/09/09/atom</link>
+                <guid>http://yangjl.com/en/codes/2016/09/09/atom</guid>
                 <pubDate>2016-09-09T00:00:00-07:00</pubDate>
         </item>
 
@@ -100,16 +97,16 @@
 
 &lt;p&gt;The authors referred their selection method as “recurrent selection”. However, I do not think it is the same recurrent selection we used in plant breeding. In plant breeding, the inbred parents were &lt;a href=&quot;https://dl.sciencesocieties.org/publications/aj/abstracts/37/2/AJ0370020134&quot;&gt;selected recurrently&lt;/a&gt; from the interbreeding plants according to their combining abilities. I think in current study, what the authors did was just “selection”. This potential terminology issue would not affect their analysis.&lt;/p&gt;
 
-&lt;p&gt;I liked the way the authors used to present gene expression profiles in &lt;strong&gt;Fig.4&lt;/strong&gt; and &lt;strong&gt;Fig.5&lt;/strong&gt;. We all understand that RNA-seq data are difficult to present. The authors came up with this very smart strategy to compare DEG among different lines. In panel B of &lt;strong&gt;Fig.4&lt;/strong&gt;, one of the F4 lines looks very similar to the hybrid. However, it may not that obvious for other lines, especially with only one negative control. If a test statistics was employed to quantify the difference, it would be a more solid analysis. (I know I have been too picky about this. :( ) We found that the scales for &lt;strong&gt;Fig.4&lt;/strong&gt; and &lt;strong&gt;Fig.5&lt;/strong&gt; are different. We were wondering why in one study the scales changed from -5 to 5, but in the other, from -50 to 50. And, the criterion they used for detecting DEG were less stringent than normally used (FC &amp;gt;= 1.3 and P-value &amp;lt; 0.05 in this study, normally FC &amp;gt; 2 and FDR &amp;lt; 0.05).  &lt;/p&gt;
+&lt;p&gt;I liked the way the authors used to present gene expression profiles in &lt;strong&gt;Fig.4&lt;/strong&gt; and &lt;strong&gt;Fig.5&lt;/strong&gt;. We all understand that RNA-seq data are difficult to present. The authors came up with this very smart strategy to compare DEG among different lines. In panel B of &lt;strong&gt;Fig.4&lt;/strong&gt;, one of the F4 lines looks very similar to the hybrid. However, it may not that obvious for other lines, especially with only one negative control. If a test statistics was employed to quantify the difference, it would be a more solid analysis. (I know I have been too picky about this. :( ) We found that the scales for &lt;strong&gt;Fig.4&lt;/strong&gt; and &lt;strong&gt;Fig.5&lt;/strong&gt; are different. We were wondering why in one study the scales changed from -5 to 5, but in the other, from -50 to 50. And, the criterion they used for detecting DEG were less stringent than normally used (FC &amp;gt;= 1.3 and P-value &amp;lt; 0.05 in this study, normally FC &amp;gt; 2 and FDR &amp;lt; 0.05).&lt;/p&gt;
 
 &lt;p&gt;In &lt;strong&gt;Fig.6&lt;/strong&gt;, we expected the authors to conduct a genetic scanning to confirm whether there were heterozygosity regions shared among lines. Unfortunately, they failed to deliver this message. It would be interesting to see, in the future, the dissection of the genetic architecture of this trait and the genetic explanations of heterosis for these very interesting hybrid mimics.&lt;/p&gt;
 
 &lt;div class=&quot;share-page&quot;&gt;
 &lt;h2 style=&quot;background:#faebd7;&quot;&gt;
     Share this on &amp;rarr; 
-    &lt;a href=&quot;https://twitter.com/intent/tweet?text=Comments on a RAHAB paper&amp;amp;url=http://yangjl.com/journal%20club/2015/10/05/rehab&amp;amp;via=&amp;amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
-    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://yangjl.com/journal%20club/2015/10/05/rehab&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
-    &lt;a href=&quot;https://plus.google.com/share?url=http://yangjl.com/journal%20club/2015/10/05/rehab&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
+    &lt;a href=&quot;https://twitter.com/intent/tweet?text=Comments on a RAHAB paper&amp;amp;url=http://localhost:4000/journal%20club/2015/10/05/rehab&amp;amp;via=&amp;amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
+    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://localhost:4000/journal%20club/2015/10/05/rehab&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
+    &lt;a href=&quot;https://plus.google.com/share?url=http://localhost:4000/journal%20club/2015/10/05/rehab&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
 &lt;/h2&gt; 
 &lt;style type=&quot;text/css&quot;&gt;
 	.share-page {
@@ -142,7 +139,7 @@
         <item>
                 <title>The art of command line</title>
                 <description>
-&lt;h1 id=&quot;the-art-of-command-line-copied-from-jlevyhttpsgithubcomjlevythe-art-of-command-lineblobmasterreadmemdgithub&quot;&gt;The Art of Command Line (copied from &lt;a href=&quot;https://github.com/jlevy/the-art-of-command-line/blob/master/README.md&quot;&gt;jlevy&lt;/a&gt;@github)&lt;/h1&gt;
+&lt;h1 id=&quot;the-art-of-command-line-copied-from-jlevygithub&quot;&gt;The Art of Command Line (copied from &lt;a href=&quot;https://github.com/jlevy/the-art-of-command-line/blob/master/README.md&quot;&gt;jlevy&lt;/a&gt;@github)&lt;/h1&gt;
 
 &lt;p&gt;Fluency on the command line is a skill often neglected or considered arcane, but it improves your flexibility and productivity as an engineer in both obvious and subtle ways. This is a selection of notes and tips on using the command-line that I’ve found useful when working on Linux. Some tips are elementary, and some are fairly specific, sophisticated, or obscure. This page is not long, but if you can use and recall all the items here, you know a lot.&lt;/p&gt;
 
@@ -302,11 +299,10 @@ but given the interest there, it seems it’s worth using Github, where people m
   &lt;li&gt;
     &lt;p&gt;A few other options relevant to ssh are security sensitive and should be enabled with care, e.g. per subnet or host or in trusted networks: &lt;code class=&quot;highlighter-rouge&quot;&gt;StrictHostKeyChecking=no&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;ForwardAgent=yes&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;To get the permissions on a file in octal form, which is useful for system configuration but not available in &lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt; and easy to bungle, use something like
-&lt;code class=&quot;highlighter-rouge&quot;&gt;sh
-    stat -c '%A %a %n' /etc/timezone
-&lt;/code&gt;&lt;/p&gt;
+  &lt;li&gt;To get the permissions on a file in octal form, which is useful for system configuration but not available in &lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt; and easy to bungle, use something like
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    stat -c &lt;span class=&quot;s1&quot;&gt;'%A %a %n'&lt;/span&gt; /etc/timezone
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;For interactive selection of values from the output of another command, use &lt;a href=&quot;https://github.com/mooz/percol&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;percol&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -314,10 +310,8 @@ but given the interest there, it seems it’s worth using Github, where people m
   &lt;li&gt;
     &lt;p&gt;For interaction with files based on the output of another command (like &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;), use &lt;code class=&quot;highlighter-rouge&quot;&gt;fpp&lt;/code&gt; (&lt;a href=&quot;https://github.com/facebook/PathPicker&quot;&gt;PathPicker&lt;/a&gt;).&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;For a simple web server for all files in the current directory (and subdirs), available to anyone on your network, use:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;python -m SimpleHTTPServer 7777&lt;/code&gt; (for port 7777 and Python 2).&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;For a simple web server for all files in the current directory (and subdirs), available to anyone on your network, use:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;python -m SimpleHTTPServer 7777&lt;/code&gt; (for port 7777 and Python 2).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;processing-files-and-data&quot;&gt;Processing files and data&lt;/h2&gt;
@@ -726,9 +720,9 @@ but given the interest there, it seems it’s worth using Github, where people m
 &lt;div class=&quot;share-page&quot;&gt;
 &lt;h2 style=&quot;background:#faebd7;&quot;&gt;
     Share this on &amp;rarr; 
-    &lt;a href=&quot;https://twitter.com/intent/tweet?text=The art of command line&amp;amp;url=http://yangjl.com/notes/2015/06/17/command-line&amp;amp;via=&amp;amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
-    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://yangjl.com/notes/2015/06/17/command-line&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
-    &lt;a href=&quot;https://plus.google.com/share?url=http://yangjl.com/notes/2015/06/17/command-line&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
+    &lt;a href=&quot;https://twitter.com/intent/tweet?text=The art of command line&amp;amp;url=http://localhost:4000/notes/2015/06/17/command-line&amp;amp;via=&amp;amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
+    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://localhost:4000/notes/2015/06/17/command-line&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
+    &lt;a href=&quot;https://plus.google.com/share?url=http://localhost:4000/notes/2015/06/17/command-line&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
 &lt;/h2&gt; 
 &lt;style type=&quot;text/css&quot;&gt;
 	.share-page {
@@ -769,10 +763,12 @@ Anyway, with no doubt, these K-mer approaches run much faster comparing to align
 &lt;p&gt;What is K-mer? Simply speaking, K-mer is a string of length K. For instance, “ATCG” is 4-mer sequence. For a given sequence of length N, it will extract &lt;code class=&quot;highlighter-rouge&quot;&gt;N-k+1&lt;/code&gt; k-mers.
 &lt;img src=&quot;http://i.imgur.com/GQyglzb.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The paradigm for a K-mer approach would be:&lt;br /&gt;
-1. Build k-mer index of your target transcripts (e.g. your gene annotation).&lt;br /&gt;
-2. Count k-mer in your RNA-seq reads.&lt;br /&gt;
-3. Quantification.  &lt;/p&gt;
+&lt;p&gt;The paradigm for a K-mer approach would be:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Build k-mer index of your target transcripts (e.g. your gene annotation).&lt;/li&gt;
+  &lt;li&gt;Count k-mer in your RNA-seq reads.&lt;/li&gt;
+  &lt;li&gt;Quantification.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h1 id=&quot;setup-the-experiment&quot;&gt;Setup the experiment&lt;/h1&gt;
 &lt;p&gt;To convince myself these approaches are as accurate as traditional ones, I setup an experiment to compare the results generated by both traditional alignment-based approach and K-mer approach. The analyzing codes were deposited in the github &lt;a href=&quot;https://github.com/yangjl/Demo&quot;&gt;repo&lt;/a&gt;.&lt;/p&gt;
@@ -797,20 +793,20 @@ kallisto index -k 31 -i Osativa_204_v7_1transcript Osativa_204_v7.0.transcript_p
 kallisto quant -i index -o output pairA_1.fastq pairA_2.fastq pairB_1.fastq pairB_2.fastq
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;# Comparing of the results&lt;/p&gt;
+&lt;h1 id=&quot;comparing-of-the-results&quot;&gt;Comparing of the results&lt;/h1&gt;
 
 &lt;p&gt;The Pearson’s correlation coefficient (r) ranged from 0.8 to 0.94. That is an impressive correlation, indicating the &lt;code class=&quot;highlighter-rouge&quot;&gt;kallisto&lt;/code&gt; is indeed as accurate as alignment-based approach. I looked into the outliers on the left sides of the plots and found those dots were from genes with repeat sequences. Note that with the alignment-based approach, I kept only uniquely mapped reads for quantification purpose. After removing these several outlier genes, the correlations become more significant.&lt;/p&gt;
 
-&lt;p&gt;Overall, I think &lt;code class=&quot;highlighter-rouge&quot;&gt;kallisto&lt;/code&gt; is a simple and rapid RNA-seq quantification alternative for alignment-based approach. However, &lt;code class=&quot;highlighter-rouge&quot;&gt;kallisto&lt;/code&gt; may over-estimate the read counts from genes containing repeats. For differential expression analysis, this may not be a critical problem since the over-estimation will not be biased.  &lt;/p&gt;
+&lt;p&gt;Overall, I think &lt;code class=&quot;highlighter-rouge&quot;&gt;kallisto&lt;/code&gt; is a simple and rapid RNA-seq quantification alternative for alignment-based approach. However, &lt;code class=&quot;highlighter-rouge&quot;&gt;kallisto&lt;/code&gt; may over-estimate the read counts from genes containing repeats. For differential expression analysis, this may not be a critical problem since the over-estimation will not be biased.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/UVU28KJ.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;share-page&quot;&gt;
 &lt;h2 style=&quot;background:#faebd7;&quot;&gt;
     Share this on &amp;rarr; 
-    &lt;a href=&quot;https://twitter.com/intent/tweet?text=RNA-seq quantification comparison: K-mer vs. alignment approaches&amp;amp;url=http://yangjl.com/tech%20report/2015/06/03/rna-seq&amp;amp;via=&amp;amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
-    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://yangjl.com/tech%20report/2015/06/03/rna-seq&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
-    &lt;a href=&quot;https://plus.google.com/share?url=http://yangjl.com/tech%20report/2015/06/03/rna-seq&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
+    &lt;a href=&quot;https://twitter.com/intent/tweet?text=RNA-seq quantification comparison: K-mer vs. alignment approaches&amp;amp;url=http://localhost:4000/tech%20report/2015/06/03/rna-seq&amp;amp;via=&amp;amp;related=&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;Twitter&lt;/a&gt;
+    &lt;a href=&quot;https://facebook.com/sharer.php?u=http://localhost:4000/tech%20report/2015/06/03/rna-seq&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Facebook&quot;&gt;Facebook&lt;/a&gt;
+    &lt;a href=&quot;https://plus.google.com/share?url=http://localhost:4000/tech%20report/2015/06/03/rna-seq&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;Google+&lt;/a&gt;
 &lt;/h2&gt; 
 &lt;style type=&quot;text/css&quot;&gt;
 	.share-page {
@@ -881,7 +877,7 @@ make
 
 &lt;h1 id=&quot;preparation-for-bam-input&quot;&gt;Preparation for BAM input&lt;/h1&gt;
 
-&lt;p&gt;The following codes all following ANGSD’s tutorial. &lt;/p&gt;
+&lt;p&gt;The following codes all following ANGSD’s tutorial.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;### download data
 wget http://popgen.dk/software/download/angsd/bams.tar.gz
@@ -910,7 +906,7 @@ angsd -bam bam.filelist -GL 1 -doGlf 2 -doMajorMinor 1 -doMaf 2 -SNP_pval 2e-6 -
 angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doGeno 5 -doPost 1 -postCutoff 0.95
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;with option &lt;code class=&quot;highlighter-rouge&quot;&gt;-doPlink 1&lt;/code&gt;, it will output PLINK format. &lt;/p&gt;
+&lt;p&gt;with option &lt;code class=&quot;highlighter-rouge&quot;&gt;-doPlink 1&lt;/code&gt;, it will output PLINK format.&lt;/p&gt;
 
 &lt;h1 id=&quot;population-genetics&quot;&gt;Population Genetics&lt;/h1&gt;
 </description>
@@ -925,7 +921,7 @@ angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pv
 &lt;h3 id=&quot;python-and-statistics-books&quot;&gt;Python and statistics books&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://work.thaslwanter.at/Stats/html/index.html&quot;&gt;Introduction to statistics 6.4 in python&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://work.thaslwanter.at/Stats/html/index.html&quot;&gt;Introduction to statistics 6.4 in python&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/&quot;&gt;Probabilistic Programming and Bayesian Methods for Hackers&lt;/a&gt;: an introduction to Bayesian methods and probabilistic progamming from a computation/understanding-first, mathematics-second point of view.&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -940,10 +936,10 @@ angsd -bam bam.filelist -GL 2 -out gatk_outfile -doMaf 2 -doMajorMinor 1 -SNP_pv
                 <description>
 &lt;h3 id=&quot;latex-citation-error-for-plos-1&quot;&gt;LaTex citation error for PLOS 1&lt;/h3&gt;
 
-&lt;p&gt;If you got the following error message:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-LaTex Warning: Citation on page undefined
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you got the following error message:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LaTex Warning: Citation on page undefined
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Just simply run latex twice, the first time, it will generate *.aux. The next time, bibtex will look for *.aux.&lt;/p&gt;
 
@@ -985,26 +981,26 @@ LaTex Warning: Citation on page undefined
         <item>
                 <title>Retrieving large SRA files from NCBI using Aspera</title>
                 <description>
-&lt;p&gt;NCBI has started using 3rd party commercial software to improve SRA data transferring speeds &lt;strong&gt;Aspera&lt;/strong&gt;. The download rate can reach to hundreds MB/s.  &lt;/p&gt;
+&lt;p&gt;NCBI has started using 3rd party commercial software to improve SRA data transferring speeds &lt;strong&gt;Aspera&lt;/strong&gt;. The download rate can reach to hundreds MB/s.&lt;/p&gt;
 
 &lt;p&gt;Here is how to use it in Linux:&lt;/p&gt;
 
-&lt;h3 id=&quot;download-it&quot;&gt;1. Download it:&lt;/h3&gt;
+&lt;h3 id=&quot;1-download-it&quot;&gt;1. Download it:&lt;/h3&gt;
 &lt;p&gt;There are multiple different stuff there &lt;a href=&quot;http://downloads.asperasoft.com/downloads&quot;&gt;http://downloads.asperasoft.com/downloads&lt;/a&gt;. You should download this one for Linux system: &lt;a href=&quot;http://downloads.asperasoft.com/en/downloads/8?list&quot;&gt;Aspera connect&lt;/a&gt;, high-performance transfer browser plug-in.&lt;/p&gt;
 
-&lt;h3 id=&quot;install-it&quot;&gt;2. Install it:&lt;/h3&gt;
+&lt;h3 id=&quot;2-install-it&quot;&gt;2. Install it:&lt;/h3&gt;
 &lt;p&gt;It is super simple for installation.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;The command line utility called &lt;strong&gt;ascp&lt;/strong&gt;, which is installed in
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-$HOME/.aspera/connect
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The command line utility called &lt;strong&gt;ascp&lt;/strong&gt;, which is installed in&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$HOME/.aspera/connect
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h3 id=&quot;use-it&quot;&gt;3. Use it:&lt;/h3&gt;
-&lt;p&gt;You can test it by downloading the &lt;em&gt;1GB&lt;/em&gt; file. Note that the public key file should point to &lt;em&gt;.openssh&lt;/em&gt; rather than &lt;em&gt;.putty&lt;/em&gt;, which was suggested by &lt;a href=&quot;http://wiki.bioinformatics.ucdavis.edu/index.php/Aspera_upload/download_to_NCBI&quot;&gt;others&lt;/a&gt;. &lt;/p&gt;
+&lt;h3 id=&quot;3-use-it&quot;&gt;3. Use it:&lt;/h3&gt;
+&lt;p&gt;You can test it by downloading the &lt;em&gt;1GB&lt;/em&gt; file. Note that the public key file should point to &lt;em&gt;.openssh&lt;/em&gt; rather than &lt;em&gt;.putty&lt;/em&gt;, which was suggested by &lt;a href=&quot;http://wiki.bioinformatics.ucdavis.edu/index.php/Aspera_upload/download_to_NCBI&quot;&gt;others&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh -QT -l 100m anonftp@ftp-private.ncbi.nlm.nih.gov:/1GB ~
 &lt;/code&gt;&lt;/pre&gt;
@@ -1056,12 +1052,12 @@ $ git pull externalName master
         <item>
                 <title>Attending #PAGXXIII at home</title>
                 <description>
-&lt;p&gt;I missed #PAG meetings (International Plant &amp;amp; Animal Genome Conference) two years in a row partly because of my newborn. Thanks to the social media such as &lt;a href=&quot;https://twitter.com/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;github.com&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;Slideshare&lt;/a&gt;, which keep people like me updated about the excitements (mainly biotech progresses) in San Diego. Here, I extracted some information from the web regarding #PAGXXIII and tried to digest the meeting info a little bit at home.  &lt;/p&gt;
+&lt;p&gt;I missed #PAG meetings (International Plant &amp;amp; Animal Genome Conference) two years in a row partly because of my newborn. Thanks to the social media such as &lt;a href=&quot;https://twitter.com/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;github.com&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;Slideshare&lt;/a&gt;, which keep people like me updated about the excitements (mainly biotech progresses) in San Diego. Here, I extracted some information from the web regarding #PAGXXIII and tried to digest the meeting info a little bit at home.&lt;/p&gt;
 
 &lt;p&gt;All the tweets with the dash tag #PAGXXIII were obtained every day during the meeting and were achieved in this Github repo &lt;a href=&quot;https://github.com/yangjl/MeetingTweets&quot;&gt;MeetingTweets&lt;/a&gt;. It also includes the tweets from last year’s meeting. Most of this code was adapted from &lt;a href=&quot;http://gettinggeneticsdone.blogspot.com/search/label/Twitter&quot;&gt;Stephen Turner&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;# Meeting slides and notes&lt;/p&gt;
+&lt;h1 id=&quot;meeting-slides-and-notes&quot;&gt;Meeting slides and notes&lt;/h1&gt;
 
 &lt;h2 id=&quot;meeting-notes&quot;&gt;Meeting Notes&lt;/h2&gt;
 &lt;p&gt;Great PAG notes from @mclafave: &lt;a href=&quot;https://github.com/mlafave/meeting_notes/blob/master/PAG_XXIII_2015.txt&quot;&gt;see here&lt;/a&gt;&lt;/p&gt;
@@ -1080,8 +1076,8 @@ $ git pull externalName master
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/yY0Tfye.png&quot; alt=&quot;Imgur&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;# DAY ONE (2015-1-10)
-I lost day one’s data.&lt;/p&gt;
+&lt;h1 id=&quot;day-one-2015-1-10&quot;&gt;DAY ONE (2015-1-10)&lt;/h1&gt;
+&lt;p&gt;I lost day one’s data.&lt;/p&gt;
 
 &lt;h1 id=&quot;day-two-2015-1-11&quot;&gt;DAY TWO (2015-1-11)&lt;/h1&gt;
 
@@ -1128,7 +1124,7 @@ I lost day one’s data.&lt;/p&gt;
         <item>
                 <title>Python: meaning of __init__ and __main__</title>
                 <description>
-&lt;h3 id=&quot;what-does-if-name--main-do&quot;&gt;What does &lt;code class=&quot;highlighter-rouge&quot;&gt;if __name__ == “__main__” do&lt;/code&gt;?&lt;/h3&gt;
+&lt;h3 id=&quot;what-does-if-__name__--__main__-do&quot;&gt;What does &lt;code class=&quot;highlighter-rouge&quot;&gt;if __name__ == “__main__” do&lt;/code&gt;?&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/419163/what-does-if-name-main-do&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;When the Python interpreter reads a source file, it executes all of the code found in it. Before executing the code, it will define a few special variables. For example, if the python interpreter is running that module (the source file) as the main program, it sets the special &lt;strong&gt;name&lt;/strong&gt; variable to have a value “&lt;strong&gt;main&lt;/strong&gt;”. If this file is being imported from another module, &lt;strong&gt;name&lt;/strong&gt; will be set to the module’s name.
@@ -1138,7 +1134,7 @@ on the command line. After setting up the special variables, it will execute the
 
 &lt;p&gt;One of the reasons for doing this is that sometimes you write a module (a .py file) where it can be executed directly. Alternatively, it can also be imported and used in another module. By doing the main check, you can have that code only execute when you want to run the module as a program and not have it execute when someone just wants to import your module and call your functions themselves.&lt;/p&gt;
 
-&lt;h3 id=&quot;what-is-initpy-forhttpstackoverflowcomquestions448271what-is-init-py-for&quot;&gt;&lt;a href=&quot;http://stackoverflow.com/questions/448271/what-is-init-py-for&quot;&gt;What is &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; for?&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;what-is-__init__py-for&quot;&gt;&lt;a href=&quot;http://stackoverflow.com/questions/448271/what-is-init-py-for&quot;&gt;What is &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt; for?&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Files name &lt;strong&gt;init&lt;/strong&gt;.py are used to mark directories on disk as Python package directories. If you have the files&lt;/p&gt;
 
@@ -1147,7 +1143,7 @@ mydir/spam/module.py
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;And mydir is on your path, you can import the code in module.py as  &lt;/p&gt;
+&lt;p&gt;And mydir is on your path, you can import the code in module.py as&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import spam.module  
 or  
@@ -1172,7 +1168,7 @@ from spam import module
 
 &lt;h3 id=&quot;direct-link-to-some-useful-functions&quot;&gt;Direct link to some useful functions&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Group by: &lt;a href=&quot;http://pandas.pydata.org/pandas-docs/stable/groupby.html?highlight=aggregate&quot;&gt;split-apply-combine&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;Group by: &lt;a href=&quot;http://pandas.pydata.org/pandas-docs/stable/groupby.html?highlight=aggregate&quot;&gt;split-apply-combine&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Comparison with &lt;a href=&quot;http://pandas.pydata.org/pandas-docs/dev/comparison_with_r.html&quot;&gt;R/R libraries&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1224,20 +1220,20 @@ data &amp;lt;- fread(&quot;yourfile.csv&quot;, sep=&quot;,&quot;)
 &lt;/div&gt;
 
 &lt;h2 id=&quot;subsetting-dt&quot;&gt;Subsetting dt&lt;/h2&gt;
-&lt;p&gt;### := NULL&lt;/p&gt;
+&lt;h3 id=&quot;-null&quot;&gt;:= NULL&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sub &amp;lt;- data[, c(&quot;chr&quot;, &quot;pos&quot;) := NULL]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;### use function of &lt;strong&gt;subset&lt;/strong&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-sub &amp;lt;- subset(fulldata, select = c(&quot;chr&quot;, &quot;pos&quot;))
-&lt;/code&gt;
-### .SD = “Subset of Data.table”
-Select the 2nd row (SNP) for/of each chromosome!
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-dt &amp;lt;- dt[, .SD[2], by=chrom]
-&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;use-function-of-subset&quot;&gt;use function of &lt;strong&gt;subset&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sub &amp;lt;- subset(fulldata, select = c(&quot;chr&quot;, &quot;pos&quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h3 id=&quot;sd--subset-of-datatable&quot;&gt;.SD = “Subset of Data.table”&lt;/h3&gt;
+&lt;p&gt;Select the 2nd row (SNP) for/of each chromosome!&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dt &amp;lt;- dt[, .SD[2], by=chrom]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;order-data-really-quickly-with-setkey&quot;&gt;Order data really quickly with setkey()&lt;/h2&gt;
 
@@ -1283,11 +1279,11 @@ cnvdf &amp;lt;- cbind(cnvdf, callcnv)
 &lt;p&gt;&lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/index.html&quot;&gt;&lt;strong&gt;Bedtools&lt;/strong&gt;&lt;/a&gt; contain several handy utilities for genomic data analysis, especially useful for feature intersection analysis by using the function &lt;strong&gt;intersect&lt;/strong&gt;. I like bedtools because of the simple &lt;strong&gt;BED&lt;/strong&gt; format and speed of their algorithm. Below listed some of my personal usage examples for your reference.&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;## BED and other formats&lt;/p&gt;
+&lt;h2 id=&quot;bed-and-other-formats&quot;&gt;BED and other formats&lt;/h2&gt;
 
-&lt;h3 id=&quot;bed-formathttpbedtoolsreadthedocsorgenlatestcontentgeneral-usagehtml&quot;&gt;BED &lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/content/general-usage.html&quot;&gt;format&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;bed-format&quot;&gt;BED &lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/content/general-usage.html&quot;&gt;format&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
-  &lt;li&gt;BED3: A BED file where each feature is described by &lt;em&gt;chrom&lt;/em&gt;, &lt;em&gt;start&lt;/em&gt;, and &lt;em&gt;end&lt;/em&gt;. &lt;/li&gt;
+  &lt;li&gt;BED3: A BED file where each feature is described by &lt;em&gt;chrom&lt;/em&gt;, &lt;em&gt;start&lt;/em&gt;, and &lt;em&gt;end&lt;/em&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;For example: chr1 110 120  
@@ -1299,18 +1295,20 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
   &lt;li&gt;BED4: &lt;em&gt;chrom&lt;/em&gt;, &lt;em&gt;start&lt;/em&gt;, &lt;em&gt;end&lt;/em&gt; and &lt;em&gt;name&lt;/em&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;other-genomic-data-format-can-be-found-from-ucsc-genome-browser-websitehttpgenomeucscedufaqfaqformatformat1&quot;&gt;Other genomic data format can be found from UCSC Genome Browser &lt;a href=&quot;http://genome.ucsc.edu/FAQ/FAQformat#format1&quot;&gt;website&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;other-genomic-data-format-can-be-found-from-ucsc-genome-browser-website&quot;&gt;Other genomic data format can be found from UCSC Genome Browser &lt;a href=&quot;http://genome.ucsc.edu/FAQ/FAQformat#format1&quot;&gt;website&lt;/a&gt;&lt;/h3&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;## Find SNPs in window, report SNPs and the windows they belong to.&lt;/p&gt;
+&lt;h2 id=&quot;find-snps-in-window-report-snps-and-the-windows-they-belong-to&quot;&gt;Find SNPs in window, report SNPs and the windows they belong to.&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bedtools intersect -a window.bed -b SNP.bed -wb
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;More details see here: &lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html&quot;&gt;&lt;strong&gt;intersect&lt;/strong&gt;&lt;/a&gt;  &lt;br /&gt;
-* &lt;strong&gt;-a:&lt;/strong&gt; window of bed format&lt;br /&gt;
-* &lt;strong&gt;-b:&lt;/strong&gt; SNPs of bed format&lt;br /&gt;
-* &lt;strong&gt;-wb:&lt;/strong&gt; write the original entry in B for each overlap  &lt;/p&gt;
+&lt;p&gt;More details see here: &lt;a href=&quot;http://bedtools.readthedocs.org/en/latest/content/tools/intersect.html&quot;&gt;&lt;strong&gt;intersect&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;-a:&lt;/strong&gt; window of bed format&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;-b:&lt;/strong&gt; SNPs of bed format&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;-wb:&lt;/strong&gt; write the original entry in B for each overlap&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
                 <link>http://yangjl.com/en/codes/2014/12/10/bedtools-practice</link>
@@ -1323,11 +1321,11 @@ Note: start is zero-based, where the first base in a chr is numbered 0. And the 
                 <description>
 &lt;p&gt;Broadly speaking, reproducible research aims to generate and report data analyses and scientific claims in a reproducible manner. Or simply, by one click, others could re-generate the results you reported and the report itself. From my personal experience of several years of quantitative genetics research, the broad definition of reproducible research is too ambitious. In a real world study, normally we will spend many days, weeks or even years for data tweaking and hammering. In these processes, many versions of intermediate data will be generated, many parameters for model fitting were tried, and many figures were plotted and changed later. It is such a pain to reproduce a research even conducted by yourself, who normally carried out multiple research projects across years. Do not mention to share with others.&lt;/p&gt;
 
-&lt;p&gt;Modern data analyses rely on tools. Thanks for the powerful R IDE: &lt;a href=&quot;http://www.rstudio.com/&quot;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt; and version control tool: &lt;a href=&quot;https://github.com/&quot;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;, which largely make this idea of reproducible research feasible. After a workshop in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;&lt;strong&gt;RILAB&lt;/strong&gt;&lt;/a&gt;, some of my colleagues show their interests in my workflow of project management and documentation, although it is far from completely reproducible. It encouraged me to blog it and share some of the tools that might be helpful for others. Here is the workflow I used.  &lt;/p&gt;
+&lt;p&gt;Modern data analyses rely on tools. Thanks for the powerful R IDE: &lt;a href=&quot;http://www.rstudio.com/&quot;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt; and version control tool: &lt;a href=&quot;https://github.com/&quot;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;, which largely make this idea of reproducible research feasible. After a workshop in &lt;a href=&quot;http://www.rilab.org/&quot;&gt;&lt;strong&gt;RILAB&lt;/strong&gt;&lt;/a&gt;, some of my colleagues show their interests in my workflow of project management and documentation, although it is far from completely reproducible. It encouraged me to blog it and share some of the tools that might be helpful for others. Here is the workflow I used.&lt;/p&gt;
 
 &lt;h2 id=&quot;setup-project&quot;&gt;Setup project&lt;/h2&gt;
 &lt;p&gt;The right corner icon of &lt;strong&gt;RStudio&lt;/strong&gt; will enable you to manage your &lt;em&gt;New Project&lt;/em&gt;.    &lt;br /&gt;
-I normally start a project with &lt;/p&gt;
+I normally start a project with&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#install.packages('ProjectTemplate')
 library('ProjectTemplate')
@@ -1340,7 +1338,7 @@ system(&quot;rm -r temp/&quot;)
 &lt;ul&gt;
   &lt;li&gt;using &lt;strong&gt;GitHub&lt;/strong&gt; to do the version control&lt;/li&gt;
   &lt;li&gt;using &lt;strong&gt;packrat&lt;/strong&gt; to do the R package dependency management&lt;/li&gt;
-  &lt;li&gt;using &lt;strong&gt;ProjectTemplate&lt;/strong&gt; to layout working directories  &lt;/li&gt;
+  &lt;li&gt;using &lt;strong&gt;ProjectTemplate&lt;/strong&gt; to layout working directories&lt;/li&gt;
 &lt;/ul&gt;
 </description>
                 <link>http://yangjl.com/en/reproducible/2014/11/20/work-flow</link>
@@ -1403,7 +1401,7 @@ by a blank line.&lt;/p&gt;
 line break&lt;/p&gt;
 
 &lt;p&gt;Text attributes &lt;em&gt;italic&lt;/em&gt;,
-&lt;strong&gt;bold&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;monospace&lt;/code&gt;,~~monospace~~, &lt;code class=&quot;highlighter-rouge&quot;&gt;monospace&lt;/code&gt; .&lt;/p&gt;
+&lt;strong&gt;bold&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;monospace&lt;/code&gt;,&lt;del&gt;monospace&lt;/del&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;monospace&lt;/code&gt; .&lt;/p&gt;
 
 &lt;p&gt;A &lt;a href=&quot;http://example.com&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
 
@@ -1440,13 +1438,13 @@ line break&lt;/p&gt;
         <item>
                 <title>Journal Club（2）</title>
                 <description>
-&lt;p&gt;This nature’s cover story “THE GREEN HOURGLASS” was really an exciting paper. I regret to not be able to fully capture it two years ago. &lt;/p&gt;
+&lt;p&gt;This nature’s cover story “THE GREEN HOURGLASS” was really an exciting paper. I regret to not be able to fully capture it two years ago.&lt;/p&gt;
 
 &lt;p&gt;The authors adapted the embryonic hourclass model proposed from vertebrates (as the figure show below) to plants, and provided the transcriptomic evidence from two complementary analyses. What is the embryonic hourclass? It refers to embryos from various taxa appear different in early stages, and converge to a similar form during mid-embryogenesis (or called phylotypic stage), and again diverge in later stages.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eRwvfhO.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Recent analyses using zebrafish and &lt;em&gt;Drosophila&lt;/em&gt; demonstrated the transcriptome was dominated by ancient genes. Here in this paper, the authors calculated two different transcriptome indices: transcriptome age index (TAI) and transcriptome divergence index (TDI). The indices were computed across seven embryo stages. After visualization of the indices, clear hourclass patterns (see figure below from the paper) were found for both measurements.  &lt;/p&gt;
+&lt;p&gt;Recent analyses using zebrafish and &lt;em&gt;Drosophila&lt;/em&gt; demonstrated the transcriptome was dominated by ancient genes. Here in this paper, the authors calculated two different transcriptome indices: transcriptome age index (TAI) and transcriptome divergence index (TDI). The indices were computed across seven embryo stages. After visualization of the indices, clear hourclass patterns (see figure below from the paper) were found for both measurements.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/BqI4EiL.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
@@ -1455,7 +1453,7 @@ line break&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Quint, M., Drost, H.-G., Gabel, A., Ullrich, K. K., Bönn, M., &amp;amp; Grosse, I. (2012). A transcriptomic hourglass in plant embryogenesis. Nature, 490(7418), 98–101. doi:10.1038/nature11394
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;#### &lt;i class=&quot;icon-folder-open&quot;&gt;&lt;/i&gt;&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/22951968&quot;&gt;reference link:&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;reference-link&quot;&gt;&lt;i class=&quot;icon-folder-open&quot;&gt;&lt;/i&gt;&lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/22951968&quot;&gt;reference link:&lt;/a&gt;&lt;/h4&gt;
 
 </description>
                 <link>http://yangjl.com/en/journal%20club/2014/04/09/Journal-Club-2</link>
@@ -1468,17 +1466,17 @@ line break&lt;/p&gt;
                 <description>
 &lt;p&gt;We are now in the Big Data era, where “the data scientist will become the most sexy job in the world” said by &lt;a href=&quot;http://www.nytimes.com/2013/04/14/education/edlife/universities-offer-courses-in-a-hot-new-field-data-science.html?pagewanted=all&amp;amp;_r=0&quot;&gt;NYT&lt;/a&gt;. And the IT world frequently mentioned “90% of the data in the world today has been created in the last two years alone”. It seems like a strong wave of data explosion is coming!&lt;/p&gt;
 
-&lt;p&gt;Amazing! However, I feel like we have nothing to do with it until recently when I checked the NCBI SRA database for a talk. I found that, we, the maize community, are right in the midst of the Big Data explosion. According to the database report, while after doing some accessions lookup, in the past several years, especially the last two years, about 13,000 Giga base-pairs were deposited from the maize community. That is about 6,500 depth of coverage of the maize genome if roughly assuming the maize genome is 2 Giba bases in size. This estimation not includes the on-going projects and non-submitted datasets. More importantly, this is happening just five years after the accomplishment of the maize B73 reference genome project. If we review the complete datasets in the SRA database, maize NGS data actually only accounted for &amp;lt; 0.1%. Until the end of Feb. 2014, more than 2,300 Tera bases reside there. The “90% &lt;strong&gt;genome sequencing data&lt;/strong&gt; were generated in the past two years alone”. See, IT’s data theory could be perfectly aligned to the sequencing industry (see the figure below).  &lt;/p&gt;
+&lt;p&gt;Amazing! However, I feel like we have nothing to do with it until recently when I checked the NCBI SRA database for a talk. I found that, we, the maize community, are right in the midst of the Big Data explosion. According to the database report, while after doing some accessions lookup, in the past several years, especially the last two years, about 13,000 Giga base-pairs were deposited from the maize community. That is about 6,500 depth of coverage of the maize genome if roughly assuming the maize genome is 2 Giba bases in size. This estimation not includes the on-going projects and non-submitted datasets. More importantly, this is happening just five years after the accomplishment of the maize B73 reference genome project. If we review the complete datasets in the SRA database, maize NGS data actually only accounted for &amp;lt; 0.1%. Until the end of Feb. 2014, more than 2,300 Tera bases reside there. The “90% &lt;strong&gt;genome sequencing data&lt;/strong&gt; were generated in the past two years alone”. See, IT’s data theory could be perfectly aligned to the sequencing industry (see the figure below).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Mb5Z1Yi.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As the data explosion, NGS data’s storage, sharing and publishing become a worldwide challenge. To overcome it, ~150 academic institutions and private companies went together to join the &lt;a href=&quot;http://genomicsandhealth.org/&quot;&gt;Global Alliance for Genomics and Health&lt;/a&gt;. While, &lt;a href=&quot;http://googleresearch.blogspot.co.uk/2014/02/google-joins-global-alliance-for.html&quot;&gt;Google Genomics&lt;/a&gt; is one of them. As the joining of some IT tycoons, &lt;strong&gt;genomics&lt;/strong&gt; now become a multi-disciplinary challenge. &lt;strong&gt;Genomics&lt;/strong&gt; and its related &lt;strong&gt;Bioinformatics&lt;/strong&gt; are upgraded to their 2.0 version. I never thought that, trained as a geneticist, I may one day work for Google. Good, bad or ironic? It might be too optimistic. There is a long way to go and the industries are actually more interested in the human health related area. As a relative small research community for maize or plant genomics studies, we are less attractive from industry’s point of view. &lt;/p&gt;
+&lt;p&gt;As the data explosion, NGS data’s storage, sharing and publishing become a worldwide challenge. To overcome it, ~150 academic institutions and private companies went together to join the &lt;a href=&quot;http://genomicsandhealth.org/&quot;&gt;Global Alliance for Genomics and Health&lt;/a&gt;. While, &lt;a href=&quot;http://googleresearch.blogspot.co.uk/2014/02/google-joins-global-alliance-for.html&quot;&gt;Google Genomics&lt;/a&gt; is one of them. As the joining of some IT tycoons, &lt;strong&gt;genomics&lt;/strong&gt; now become a multi-disciplinary challenge. &lt;strong&gt;Genomics&lt;/strong&gt; and its related &lt;strong&gt;Bioinformatics&lt;/strong&gt; are upgraded to their 2.0 version. I never thought that, trained as a geneticist, I may one day work for Google. Good, bad or ironic? It might be too optimistic. There is a long way to go and the industries are actually more interested in the human health related area. As a relative small research community for maize or plant genomics studies, we are less attractive from industry’s point of view.&lt;/p&gt;
 
 &lt;p&gt;Here, I will try to interpret the maize NGS data a little. This kind of study may be extended to other crop species later. After a close look, the data presented their own story. This kind of story might not be extracted from the papers alone. Below, I listed the top 10 maize projects according to their data output.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/01JWlMz.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;From the above figure, it seems like the maize genetic studies were expanding from their traditional research areas. Thanks to the continuous declining of the sequencing price, many genome wide studies become possible, such as geno-pheno association, transcriptome, methylome, etc. At the same time, the resources and talents were under “exon reshuffling” during this process. Some Chinese groups, including those from CAU, CAAS and Huazhong Agricultural University are rising. &lt;/p&gt;
+&lt;p&gt;From the above figure, it seems like the maize genetic studies were expanding from their traditional research areas. Thanks to the continuous declining of the sequencing price, many genome wide studies become possible, such as geno-pheno association, transcriptome, methylome, etc. At the same time, the resources and talents were under “exon reshuffling” during this process. Some Chinese groups, including those from CAU, CAAS and Huazhong Agricultural University are rising.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;p&gt;Top 10 projects （&lt;a href=&quot;/data/SRA_maize_030614.csv&quot;&gt;download complete table&lt;/a&gt;）&lt;/p&gt;
@@ -1558,7 +1556,7 @@ line break&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;In the U.S., from the above summary table of the sequencing data, I learned that different labs have their own focus. The &lt;strong&gt;lab&lt;/strong&gt; here, sometimes, should also refer to the efforts from their collaborators. Among these labs, Buckler’s group at Cornell, after finishing the zea mays HapMap project, was now aiming to sequencing every species of maize in the world using Genotyping-By-Sequencing (GBS). Recently, Buell’s lab at MSU released a large set of transcriptomic data. This group may lead the maize transcriptome analysis in the future. A group at CSHL did a lot of Methylome study. Another group at CSHL, Jackson’s lab, focused on the development studies, their efforts of transcriptomic sequencing at various developmental stages may eventually lead to a developmentome (I invented this term) some day. Other research subjects, such as ISU’s Zeanome and PAV, UC Davis R-I group’s domestication and evolution and University of Minnesota’s IBM RIL eQTL mapping, et. al.. &lt;/p&gt;
+&lt;p&gt;In the U.S., from the above summary table of the sequencing data, I learned that different labs have their own focus. The &lt;strong&gt;lab&lt;/strong&gt; here, sometimes, should also refer to the efforts from their collaborators. Among these labs, Buckler’s group at Cornell, after finishing the zea mays HapMap project, was now aiming to sequencing every species of maize in the world using Genotyping-By-Sequencing (GBS). Recently, Buell’s lab at MSU released a large set of transcriptomic data. This group may lead the maize transcriptome analysis in the future. A group at CSHL did a lot of Methylome study. Another group at CSHL, Jackson’s lab, focused on the development studies, their efforts of transcriptomic sequencing at various developmental stages may eventually lead to a developmentome (I invented this term) some day. Other research subjects, such as ISU’s Zeanome and PAV, UC Davis R-I group’s domestication and evolution and University of Minnesota’s IBM RIL eQTL mapping, et. al..&lt;/p&gt;
 
 &lt;p&gt;Sequencing alone could not solve the biological problems until applied with sophisticated analyses. When genetics meets Big Data, the analysis itself become a problem. Traditional training did not prepared genetists with big data skills. In the future, the one who mastering the data tools and making sense of data would be more likely to success I guess. Genetics is now not limited to pipetting, pollinating or cloning, coding skills should be added to our toolkit as well.&lt;/p&gt;
 
@@ -1688,7 +1686,7 @@ Jekyll-bootstrap conveniently provides the base directory format.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;_site&lt;/strong&gt;&lt;br /&gt;
-  This is where the generated site will be placed once Jekyll is done transforming it. &lt;/p&gt;
+  This is where the generated site will be placed once Jekyll is done transforming it.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;assets&lt;/strong&gt;&lt;br /&gt;
@@ -1779,7 +1777,7 @@ Example:&lt;/p&gt;
 
 &lt;p&gt;This page will be available at &lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourdomain.com/people/bob/essay.html&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Recommended Pages&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recommended Pages&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;index.html&lt;/strong&gt;&lt;br /&gt;
@@ -1845,7 +1843,7 @@ Liquid is designed for end-users to be able to execute logic within template fil
 without imposing any security risk on the hosting server.&lt;/p&gt;
 
 &lt;p&gt;Jekyll uses Liquid to generate the post content within the final page layout structure and as the primary interface for working with
-your site and post/page data. &lt;/p&gt;
+your site and post/page data.&lt;/p&gt;
 
 &lt;h3 id=&quot;why-do-we-have-to-use-liquid&quot;&gt;Why Do We Have to Use Liquid?&lt;/h3&gt;
 
@@ -1856,7 +1854,7 @@ GitHub cannot afford to run arbitrary code on their servers so they lock develop
 
 &lt;p&gt;The short story is liquid is not real code and its not intended to execute real code.
 The point being you can’t do jackshit in liquid that hasn’t been allowed explicitly by the implementation.
-What’s more you can only access data-structures that have been explicitly passed to the template. &lt;/p&gt;
+What’s more you can only access data-structures that have been explicitly passed to the template.&lt;/p&gt;
 
 &lt;p&gt;In Jekyll’s case it is not possible to alter what is passed to Liquid without hacking the gem or running custom plugins. 
 Both of which cannot be supported by GitHub Pages.&lt;/p&gt;
@@ -1876,7 +1874,7 @@ you are better off sticking with ruby. Toward that end I’ve built &lt;a href=&
 &lt;p&gt;Static assets are any file in the root or non-underscored subfolders that are not pages.
 That is they have no valid YAML Front Matter and are thus not treated as Jekyll Pages.&lt;/p&gt;
 
-&lt;p&gt;Static assets should be used for images, css, and javascript files. &lt;/p&gt;
+&lt;p&gt;Static assets should be used for images, css, and javascript files.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-jekyll-parses-files&quot;&gt;How Jekyll Parses Files&lt;/h2&gt;
 
@@ -1989,7 +1987,7 @@ As noted, our main programming constraint is the fact that our API is limited to
 
 &lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
 
-&lt;p&gt;Please take a look at []() 
+&lt;p&gt;Please take a look at &lt;a href=&quot;&quot;&gt;&lt;/a&gt; 
 or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
 </description>
                 <link>http://yangjl.com/en/lessons/2011/12/29/jekyll-introduction</link>

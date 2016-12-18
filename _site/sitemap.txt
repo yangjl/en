@@ -11,7 +11,7 @@ http://yangjl.com/en/tags
 http://yangjl.com/en/page2/
 http://yangjl.com/en/page3/
 
-http://yangjl.com/en/journal%20club/2016/09/09/atom
+http://yangjl.com/en/codes/2016/09/09/atom
 http://yangjl.com/en/journal%20club/2015/10/05/rehab
 http://yangjl.com/en/notes/2015/06/17/command-line
 http://yangjl.com/en/tech%20report/2015/06/03/rna-seq
